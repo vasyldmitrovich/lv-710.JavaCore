@@ -32,10 +32,4 @@ public class Calculations {
     public int randomMinuteAmount() {
         return random.nextInt(60);
     }
-
-
-
-
-
-
 }
