@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/ihomziak/com.softserve.javaCoreProject/com.softserve.javaCoreProject.iml" filepath="$PROJECT_DIR$/ihomziak/com.softserve.javaCoreProject/com.softserve.javaCoreProject.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/lv-710.JavaCore.iml" filepath="$PROJECT_DIR$/.idea/lv-710.JavaCore.iml" />
     </modules>
   </component>
