@@ -12,14 +12,14 @@ public class Flf {
         System.out.print("Input b: ");
         int b = in.nextInt();
         
-        System.out.print("a+b=");
-        System.out.println(a+b);
-        System.out.print("a-b=");
-        System.out.println(a-b);
-        System.out.print("a*b=");
-        System.out.println(a*b);
-        System.out.print("a/b=");
-        System.out.println(a/b);
+        System.out.println("a+b="+(a+b));
+       
+        System.out.println("a-b="+(a-b));
+       
+        System.out.println("a*b="+(a*b));
+    
+        System.out.print("a/b="+a/b);
+      
         in.close();
     }
 
