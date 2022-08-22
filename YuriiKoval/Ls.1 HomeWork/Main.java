@@ -3,25 +3,28 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) {
-        Calculator calculator = new Calculator();
-        calculator.calculate();
 
-        HowAreYou howAreYouQuestion = new HowAreYou();
-        howAreYouQuestion.answer();
+        Calculator1 cal = new  Calculator1();
+        cal.calculateResult();
 
-        Circle myCircle = new Circle();
-        myCircle.setRadius();
-        myCircle.getCirclePerimeter();
-        myCircle.getCircleArea();
+//        Calculator calculator = new Calculator();
+//        calculator.calculate();
+//
+//        HowAreYou howAreYouQuestion = new HowAreYou();
+//        howAreYouQuestion.answer();
 
-        AddressBook myAddressBook = new AddressBook();
-        myAddressBook.setName();
-        myAddressBook.setAddress();
-        myAddressBook.getAllInformation();
+//        Circle myCircle = new Circle();
+//        myCircle.getCirclePerimeter();
+//        myCircle.getCircleArea();
 
-        PhoneCall phoneCalls = new PhoneCall();
-        phoneCalls.setCostPerMinute();
-        phoneCalls.setTime();
-        phoneCalls.calculatePriceOfCall();
+//        AddressBook myAddressBook = new AddressBook();
+//        myAddressBook.setName();
+//        myAddressBook.setAddress();
+//        myAddressBook.getAllInformation();
+//
+//        PhoneCall phoneCalls = new PhoneCall();
+//        phoneCalls.setCostPerMinute();
+//        phoneCalls.setTime();
+//        phoneCalls.calculatePriceOfCall();
         }
     }
