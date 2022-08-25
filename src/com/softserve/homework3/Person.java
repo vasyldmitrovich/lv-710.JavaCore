@@ -30,5 +30,10 @@ public class Person {
         return birthYear;
     }
 
+    public int getAge(){
+        LocalDate current_date = LocalDate.now();
+        int current_year = current_date.getYear();
+        return current_year - birthYear;
+    }
 
 }
