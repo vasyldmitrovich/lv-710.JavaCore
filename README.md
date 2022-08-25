@@ -15,7 +15,7 @@
 
 - change directory to **lv710**;
 - check branch **git branch**
-- create new branch **git branch <NAME>**
-- switch to new branch **git checkout <NAME>**
+- create new branch **git branch <NAME>** nameBranch 
+- switch to new branch **git checkout <NAME>** nameBranch
 - open project in Idea/Eclipse;
 - write new code;
