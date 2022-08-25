@@ -14,6 +14,7 @@ public class Main {
                 + Employee.getTotalSum() + " USD");
         System.out.println(stepan.toString());
         System.out.println(stepan.getName() + "'s salary in this month is " + stepan.getSalary() + " USD");
+        System.out.println(serhii.toString());
         System.out.println(serhii.getName() + "'s salary in this month is " + serhii.getSalary() + " USD");
         System.out.println("Our team's salary expenses in this month are " + Employee.getTotalSum() + " USD");
 
