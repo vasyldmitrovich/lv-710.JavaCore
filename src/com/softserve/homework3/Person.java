@@ -34,7 +34,7 @@ public class Person {
         return current_year - birthYear;
     }
 
-    public void input(){
+    public void input() {
         Scanner scanner = new Scanner(System.in);
         System.out.print("Enter first name ");
         firstName = scanner.nextLine();
@@ -44,7 +44,17 @@ public class Person {
         birthYear = Integer.parseInt(scanner.nextLine());
     }
 
-    public String output(){
+    public String output() {
         return firstName + " " + lastName + " borned in " + birthYear;
     }
+
+    public void changeNames(String fn, String ln) {
+        if (fn != null) {
+            firstName = fn;
+        }
+        if (ln != null) {
+            lastName = ln;
+        }
+    }
+
 }
