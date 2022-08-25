@@ -1,5 +1,7 @@
 package com.softserve.edu4;
 
+import java.util.Arrays;
+
 public class Appl { // extends Object by default
 
     private String name = "Ivan";
@@ -44,7 +46,7 @@ public class Appl { // extends Object by default
     }
 
     public static void main(String[] args) {
-        System.out.println("Ok12");
+        System.out.println("Edu4");
         /*
         byte b = 1;
         b = (byte) (b + 1); // 1 is int
@@ -74,18 +76,26 @@ public class Appl { // extends Object by default
         System.out.printf("b = (byte) 255 = " + b + "  as Hex b = %h", b);  // -1  toString();
         */
         // /*-
-        Student student = new Student();
-        Appl app = new Appl();
+        Student student = new Student("Vova","Belbo",33);
+        System.out.println(student);
+        System.out.println(student.aLong);
+
+        student.setFirstName("bla bla");
+        System.out.println("Student First name = " + student.getFirstName());
+
+
+        /*Appl app = new Appl();
         app.print();
         app.print("hello");
         app.print("Super", "hello");
+        */
         //
         //app.print(1, 2, 3); // Overload Error
         // app.print(10, 20, 30, 40);
-        app.print("abc", 1.1, 123, student); // 1.1->double->Double;  123->int->Integer
+        //app.print("abc", 1.1, 123, student); // 1.1->double->Double;  123->int->Integer
         //
-        app.print3(1, 2); // 1 and 2 int
-        app.print3(3L, 4L); // 1 and 2 long
+//        app.print3(1, 2); // 1 and 2 int
+//        app.print3(3L, 4L); // 1 and 2 long
         // */
     }
 }

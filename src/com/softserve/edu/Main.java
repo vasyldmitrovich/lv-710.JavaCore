@@ -1,13 +1,16 @@
 package com.softserve.edu;
 
+import com.softserve.edu4.Student;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.util.Arrays;
 
-public class Main {
+public class Main extends Student{
     public static void main(String[] args) throws IOException {
         //
-        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        /*BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         //
         System.out.print("Hello. What is your name? ");
         String name = br.readLine();
@@ -19,6 +22,22 @@ public class Main {
         System.out.println("Hello " + name);
         System.out.println("You are " + age);
         //
-        br.close();
+        br.close();*/
+        Student student = new Student();
+        Student student2 = new Student();
+        Student student3 = new Student();
+
+        System.out.println("How many students = " + Student.count);
+        Student student4 = new Student();
+        Student.count = 100;
+        System.out.println("How many students = " + Student.count);
+        Student student5 = new Student("Vova","Belbo",33);
+        Student student6 = new Student("Vova","Belbo",33);
+        System.out.println("How many students = " + Student.count);
+
+        String str = student.getProtectVariable();
+        Main mmm = new Main();
+        String sss = mmm.protectVariable;
+        //System.out.println(sss);
     }
 }
