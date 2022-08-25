@@ -44,5 +44,7 @@ public class Person {
         birthYear = Integer.parseInt(scanner.nextLine());
     }
 
-    
+    public String output(){
+        return firstName + " " + lastName + " borned in " + birthYear;
+    }
 }
