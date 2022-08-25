@@ -6,7 +6,7 @@ public class Main {
         Employee stepan = new Employee("Stepan", 10, 164);
         Employee serhii = new Employee("Serhii", 10, 156);
         System.out.println(yurii.toString());
-        System.out.println(yurii.getName() + "'s salary in this month is " + yurii.getSalary() + " USD/hour");
+        System.out.println(yurii.getName() + "'s salary in this month is " + yurii.getSalary() + " USD");
         yurii.changeRate(11);
         System.out.println("But he worked well and we decide to increase his rate to " + yurii.getRate() + " USD/hour");
         System.out.println("Also Yurii gets bonus " + (yurii.getBonuses()) + " USD");
