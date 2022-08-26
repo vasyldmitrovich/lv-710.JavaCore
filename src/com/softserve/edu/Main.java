@@ -1,11 +1,8 @@
 package com.softserve.edu;
 
-import com.softserve.edu4.Student;
+import com.softserve.edu03.Student;
 
-import java.io.BufferedReader;
 import java.io.IOException;
-import java.io.InputStreamReader;
-import java.util.Arrays;
 
 public class Main extends Student{
     public static void main(String[] args) throws IOException {
