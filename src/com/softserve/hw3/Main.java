@@ -2,11 +2,29 @@ package com.softserve.hw3;
 
 public class Main {
     public static void main(String[] args) {
-        Person georgeSmith = new Person("George", "Smith");
-        georgeSmith.setBirthDate(1996);
-        georgeSmith.getAge();
-        georgeSmith.output();
-        georgeSmith.changeName("Yurii", "Koval");
-        georgeSmith.output();
+        Person aldousHuxley = new Person("George", "Orwell");
+        aldousHuxley.setBirthDate(1963);
+        aldousHuxley.getAge();
+        aldousHuxley.output();
+        aldousHuxley.changeName("Aldous", "Huxley");
+        aldousHuxley.output();
+        Person leninaCrowne = new Person();
+        leninaCrowne.setFirstName("Lenina");
+        leninaCrowne.setLastName("Crowne");
+        leninaCrowne.setBirthDate(1983);
+        leninaCrowne.getAge();
+        leninaCrowne.output();
+        Person fannyCrowne = new Person();
+        fannyCrowne.input();
+        fannyCrowne.getAge();
+        fannyCrowne.output();
+        Person bernardMarx = new Person("Bernard", "Marx");
+        bernardMarx.setBirthDate(1988);
+        bernardMarx.getAge();
+        bernardMarx.output();
+        Person benitoHoover = new Person("Benito", "Hoover");
+        benitoHoover.setBirthDate(1946);
+        benitoHoover.getAge();
+        benitoHoover.output();
     }
 }
