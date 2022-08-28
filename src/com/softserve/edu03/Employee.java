@@ -10,7 +10,6 @@ public class Employee {
     private int hours;
     public static double totalSum=0;
     BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-
     Employee() throws IOException {
         System.out.println("Введіть імя працівника:");
         this.name= br.readLine();
@@ -37,6 +36,25 @@ public class Employee {
         //totalSum = totalSum + (this.rate*this.hours);
     }
 
+    public String getName() {
+        return name;
+    }
+
+    public double getRate() {
+        return rate;
+    }
+
+    public void setRate(double rate) {
+        this.rate = rate;
+    }
+
+    public int getHours() {
+        return hours;
+    }
+
+    public void setHours(int hours) {
+        this.hours = hours;
+    }
 
     public double getSalary(){
         return rate * hours;
@@ -50,9 +68,9 @@ public class Employee {
     public void addToTotalSum(){
         totalSum=totalSum+getSalary();
     }
-    public double changeRate(int rate){
-        this.rate = rate;
-        return rate * hours;
+    public double changeRate(double rate){
+        setRate(rate);
+        return rate;
     }
 
     public double getBonuses(){
