@@ -32,7 +32,7 @@ public class Person {
         LocalDate current_date = LocalDate.now();
         int current_year = current_date.getYear();
         if (birthYear == 0){
-            System.out.println("He's birth year is undefined so we've decided that he's age is 0");
+            System.out.println("He's birth year is undefined so we've decided that his age is 0");
             return 0;
         }
         return current_year - birthYear;
