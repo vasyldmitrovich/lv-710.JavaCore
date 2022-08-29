@@ -1,16 +1,14 @@
 package com.softserve.hw03;
 
-import java.util.Calendar;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.util.Calendar;
 
 public class Person {
     private String firstName = "";
     private String lastName = "";
-    private int birthYear = 0;
-
-    private BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+    private int birthYear;
 
     public String getFirstName() {
         return firstName;
@@ -37,14 +35,11 @@ public class Person {
     }
 
     Person() {
-
     }
 
-    Person(String firstName, String lastName) throws IOException {
+    Person(String firstName, String lastName){
         this.firstName = firstName;
         this.lastName = lastName;
-        System.out.println(firstName + " " + lastName + " added, enter birth year:");
-        this.birthYear = Integer.parseInt(br.readLine());
     }
 
     public int getAge() {
@@ -52,15 +47,16 @@ public class Person {
     }
 
     public void input() throws IOException {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         System.out.println("Enter first name:");
-        String firstName = br.readLine();
+        String tempFirstName = br.readLine();
         System.out.println("Enter last name:");
-        String lastName = br.readLine();
+        String tempLastName = br.readLine();
         System.out.println("Enter birth year:");
-        int birthYear = Integer.parseInt(br.readLine());
-        this.lastName = lastName;
-        this.firstName = firstName;
-        this.birthYear = birthYear;
+        int tempBirthYear = Integer.parseInt(br.readLine());
+        this.firstName = tempFirstName;
+        this.lastName = tempLastName;
+        this.birthYear = tempBirthYear;
     }
 
     public void output() {
@@ -69,24 +65,13 @@ public class Person {
 
     @Override
     public String toString() {
-        return "First name: " + this.firstName +
+        return "Person {"+
+                " First name: " + this.firstName +
                 ", last name: " + this.lastName +
-                ", birth year: " + this.birthYear;
+                ", birth year: " + this.birthYear +"}";
     }
-
     public void changeName(String firstName, String lastName) {
         if (!firstName.isBlank()) this.firstName = firstName;
         if (!lastName.isBlank()) this.lastName = lastName;
-    }
-
-    public void changeName(String anyName) throws IOException {
-        System.out.println("Change first or last name? Type 1 for first and 2 for last");
-        int fl = Integer.parseInt(br.readLine());
-        switch (fl) {
-            case 1:
-                this.firstName = anyName;
-            case 2:
-                this.lastName = anyName;
-        }
     }
 }
