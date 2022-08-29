@@ -2,20 +2,20 @@ package com.softserve.edu03;
 
 public class Employee {
     private String name;
-    private long rate;
-    private long hours;
-    private static long totalSum;
+    private double rate;
+    private int hours;
+    private static double totalSum;
 
     public Employee() {
 
     }
 
-    public Employee (String name, long rate){
+    public Employee (String name, double rate){
         this.name = name;
         this.rate = rate;
     }
 
-    public Employee (String name, long rate, long hours){
+    public Employee (String name, double rate, int hours){
         this.name = name;
         this.rate = rate;
         this.hours = hours;
@@ -29,23 +29,23 @@ public class Employee {
         return this.name;
     }
 
-    public void setRate(long rate) {
+    public void setRate(double rate) {
         this.rate = rate;
     }
 
-    public long getRate() {
+    public double getRate() {
         return this.rate;
     }
 
-    public void setHours(long hours) {
+    public void setHours(int hours) {
         this.hours = hours;
     }
 
-    public long getHours() {
+    public int getHours() {
         return this.hours;
     }
 
-    public long getSalary() {
+    public double getSalary() {
         totalSum += this.rate * this.hours;
         return this.rate * this.hours;
     }
@@ -56,19 +56,19 @@ public class Employee {
                 " he worked " + getHours() + " hours.";
     }
 
-    public long changeRate(long rate){
+    public double changeRate(double rate){
         totalSum -= (this.rate * this.hours);
         this.rate = rate;
         getSalary();
         return this.rate;
     }
 
-    public long getBonuses() {
+    public double getBonuses() {
         totalSum += this.rate * this.hours / 10;
         return this.rate * this.hours / 10;
     }
 
-    public static long getTotalSum() {
+    public static double getTotalSum() {
         return totalSum;
     }
 }
