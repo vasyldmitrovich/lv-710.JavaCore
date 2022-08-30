@@ -21,8 +21,8 @@ public class Student implements Comparable<Student> {
     public Student(String name, double rating) {
         this.name = name;
         this.rating = rating;
-        count++;
         sumRating += rating;
+        count++;
         avgRating = sumRating / count;
     }
 

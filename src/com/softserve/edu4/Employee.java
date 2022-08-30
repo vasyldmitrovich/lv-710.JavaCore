@@ -18,10 +18,8 @@ public class Employee {
         totalSum += getSalary();
     }
     public Employee(String name, double rate, double hours) {
-        this.rate = rate;
-        this.name = name;
+        this(name, rate);
         this.hours = hours;
-        totalSum += getSalary();
     }
 
     public void setRate(double rate) {
