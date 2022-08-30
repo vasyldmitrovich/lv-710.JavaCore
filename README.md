@@ -23,7 +23,7 @@
 ----------
 First and Last name | OOP Intro | Condition
 ------------------------------------------------------
-- Bohdan Dranchuk        +     
+- Bohdan Dranchuk +     
 - Vladimir Gazashvili
 - Ivan Homziak
 - Maksym Hromylo
