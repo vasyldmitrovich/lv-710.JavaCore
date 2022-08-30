@@ -23,7 +23,7 @@
 ----------
 First and Last name | OOP Intro | Condition
 ------------------------------------------------------
-- Bohdan Dranchuk          
+- Bohdan Dranchuk        +     
 - Vladimir Gazashvili
 - Ivan Homziak
 - Maksym Hromylo
@@ -35,7 +35,7 @@ First and Last name | OOP Intro | Condition
 - Serhii Mudrachenko
 - Mike Sao
 - Shevchuk Serhii
-- Oksana Shevchuk
+- Oksana Shevchuk        +-
 - Dima Vazhevatov
 - Роман Скочко
 
