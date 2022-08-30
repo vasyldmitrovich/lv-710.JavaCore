@@ -23,19 +23,19 @@
 ----------
 First and Last name | OOP Intro | Condition
 ------------------------------------------------------
-Bohdan Dranchuk          
-Vladimir Gazashvili
-Ivan Homziak
-Maksym Hromylo
-Yura Koval
-Vadim Kovbasiuk
-Alina Ladur
-Oleksandr Lopata
-Serhii Luniov
-Serhii Mudrachenko
-Mike Sao
-Shevchuk Serhii
-Oksana Shevchuk
-Dima Vazhevatov
-Роман Скочко
+- Bohdan Dranchuk          
+- Vladimir Gazashvili
+- Ivan Homziak
+- Maksym Hromylo
+- Yura Koval
+- Vadim Kovbasiuk
+- Alina Ladur
+- Oleksandr Lopata
+- Serhii Luniov
+- Serhii Mudrachenko
+- Mike Sao
+- Shevchuk Serhii
+- Oksana Shevchuk
+- Dima Vazhevatov
+- Роман Скочко
 
