@@ -1,8 +1,7 @@
-package com.softserve.edu4;
+package com.softserve.edu4.employee;
 
 import lombok.*;
 
-import java.util.concurrent.ThreadLocalRandom;
 
 @Data
 @NoArgsConstructor
@@ -34,12 +33,12 @@ public class Employee {
         totalSum += getSalary();
     }
 
-    public static double getTotalSum() {
-        return totalSum;
+    public double getSalary() {
+        return rate * hours;
     }
 
-    double getSalary() {
-        return rate * hours;
+    public static double getTotalSum() {
+        return totalSum;
     }
 
     void changeRate(int rate) {
@@ -49,19 +48,5 @@ public class Employee {
 
     void getBonuses() {
         System.out.println("10% from salary - " + (0.1 * getSalary()));
-    }
-
-    public static void main(String[] args) {
-        for (int i = 0; i < 3;) {
-            Employee employee = new Employee("employee" + (++i),
-                    ThreadLocalRandom.current().nextInt(10_000, 20_000),
-                    ThreadLocalRandom.current().nextInt(100, 172));
-
-            System.out.println(employee);
-            System.out.println(employee.getSalary());
-            employee.getBonuses();
-            System.out.println("totalSum: " + Employee.getTotalSum());
-            System.out.println("________________________________");
-        }
     }
 }

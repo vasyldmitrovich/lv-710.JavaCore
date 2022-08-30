@@ -1,17 +1,15 @@
-package com.softserve.edu4;
+package com.softserve.edu4.student;
 
 import lombok.Data;
-
-import java.util.stream.Stream;
 
 
 @Data
 public class Student implements Comparable<Student> {
+    private static int count;
+    private static double sumRating;
+    private static double avgRating;
     private String name;
     private double rating;
-    private static double sumRating;
-    private static int count;
-    private static double avgRating;
 
     public Student() {
         count++;
@@ -52,25 +50,5 @@ public class Student implements Comparable<Student> {
         return this.rating > o.rating ? 1 : -1;
     }
 
-    public static void main(String[] args) {
-        Student studentBob = new Student("Bob", 2);
-        System.out.println("AvgRating = " + Student.getAvgRating() +
-                "\nTotalRating = " + Student.getSumRating());
-
-        Student studentTom = new Student("Tom", 1);
-        studentTom.setRating(3);
-        System.out.println("AvgRating = " + Student.getAvgRating() +
-                "\nTotalRating = " + Student.getSumRating());
-
-        Student studentAnna = new Student("Anna", 4);
-        System.out.println("AvgRating = " + Student.getAvgRating() +
-                "\nTotalRating = " + Student.getSumRating());
-
-        System.out.println("Is Tom better than Anna? - " + studentTom.betterStudent(studentAnna));
-
-//        var students = Stream.of(studentBob, studentAnna, studentTom)
-//                .sorted().toList();
-
-    }
 }
 
