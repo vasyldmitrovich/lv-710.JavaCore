@@ -53,17 +53,19 @@ public class Person {
         int input = InputReader.getInputInt();
         String strInput;
         switch (input) {
-            case 1 -> {
+            case 1: {
                 System.out.print("Enter first name: ");
                 strInput = InputReader.getInputString();
                 firstName = strInput;
+                break;
             }
-            case 2 -> {
+            case 2: {
                 System.out.print("Enter last name: ");
                 strInput = InputReader.getInputString();
                 lastName = strInput;
+                break;
             }
-            default -> System.out.println("\nwrong input");
+            default: System.out.println("\nwrong input");
         }
     }
 
