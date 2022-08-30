@@ -35,8 +35,7 @@ public class Person {
     public String getAge() {
         LocalDate now = LocalDate.now();
         LocalDate bDay = now.minusYears(birthYear);
-        String bDayFormat = bDay.format(DateTimeFormatter.ofPattern("yy"));
-        return bDayFormat;
+        return bDay.format(DateTimeFormatter.ofPattern("yy"));
     }
 
     public void changeName(String fn, String ln) {
@@ -51,31 +50,30 @@ public class Person {
 
     public void changeName() throws IOException {
         System.out.print("\nDo you want to change first (1) or last (2) name? (enter 1 or 2): ");
-        int input = Main.getInputInt();
+        int input = InputReader.getInputInt();
         String strInput;
         switch (input) {
-            case 1:
+            case 1 -> {
                 System.out.print("Enter first name: ");
-                strInput = Main.getInputString();
+                strInput = InputReader.getInputString();
                 firstName = strInput;
-                break;
-            case 2:
+            }
+            case 2 -> {
                 System.out.print("Enter last name: ");
-                strInput = Main.getInputString();
+                strInput = InputReader.getInputString();
                 lastName = strInput;
-                break;
-            default:
-                System.out.println("\nwrong input");
+            }
+            default -> System.out.println("\nwrong input");
         }
     }
 
     public void input() throws IOException {
         System.out.print("Enter first name: ");
-        this.firstName = Main.getInputString();
+        this.firstName = InputReader.getInputString();
         System.out.print("Enter last name: ");
-        this.lastName = Main.getInputString();
+        this.lastName = InputReader.getInputString();
         System.out.print("Enter birth year: ");
-        this.birthYear = Main.getInputInt();
+        this.birthYear = InputReader.getInputInt();
     }
 
     public void output() {
