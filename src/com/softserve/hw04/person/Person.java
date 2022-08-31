@@ -26,7 +26,7 @@ public class Person {
 
     public void input() {
         System.out.println("Enter person Name or FirstName and LastName:");
-        String nameElements = ConsoleHelper.getDataFromConsole();
+        String nameElements = ConsoleHelper.getDataFromConsole();//Good decision
         changeName(nameElements.split(" "));
 
         System.out.println("Enter year of birth:");

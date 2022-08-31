@@ -46,6 +46,7 @@ public class Employee {
         System.out.println("recalculate salary - " + getSalary());
     }
 
+    //TODO when use that method, that method must rewrite totalSum variable
     void getBonuses() {
         System.out.println("10% from salary - " + (0.1 * getSalary()));
     }
