@@ -34,6 +34,7 @@ public class Person {
         this.birthYear = birthYear;
     }
 
+    //TODO move constructors before getters and setters
     Person() {
     }
 
