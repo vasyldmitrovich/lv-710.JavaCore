@@ -7,7 +7,10 @@ public class Employee {
     private static float totalSum = 0;
 
 
-    //TODO add constructor without parameters
+    
+    public Employee(){
+    }
+    
     public Employee(String name, int rate) {
         this.name = name;
         this.rate = rate;
