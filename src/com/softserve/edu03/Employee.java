@@ -1,4 +1,4 @@
-package edu03;
+package com.softserve.edu03;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -24,6 +24,7 @@ public class Employee {
        this.rate = rate;
        this.hours = hours;
    }
+   //TODO that method if do not use pleas delete, if use than that method move to main method
 /*   public void getEmployee() throws IOException {
   		BufferedReader br = new BufferedReader(new InputStreamReader(System.in)); 
       	System.out.println("What is your name? ");

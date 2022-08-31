@@ -1,4 +1,4 @@
-package edu03;
+package com.softserve.edu03;
 
 
 
@@ -29,6 +29,10 @@ public class Main  {
        emp3.addToTotalSum();
      
        System.out.println ("totalSum= "+Employee.totalSum);
+
+	   //TODO you did all thinks good, and now add to changeRate logic, when we use that method totalSum must be rewrite
+	   emp1.changeRate(100);
+			System.out.println ("totalSumNew= "+Employee.totalSum);
       
 	
 	    
