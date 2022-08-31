@@ -4,11 +4,10 @@ import java.util.ArrayList;
 
 public class Employee {
 
-
     private String name;
     private int rate;
     private int hours;
-    private int bonus = 0;
+    private int bonus;
 
     Employee() {
     }
@@ -39,7 +38,7 @@ public class Employee {
         return this.name;
     }
 
-    public void setRate(int rate) {
+    public void changeRate(int rate) {
         this.rate = rate;
     }
 
@@ -56,7 +55,7 @@ public class Employee {
     }
 
     public int getSalary() {
-        return this.rate * this.hours + this.bonus;
+        return this.rate * this.hours;
     }
 
     @Override
@@ -72,8 +71,13 @@ public class Employee {
 //        return newRate * this.hours;
 //    }
 
+    public static void main(String[] args) {
+        double x = 0.1;
+        int i = (int) (1000 * x);
+        System.out.println(i);
+    }
     public int getBonus() {
-        return this.bonus;
+        return getSalary()/10;
     }
 
     public void setBonus(int bonus) {
@@ -84,7 +88,7 @@ public class Employee {
     public int totalSum(ArrayList<Employee> employees) {
         int totalSum = 0;
         for (Employee employee : employees) {
-            int salary = employee.getSalary();
+            int salary = employee.getSalary() + employee.getBonus();
             totalSum = totalSum + salary;
         }
         return totalSum;
