@@ -62,14 +62,10 @@ public class Employee {
     public String toString() {
         return "Employee: " + getName() + "\n" +
                 "Rate: " + getRate() + "\n" +
-                "Hours: " + getHours() + "\n";
+                "Hours: " + getHours() + "\n" +
+                "Bonus: " + getBonus() + "\n" +
+                "Salary: " + getSalary();
     }
-
-    //TODO in that method you mast get old salary, minus old salary from totalSum set new rate and use getSalary() method, and that method add to totalSum new salary
-//    public int changeRate(int rate) {
-//        this.newRate = newRate;
-//        return newRate * this.hours;
-//    }
 
     public static void main(String[] args) {
         double x = 0.1;
@@ -84,7 +80,6 @@ public class Employee {
         this.bonus = bonus;
     }
 
-    //TODO return int value
     public int totalSum(ArrayList<Employee> employees) {
         int totalSum = 0;
         for (Employee employee : employees) {
