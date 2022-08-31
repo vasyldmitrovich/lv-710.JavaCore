@@ -4,6 +4,8 @@ import java.util.ArrayList;
 
 public class Main {
 
+    //TODO rename folder edu04 to edu03
+
     public static void main(String[] args) {
 
         //TODO Do not correct work totalSum after change newRate and after addBonus
