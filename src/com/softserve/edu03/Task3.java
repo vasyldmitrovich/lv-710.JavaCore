@@ -1,5 +1,7 @@
 package com.softserve.edu03;
 
+import java.util.Arrays;
+
 public class Task3 {
     public static void main(String[] args){
 
@@ -15,6 +17,10 @@ public class Task3 {
         System.out.println(emp1.toString());
         System.out.println(emp2.toString());
         System.out.println(emp3.toString());
+
+        //TODO All good, pleas add logic to method changeRate, when we rewrite rate totalSum must be changed
+        emp1.changeRate(100);
+        System.out.println("New totalSum is = " + Employee.getTotalSum());
 
 
     }
