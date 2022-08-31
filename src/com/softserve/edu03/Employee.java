@@ -67,11 +67,6 @@ public class Employee {
                 "Salary: " + getSalary();
     }
 
-    public static void main(String[] args) {
-        double x = 0.1;
-        int i = (int) (1000 * x);
-        System.out.println(i);
-    }
     public int getBonus() {
         return getSalary()/10;
     }
