@@ -7,10 +7,10 @@ public class Employee {
     private String name;
     private int rate;
     private int hours;
-    private int newRate;
+    private int newRate;//TODO rate must be only one
     private final double bonuses = 1.1;
-    private ArrayList<Employee> list;
-    private int count;
+    private ArrayList<Employee> list;//TODO this field you do not use in your object, delete that field
+    private int count;//TODO do not needed count, need static totalSum
 
     Employee() {
     }
@@ -67,6 +67,7 @@ public class Employee {
         return this.rate * this.hours;
     }
 
+    //TODO method salary must be only one, that method return salary
     public int getNewSalary() {
         return this.newRate * this.hours;
     }
@@ -78,6 +79,7 @@ public class Employee {
                 "Hours: " + getHours() + "\n";
     }
 
+    //TODO in that method you mast get old salary, minus old salary from totalSum set new rate and use getSalary() method, and that method add to totalSum new salary
     public int changeRate(int newRate) {
         this.newRate = newRate;
         return newRate * this.hours;
@@ -87,6 +89,7 @@ public class Employee {
         return this.bonuses * getSalary();
     }
 
+    //TODO return int value
     public double totalSum(ArrayList<Employee> employees) {
         double totalSum = 0;
         for (Employee employee : employees) {
@@ -96,6 +99,7 @@ public class Employee {
         return totalSum;
     }
 
+    //TODO delete next two method because you do not use that methods
     public int getEmployeesNumber() {
         ArrayList<Employee> employees = new ArrayList<>();
         double sum = list.stream().filter(o -> o.getSalary() > 10).mapToDouble(Employee::getSalary).sum();
