@@ -48,6 +48,7 @@ public class Person {
         return s.substring(0, 1).toUpperCase() + s.substring(1);
     }
 
+    //TODO move this logic to Demo class
     public void changeName() throws IOException {
         System.out.print("\nDo you want to change first (1) or last (2) name? (enter 1 or 2): ");
         int input = InputReader.getInputInt();
@@ -78,6 +79,7 @@ public class Person {
         this.birthYear = InputReader.getInputInt();
     }
 
+    //TODO write this method correct, that method must show information about Person
     public void output() {
         System.out.println(toString());
     }

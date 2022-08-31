@@ -19,6 +19,8 @@ public class Employee {
         return hours;
     }
 
+    //TODO move constructors to up and add setters, add totalSum variable and method
+
     public Employee() {
     }
 
