@@ -1,7 +1,8 @@
 package com.softserve.edu03;
-
+/**It is very, very cool */
 public class Main {
     public static void main(String[] args) {
+
         Employee yurii = new Employee("Yurii", 10, 172);
         Employee stepan = new Employee("Stepan", 10, 164);
         Employee serhii = new Employee("Serhii", 10, 156);

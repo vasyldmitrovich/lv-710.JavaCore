@@ -48,10 +48,11 @@ public class Person {
     public void input() {
         System.out.println("Please, enter your first name");
         this.firstName = input.nextLine();
-        System.out.println("Please, enter your first name");
+        System.out.println("Please, enter your first name");//TODO change first to last
         this.lastName = input.nextLine();
         System.out.println("Please, enter your birth year");
-        this.birthDate = input.nextInt();
+        this.birthDate = input.nextInt();//TODO you can improve this code if you add condition
+        //TODO if data from user is int type write this data to person if not send message and write for example 2000
     }
 
     public void output() {
