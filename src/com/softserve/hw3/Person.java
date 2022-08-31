@@ -7,6 +7,7 @@ public class Person {
     private String lastName;
     private int birthDate;
     Scanner input = new Scanner(System.in);
+    boolean inputIsCorrect = false;
 
     public Person(){
 
@@ -48,11 +49,17 @@ public class Person {
     public void input() {
         System.out.println("Please, enter your first name");
         this.firstName = input.nextLine();
-        System.out.println("Please, enter your first name");//TODO change first to last
+        System.out.println("Please, enter your last name");
         this.lastName = input.nextLine();
         System.out.println("Please, enter your birth year");
-        this.birthDate = input.nextInt();//TODO you can improve this code if you add condition
-        //TODO if data from user is int type write this data to person if not send message and write for example 2000
+        while (!inputIsCorrect){
+            try {
+                this.birthDate = Integer.parseInt(input.nextLine());
+                inputIsCorrect = true;
+            } catch (NumberFormatException e) {
+                System.out.println("You need to enter your birth year, for example - 1999");
+            }
+        }
     }
 
     public void output() {
