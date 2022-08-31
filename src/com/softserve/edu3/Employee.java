@@ -6,8 +6,6 @@ public class Employee {
     private int hours;
     private static float totalSum = 0;
 
-
-    
     public Employee(){
     }
     
@@ -32,10 +30,10 @@ public class Employee {
     }
 
     public float getSalary() {
-        float Salary = 0;//TODO do not correct naming variable must be lover case
-        Salary = hours * rate;
-        updateTotalSum(Salary);
-        return Salary;
+        float salary = 0;
+        salary = hours * rate;
+        updateTotalSum(salary);
+        return salary;
     }
 
     public void changeRate(int rate) {
