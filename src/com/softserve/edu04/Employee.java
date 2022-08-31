@@ -4,6 +4,8 @@ import java.util.ArrayList;
 
 public class Employee {
 
+    private int totalSum;//TODO do not needed count, need static totalSum
+
     private String name;
     private int rate;
     private int hours;
@@ -24,11 +26,6 @@ public class Employee {
         this.name = name;
         this.rate = rate;
         this.hours = hours;
-        this.count++;
-    }
-
-    public int getCount() {
-        return this.count;
     }
 
     public void setName(String name) {
@@ -55,21 +52,8 @@ public class Employee {
         return this.hours;
     }
 
-    public void setNewRate(int newRate) {
-        this.newRate = newRate;
-    }
-
-    public int getNewRate() {
-        return newRate;
-    }
-
     public int getSalary() {
         return this.rate * this.hours;
-    }
-
-    //TODO method salary must be only one, that method return salary
-    public int getNewSalary() {
-        return this.newRate * this.hours;
     }
 
     @Override
@@ -80,38 +64,22 @@ public class Employee {
     }
 
     //TODO in that method you mast get old salary, minus old salary from totalSum set new rate and use getSalary() method, and that method add to totalSum new salary
-    public int changeRate(int newRate) {
-        this.newRate = newRate;
-        return newRate * this.hours;
-    }
+//    public int changeRate(int rate) {
+//        this.newRate = newRate;
+//        return newRate * this.hours;
+//    }
 
     public double getBonuses() {
         return this.bonuses * getSalary();
     }
 
     //TODO return int value
-    public double totalSum(ArrayList<Employee> employees) {
-        double totalSum = 0;
+    public int totalSum(ArrayList<Employee> employees) {
+        int totalSum = 0;
         for (Employee employee : employees) {
-            double salary = employee.getSalary();
+            int salary = employee.getSalary();
             totalSum = totalSum + salary;
         }
         return totalSum;
     }
-
-    //TODO delete next two method because you do not use that methods
-    public int getEmployeesNumber() {
-        ArrayList<Employee> employees = new ArrayList<>();
-        double sum = list.stream().filter(o -> o.getSalary() > 10).mapToDouble(Employee::getSalary).sum();
-        return (int) sum;
-    }
-
-//    public ArrayList<Employee> getEmployeeNumber(Employee... employees) {
-//        ArrayList<Employee[]> e = new ArrayList<>();
-//        ArrayList<Employee[]> emp;
-//        for (int i = 0; i<= employees.length; i++) {
-//            emp = e.add(employees);
-//        }
-//
-//    }
 }
