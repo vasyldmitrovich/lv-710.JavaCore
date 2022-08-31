@@ -6,6 +6,27 @@ public class Employee {
     private String name;
     private int rate;
     private int hours;
+    private static BigDecimal totalSum = BigDecimal.ZERO;
+
+    public Employee() {
+        totalSum = totalSum.add(BigDecimal.valueOf(this.rate).
+                multiply(BigDecimal.valueOf(this.hours)));
+    }
+
+    public Employee(String name, int rate) {
+        this.name = name;
+        this.rate = rate;
+        totalSum = totalSum.add(BigDecimal.valueOf(this.rate).
+                multiply(BigDecimal.valueOf(this.hours)));
+    }
+
+    public Employee(String name, int rate, int hours) {
+        this.name = name;
+        this.rate = rate;
+        this.hours = hours;
+        totalSum = totalSum.add(BigDecimal.valueOf(this.rate).
+                multiply(BigDecimal.valueOf(this.hours)));
+    }
 
     public String getName() {
         return name;
@@ -19,39 +40,54 @@ public class Employee {
         return hours;
     }
 
-    //TODO move constructors to up and add setters, add totalSum variable and method
-
-    public Employee() {
+    public void setName(String name) {
+        if (name != null)
+            this.name = name;
+        else
+            System.out.println("wrong data");
     }
 
-    public Employee(String name, int rate) {
-        this.name = name;
-        this.rate = rate;
+    public void setRate(int rate) {
+        if (rate > 0)
+            this.rate = rate;
+        else
+            System.out.println("wrong data");
     }
 
-    public Employee(String name, int rate, int hours) {
-        this.name = name;
-        this.rate = rate;
-        this.hours = hours;
+    public void setHours(int hours) {
+        if (hours > 0)
+            this.hours = hours;
+        else
+            System.out.println("wrong data");
     }
 
     public BigDecimal getSalary() {
-        BigDecimal a = new BigDecimal(rate);
-        BigDecimal b = new BigDecimal(hours);
-        BigDecimal result = a.multiply(b);
-        return result;
+        BigDecimal empRate = new BigDecimal(rate);
+        BigDecimal empHours = new BigDecimal(hours);
+        return empRate.multiply(empHours);
     }
 
     public BigDecimal changeRate(int rate) {
-        this.rate = rate;
+        if (rate > 0) {
+            totalSum = totalSum.subtract(BigDecimal.valueOf(this.rate).
+                    multiply(BigDecimal.valueOf(this.hours)));
+            this.rate = rate;
+            totalSum = totalSum.add(BigDecimal.valueOf(this.rate).
+                    multiply(BigDecimal.valueOf(this.hours)));
+        } else {
+            System.out.println("ERROR: method changeRate has wrong data");
+        }
         return getSalary();
     }
 
     public BigDecimal getBonuses() {
         BigDecimal salary = new BigDecimal(String.valueOf(getSalary()));
         BigDecimal bonus = new BigDecimal("0.10");
-        BigDecimal result = salary.multiply(bonus);
-        return result;
+        return salary.multiply(bonus);
+    }
+
+    public BigDecimal getTotalSum() {
+        return totalSum;
     }
 
     @Override
@@ -60,6 +96,7 @@ public class Employee {
                 ", rate: " + rate +
                 ", hours: " + hours +
                 ", salary: " + getSalary() +
-                ", bonus: " + getBonuses();
+                ", bonus: " + getBonuses() +
+                ";";
     }
 }

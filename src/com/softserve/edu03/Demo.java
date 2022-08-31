@@ -1,29 +1,33 @@
 package com.softserve.edu03;
 
-import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
 
+
 public class Demo {
-    private static BigDecimal totalSum = BigDecimal.ZERO;
-
     public static void demonstration() {
-
-        List<Employee> obj = new ArrayList<>();
+        Employee emplObj = new Employee();
+        List<Employee> emplList = new ArrayList<>();
         for (int i = 0; i < 3; i++) {
-            obj.add(i, new Employee("Employee" + i,
+            emplList.add(i, new Employee("Employee" + (i + 1),
                     (10 * ((i + 1) * 5)), (12 * ((i + 1) * 5))));
         }
 
-        for (int i = 0; i < obj.size(); i++) {
-            System.out.println(obj.get(i));
+        for (int i = 0; i < emplList.size(); i++) {
+            System.out.println(emplList.get(i));
         }
+        System.out.println("Total salary for 3 workers: "
+                + emplObj.getTotalSum());
 
-        System.out.println("\nIncrease rate for Employee0: " + obj.get(0).changeRate(200));
-
-        for (int i = 0; i < obj.size(); i++) {
-            totalSum = totalSum.add(obj.get(i).getSalary());
+        // change rate for employee1
+        System.out.println("\nChange rate for Employee1: " +
+                emplList.get(0).changeRate(300) + "\n");
+        // show whole statistic after changing rate
+        for (int i = 0; i < emplList.size(); i++) {
+            System.out.println(emplList.get(i));
         }
-        System.out.println("\nTotal salary: " + totalSum);
+        System.out.println("Total salary for 3 workers: "
+                + emplObj.getTotalSum());
+
     }
 }

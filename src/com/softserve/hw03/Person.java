@@ -48,28 +48,6 @@ public class Person {
         return s.substring(0, 1).toUpperCase() + s.substring(1);
     }
 
-    //TODO move this logic to Demo class
-    public void changeName() throws IOException {
-        System.out.print("\nDo you want to change first (1) or last (2) name? (enter 1 or 2): ");
-        int input = InputReader.getInputInt();
-        String strInput;
-        switch (input) {
-            case 1: {
-                System.out.print("Enter first name: ");
-                strInput = InputReader.getInputString();
-                firstName = strInput;
-                break;
-            }
-            case 2: {
-                System.out.print("Enter last name: ");
-                strInput = InputReader.getInputString();
-                lastName = strInput;
-                break;
-            }
-            default: System.out.println("\nwrong input");
-        }
-    }
-
     public void input() throws IOException {
         System.out.print("Enter first name: ");
         this.firstName = InputReader.getInputString();
@@ -79,16 +57,11 @@ public class Person {
         this.birthYear = InputReader.getInputInt();
     }
 
-    //TODO write this method correct, that method must show information about Person
     public void output() {
-        System.out.println(toString());
+        System.out.println("first name: " + capitStr(firstName) +
+                ", last name: " + capitStr(lastName) +
+                ", birth year: " + birthYear +
+                ", age: " + getAge() + ";");
     }
 
-    @Override
-    public String toString() {
-        return "firstName: " + capitStr(firstName) +
-                ", lastName: " + capitStr(lastName) +
-                ", birthYear: " + birthYear +
-                ", age: " + getAge() + ";";
-    }
 }
