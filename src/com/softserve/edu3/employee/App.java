@@ -1,10 +1,8 @@
-package com.softserve.edu4.employee;
+package com.softserve.edu3.employee;
 
-import java.util.Arrays;
 import java.util.concurrent.ThreadLocalRandom;
 
 public class App {
-    //TODO rename package from udu4 to adu03
     public static void main(String[] args) {
         for (int i = 0; i < 3;) {
             Employee employee = new Employee("employee" + (++i),
@@ -18,10 +16,6 @@ public class App {
             System.out.println("________________________________");
         }
 
-        //TODO Your totalSum do not represent correct data, the value in this variable is zero
         System.out.println("Total sum is = " + Employee.getTotalSum());
-
-
-        //TODO this is cool that yor know how use Lombok, but please use that in your own projects. Pleas in that task write constructor without params
     }
 }

@@ -1,10 +1,9 @@
-package com.softserve.hw04.person;
+package com.softserve.hw03.person;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class App {
-    //TODO rename package from hw04.person to hw03
     public static void main(String[] args) {
         List<Person> persons = new ArrayList<>();
 

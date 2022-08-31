@@ -19,11 +19,12 @@ public class PhoneCallsTask {
     private static List<Conversation> callsList = new ArrayList<>();
 
     protected static void calculateCallsCost() {
-        fillCallsList();
-        shouInfoAboutCalls();
+        PhoneCallsTask phoneCallsTask = new PhoneCallsTask();
+        phoneCallsTask.fillCallsList();
+        phoneCallsTask.shouInfoAboutCalls();
     }
 
-    private static void fillCallsList() {
+    private void fillCallsList() {
         for (int i = 1; i <= AMOUNT_CALLS; i++) {
             writeMessage("Enter the call time for conversation #" + i + ":");
             int timing = readIntMessage();
@@ -33,7 +34,7 @@ public class PhoneCallsTask {
         }
     }
 
-    private static void shouInfoAboutCalls() {
+    private void shouInfoAboutCalls() {
         writeMessage("\n__Calls information__\n");
         for (int i = 0; i < callsList.size(); i++) {
             writeMessage((i + 1) + " conversation:");
@@ -86,11 +87,10 @@ public class PhoneCallsTask {
 
         @Override
         public String toString() {
-            return String.format("""
-                    timing - %d
-                    tariff - %.2f
-                    prise - %.2f
-                    """, timing, tariff, prise);
+            return String.format("timing - %d" +
+                    "\ntariff - %.2f" +
+                    "\nprise - %.2f"
+                    , timing, tariff, prise);
         }
     }
 }

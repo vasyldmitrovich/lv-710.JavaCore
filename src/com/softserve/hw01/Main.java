@@ -7,11 +7,11 @@ public class Main {
 
     public static void main(String[] args) {
 
-        FlowerBedTask.calculateThePerimeterAndArea();
+//        FlowerBedTask.calculateThePerimeterAndArea();
 
 //        NameAndAddressTask.defineNameAndAddress();
 
-//        PhoneCallsTask.calculateCallsCost();
+        PhoneCallsTask.calculateCallsCost();
 
     }
 }

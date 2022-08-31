@@ -1,6 +1,4 @@
-package com.softserve.edu4.student;
-
-import java.util.stream.Stream;
+package com.softserve.edu3.student;
 
 public class App {
     public static void main(String[] args) {

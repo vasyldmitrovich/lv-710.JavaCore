@@ -1,15 +1,19 @@
-package com.softserve.hw04.person;
+package com.softserve.hw03.person;
 
-import lombok.SneakyThrows;
 
 import java.io.BufferedReader;
+import java.io.IOException;
 import java.io.InputStreamReader;
 
 public class ConsoleHelper {
     private static final BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
 
-    @SneakyThrows
+
     protected static String getDataFromConsole() {
-        return reader.readLine();
+        try {
+            return reader.readLine();
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
     }
 }

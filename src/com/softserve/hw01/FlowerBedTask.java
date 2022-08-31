@@ -15,12 +15,11 @@ class FlowerBedTask {
 
         double radius = getRadiusFromUser();
 
-        writeMessage(String.format("""
-                Circle has:
-                radius = %.2f
-                area = %.2f
-                perimeter = %.2f
-                """, radius, getArea(radius), getPerimeter(radius)));
+        writeMessage(String.format("Circle has:" +
+                "\nradius = %.2f" +
+                "\narea = %.2f" +
+                "\nperimeter = %.2f"
+                , radius, getArea(radius), getPerimeter(radius)));
     }
 
     private static double getRadiusFromUser() {
