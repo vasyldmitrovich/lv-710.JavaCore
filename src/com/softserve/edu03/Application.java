@@ -1,8 +1,6 @@
-package com.softserve.edu4;
+package com.softserve.edu03;
 
-import java.util.Arrays;
-
-public class Appl { // extends Object by default
+public class Application { // extends Object by default
 
     private String name = "Ivan";
 
