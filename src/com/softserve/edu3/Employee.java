@@ -6,6 +6,8 @@ public class Employee {
     private int hours;
     private static float totalSum = 0;
 
+
+    //TODO add constructor without parameters
     public Employee(String name, int rate) {
         this.name = name;
         this.rate = rate;
@@ -27,7 +29,7 @@ public class Employee {
     }
 
     public float getSalary() {
-        float Salary = 0;
+        float Salary = 0;//TODO do not correct naming variable must be lover case
         Salary = hours * rate;
         updateTotalSum(Salary);
         return Salary;
