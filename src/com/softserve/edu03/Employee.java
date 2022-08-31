@@ -34,6 +34,7 @@ public class Employee {
         totalSum += salary() + bonuses();
     }
 
+    //TODO move to top, before methods
     public Employee() {
         totalSum += salary() + bonuses();
     }
@@ -71,6 +72,7 @@ public class Employee {
         return info;
     }
 
+    //TODO delete unneeded main method from that class
     public static void main(String[] args) {
 
     }
