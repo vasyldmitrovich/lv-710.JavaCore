@@ -1,10 +1,8 @@
-package com.softserve.edu04;
+package com.softserve.edu03;
 
 import java.util.ArrayList;
 
 public class Main {
-
-    //TODO rename folder edu04 to edu03
 
     public static void main(String[] args) {
 
