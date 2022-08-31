@@ -10,6 +10,14 @@ public class Person {
     private String lastName = "";
     private int birthYear;
 
+    Person() {
+    }
+
+    Person(String firstName, String lastName) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+    }
+
     public String getFirstName() {
         return firstName;
     }
@@ -34,14 +42,6 @@ public class Person {
         this.birthYear = birthYear;
     }
 
-    //TODO move constructors before getters and setters
-    Person() {
-    }
-
-    Person(String firstName, String lastName){
-        this.firstName = firstName;
-        this.lastName = lastName;
-    }
 
     public int getAge() {
         return Calendar.getInstance().get(Calendar.YEAR) - birthYear;
@@ -66,11 +66,12 @@ public class Person {
 
     @Override
     public String toString() {
-        return "Person {"+
+        return "Person {" +
                 " First name: " + this.firstName +
                 ", last name: " + this.lastName +
-                ", birth year: " + this.birthYear +"}";
+                ", birth year: " + this.birthYear + "}";
     }
+
     public void changeName(String firstName, String lastName) {
         if (!firstName.isBlank()) this.firstName = firstName;
         if (!lastName.isBlank()) this.lastName = lastName;
