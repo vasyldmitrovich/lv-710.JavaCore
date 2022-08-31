@@ -17,19 +17,21 @@ public class Main {
 
         System.out.println("---");
 
-        System.out.println(firstEmployee.getName() + " " + firstEmployee.getSalary());
+        System.out.println(firstEmployee.getName() + " - " + firstEmployee.getSalary());
         firstEmployee.setRate(20);
-        System.out.println(firstEmployee.getName() + " " + firstEmployee.getSalary());
+        System.out.println(firstEmployee.getName() + " - " + firstEmployee.getSalary());
         System.out.println("---");
 
-        System.out.println(secondEmployee.getName() + " " + secondEmployee.getSalary());
+        System.out.println(secondEmployee.getName() + " - " + secondEmployee.getSalary());
         secondEmployee.setRate(200);
-        System.out.println(secondEmployee.getName() + " " + secondEmployee.getSalary());
+        System.out.println(secondEmployee.getName() + " - " + secondEmployee.getSalary());
         System.out.println("---");
 
-        System.out.println(thirdEmployee.getName() + " " + thirdEmployee.getSalary());
+        System.out.println(thirdEmployee.getName() + " - " + thirdEmployee.getSalary());
         thirdEmployee.setRate(300);
-        System.out.println(thirdEmployee.getName() + " " + thirdEmployee.getSalary());
+        thirdEmployee.setBonus(100);
+        System.out.println(thirdEmployee.getName() + " - " + thirdEmployee.getBonus() + " bonus = " +
+                thirdEmployee.getSalary());
         System.out.println("---");
 
 

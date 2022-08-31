@@ -4,15 +4,11 @@ import java.util.ArrayList;
 
 public class Employee {
 
-    private int totalSum;//TODO do not needed count, need static totalSum
 
     private String name;
     private int rate;
     private int hours;
-    private int newRate;//TODO rate must be only one
-    private final double bonuses = 1.1;
-    private ArrayList<Employee> list;//TODO this field you do not use in your object, delete that field
-    private int count;//TODO do not needed count, need static totalSum
+    private int bonus = 0;
 
     Employee() {
     }
@@ -26,6 +22,13 @@ public class Employee {
         this.name = name;
         this.rate = rate;
         this.hours = hours;
+    }
+
+    Employee(String name, int rate, int hours, int bonus) {
+        this.name = name;
+        this.rate = rate;
+        this.hours = hours;
+        this.bonus = bonus;
     }
 
     public void setName(String name) {
@@ -53,7 +56,7 @@ public class Employee {
     }
 
     public int getSalary() {
-        return this.rate * this.hours;
+        return this.rate * this.hours + this.bonus;
     }
 
     @Override
@@ -69,8 +72,12 @@ public class Employee {
 //        return newRate * this.hours;
 //    }
 
-    public double getBonuses() {
-        return this.bonuses * getSalary();
+    public int getBonus() {
+        return this.bonus;
+    }
+
+    public void setBonus(int bonus) {
+        this.bonus = bonus;
     }
 
     //TODO return int value
