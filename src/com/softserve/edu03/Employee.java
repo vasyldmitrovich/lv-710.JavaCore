@@ -1,7 +1,5 @@
 package edu03;
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
+
 
 
 public class Employee {
@@ -24,20 +22,7 @@ public class Employee {
        this.rate = rate;
        this.hours = hours;
    }
-/*   public void getEmployee() throws IOException {
-  		BufferedReader br = new BufferedReader(new InputStreamReader(System.in)); 
-      	System.out.println("What is your name? ");
-      	String name = br.readLine();
-      	System.out.println("What is your Rate? " +name +"?");
-   
 
-        rate = Double.parseDouble ( br.readLine() );
-      	
-      	System.out.println("How many hours did you work? " +name +"?");
-        
-
-       double hours = Double.parseDouble ( br.readLine() );
-   }*/
    public String getName() {
        return name;
    }
