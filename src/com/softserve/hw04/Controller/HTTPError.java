@@ -19,8 +19,8 @@ public enum HTTPError {
     UNSUPPORTED_MEDIA_TYPE(415, "unsupported media type"),
     REQUESTED_RANGE_NOT_SATISFIABLE(416, "requested range not satisfiable"),
     EXPECTATION_FAILED(417, "expectation failed");
-    int code;
-    String statusCode;
+    private final int code;
+    private final String statusCode;
     HTTPError(int code, String statusCode) {
         this.code=code;
         this.statusCode=statusCode;
@@ -29,8 +29,11 @@ public enum HTTPError {
     public int getCode() {
         return code;
     }
-
     public String getStatusCode() {
         return statusCode;
+    }
+    public static String getStatusCode(int codeErr) {
+        for (HTTPError err : HTTPError.values()) if (err.code == codeErr) return err.statusCode;
+        return "No Code "+codeErr;
     }
 }

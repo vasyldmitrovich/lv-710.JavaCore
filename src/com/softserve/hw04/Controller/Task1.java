@@ -27,12 +27,7 @@ public class Task1 {
         System.out.println("min = " + min + ", max = " + max);
 
         int HTTPErr = myIn.readInt("Enter HTTP Error code(400-417): ");
-        myOut.print("Status code: ", getStatusCode(HTTPErr));
-    }
-
-    private static String getStatusCode(int codeErr) {
-        for (HTTPError err : HTTPError.values()) if (err.code == codeErr) return err.statusCode;
-        return "No Code";
+        myOut.print("Status code: ", HTTPError.getStatusCode(HTTPErr));
     }
 
     private static void addWithCheck() {
