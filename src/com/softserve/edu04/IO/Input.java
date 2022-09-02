@@ -3,7 +3,7 @@ package com.softserve.edu04.IO;
 import java.util.Scanner;
 
 public class Input implements In{
-    private Scanner sc;
+    private final Scanner sc;
 
     public Input() {
         sc = new Scanner(System.in);
@@ -15,17 +15,26 @@ public class Input implements In{
         }
     }
 
+    @Override
     public int readInt(String... msg) {
         printMsg(msg);
         return sc.nextInt();
     }
+    @Override
     public String readString(String... msg) {
         printMsg(msg);
         return sc.nextLine();
     }
+    @Override
     public double readDouble(String... msg) {
         printMsg(msg);
         return sc.nextDouble();
+    }
+
+    @Override
+    public boolean readBoolean(String... msg) {
+        printMsg(msg);
+        return sc.nextBoolean();
     }
 
     public void close() {

@@ -6,5 +6,6 @@ public interface In {
     String readString(String... msg);
 
     double readDouble(String... msg);
+    boolean readBoolean(String... msg);
     void close();
 }
