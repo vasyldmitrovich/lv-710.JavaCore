@@ -15,7 +15,7 @@ public class App {
     private static void runTask() {
         In myIn = new Input();
         int task = myIn.readInt("What task to start with?(1-4) ");
-        boolean andAllAfter = myIn.readBoolean("Do all the following?(true/faulse) ");
+        boolean andAllAfter = myIn.readBoolean("Do all the following?(true/false) ");
         switch (task) {
             case 1:
                 System.out.println("Task 1");
