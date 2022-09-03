@@ -1,4 +1,4 @@
-package com.softserve.edu3.employee;
+package com.softserve.edu03.employee;
 
 
 public class Employee {

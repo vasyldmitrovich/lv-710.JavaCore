@@ -1,4 +1,4 @@
-package com.softserve.edu3.student;
+package com.softserve.edu03.student;
 
 
 import java.util.Objects;

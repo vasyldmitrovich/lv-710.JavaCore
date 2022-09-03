@@ -1,4 +1,4 @@
-package com.softserve.hw03.person;
+package com.softserve.hw03;
 
 
 import java.io.BufferedReader;
