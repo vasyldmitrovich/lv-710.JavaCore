@@ -1,4 +1,4 @@
-package com.softserve.hw04.io;
+package com.softserve.hw03.io;
 
 import java.util.Scanner;
 

@@ -1,6 +1,6 @@
-package com.softserve.hw04;
+package com.softserve.hw03;
 
-import com.softserve.hw04.io.Input;
+import com.softserve.hw03.io.Input;
 
 public class Main {
 

@@ -1,4 +1,4 @@
-package com.softserve.hw04;
+package com.softserve.hw03;
 
 import java.time.Duration;
 import java.time.LocalDate;
