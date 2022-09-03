@@ -10,28 +10,30 @@ public class Employee {
 	private double bonus;
 	
 	
-	public Employee() {
-		this.name = "Unknown";
-		this.rate = 0;
-		this.hours = 0;
-		getSalary();
-	}
+//	public Employee() {
+//		this.name = "Unknown";
+//		this.rate = 0;
+//		this.hours = 0;
+//		getSalary();
+//	}
+//
+//	public Employee(String name, double rate) {
+//		this.name = name;
+//		this.rate = rate;
+//		getSalary();
+//
+//	}
 
-	public Employee(String name, double rate) {
-		this.name = name;
-		this.rate = rate;
-		getSalary();
-
-	}
-
-	public Employee(String name, double rate, double hours) {
+	public Employee(String name, double rate, double hours, double bonus) {
 		this.name = name;
 		this.rate = rate;
 		this.hours = hours;
+		this.bonus = bonus;
 		getSalary();
-		getBonus();
+		getTotalBonus();
 		totalSum += salary;	
-		totalBonus += bonus;
+		totalSum = totalSum+ totalBonus;
+		
 		
 	}
 
@@ -70,11 +72,11 @@ public class Employee {
 	}
 	
 	public void setBonus(double bonus) {
-		this.bonus = bonus;
+		this.bonus = getSalary() * bonus / 100;
+		totalBonus += this.bonus;
 	}
 	
 	public double getBonus() {
-		this.bonus = getSalary() * bonus;
 		return bonus;
 	}
 	
@@ -82,10 +84,14 @@ public class Employee {
 		return totalBonus;
 	}
 	
+////	public void changeRate (double rate) {
+////		this.rate = rate;
+//	}
+	
 	@Override
 	public String toString() {
 		return "Employee [name=" + name + ", rate=" + rate + ", hours=" + hours + ", salary=" + salary + 
-				", bonus=" + bonus + "%" + "]";
+				", bonus=" + bonus + "]";
 	}
 				
 }
