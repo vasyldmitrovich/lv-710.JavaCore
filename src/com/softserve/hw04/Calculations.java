@@ -17,6 +17,20 @@ public class Calculations {
                 maxValue = integer;
             }
         }
-        System.out.println(maxValue);
+        System.out.println("Maximum integer in array is equal to: " + maxValue);
+    }
+
+    public int oddNumbers(Integer... values) {
+        int val = 0;
+        for(Integer value : values) {
+            if(value % 2 == 0) {
+                val = value;
+                System.out.println("Even number" + value);
+            } else {
+                val = value;
+                System.out.println("Odd number " + value);
+            }
+        }
+        return val;
     }
 }
