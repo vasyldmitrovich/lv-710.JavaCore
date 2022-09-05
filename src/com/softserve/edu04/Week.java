@@ -39,11 +39,6 @@ public enum Week  {
         public String getSp() {
             return sp;
         }
-    
-
-	//public class WeekDay {
-		
-	//}
 		
 		 public static void weekDay() { 
   
