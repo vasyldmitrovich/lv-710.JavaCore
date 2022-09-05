@@ -20,10 +20,27 @@ public class InputReader {
     public static int getInputInt() throws IOException {
         try {
             return Integer.parseInt(bf.readLine());
-
         } catch (NumberFormatException e) {
             System.out.println("wrong data");
             return getInputInt();
+        }
+    }
+
+    public static float getInputFloat() throws IOException {
+        try {
+            return Float.parseFloat(bf.readLine());
+        } catch (NumberFormatException e) {
+            System.out.println("wrong data");
+            return getInputFloat();
+        }
+    }
+
+    public static double getInputDouble() throws IOException {
+        try {
+            return Double.parseDouble(bf.readLine());
+        } catch (NumberFormatException e) {
+            System.out.println("wrong data");
+            return getInputDouble();
         }
     }
 }
