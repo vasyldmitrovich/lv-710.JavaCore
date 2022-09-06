@@ -28,6 +28,7 @@ public class Task1 {
         // #3
 //        task1.identifyHTTPStatus(404);
 
+
     }
 
     // #1 ---------------------------------------------------------------
@@ -84,7 +85,7 @@ public class Task1 {
         return httpStatus -> httpStatus.getStatuses().stream()
                 .filter(status -> status.getCode() == code)
                 .findFirst()
-                .ifPresent(status -> writeMessage(status.getCode() + " " + status.getName()));
+                .ifPresent(status -> writeMessage(httpStatus.name() + " " + status.getCode() + " " + status.getName()));
     }
 
     private Predicate<HTTPStatus> containsCodePredicate(Integer code) {
