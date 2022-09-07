@@ -28,11 +28,9 @@ public class Main {
 
     public static void main(String[] args) throws IOException {
         Employee emp1 = newEmployee();
-        emp1.addToTotalSum();
         Employee emp2 = newEmployee();
-        emp2.addToTotalSum();
         Employee emp3 = newEmployee();
-        emp3.addToTotalSum();
+        emp3.changeRate(15.0);
         getSalary(emp1);
         getSalary(emp2);
         getSalary(emp3);

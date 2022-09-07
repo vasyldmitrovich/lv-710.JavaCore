@@ -21,6 +21,7 @@ public class Employee {
         this.name = name;
         this.rate = rate;
         this.hours = hours;
+        totalSum += getSalary();
     }
     public String getName() {
         return name;
@@ -59,13 +60,16 @@ public class Employee {
                 ", hours='" + this.hours+ "'}'";
     }
 
-    public void addToTotalSum() {
+/*    public void addToTotalSum() {
         totalSum = totalSum + getSalary();
-    }
+    }*/
 
     public double changeRate(double rate) {
+        totalSum -= getSalary();
         setRate(rate);
+        totalSum += getSalary();
         return rate;
+
     }
 
     public double getBonuses() {
