@@ -1,4 +1,6 @@
-package com.softserve.edu04;
+package com.softserve.edu04.tasks;
+
+import com.softserve.edu04.DayOfTheWeek;
 
 public class Task2 {
     public static void main(String[] args) {
