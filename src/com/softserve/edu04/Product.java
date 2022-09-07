@@ -39,15 +39,15 @@ public class Product {
 	     public void setQuantity(int quantity) {
 	       this.quantity = quantity;
 	   }
-	     Product p1 = new Product("TV", 1000, 1000 );
-	     Product p2 = new Product("Phone", 2000, 2000 );
-	     Product p3 = new Product("Laptop", 3000, 3000 );
-	     Product p4 = new Product("VR", 4000, 4000 );
-	     Product[] products = {p1, p2, p3, p4};
+	     static Product p1 = new Product("TV", 1000, 1000 );
+	     static Product p2 = new Product("Phone", 2000, 2000 );
+	     static Product p3 = new Product("Laptop", 3000, 3000 );
+	     static Product p4 = new Product("VR", 4000, 4000 );
+	    static Product[] products = {p1, p2, p3, p4};
 	     
 	   
 	   
-	     public void mostExpencive () {
+	     public static void mostExpencive () {
 	    	 Product mp = new Product("", 0, 0);
 	    	 for ( int i = 0; i < products.length; i++) {
 	    		 if (mp.getPrice() < products[i].getPrice()){
@@ -59,7 +59,7 @@ public class Product {
 	    	
 	     }
 	     
-	     public void maxQuantity () {
+	     public static void maxQuantity () {
 	    	 Product mq = new Product("", 0, 0);
 	    	 for ( int i = 0; i < products.length; i++) {
 	    		 if (mq.getQuantity() < products[i].getQuantity()){
