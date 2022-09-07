@@ -3,6 +3,7 @@ package com.softserve.hw01;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.util.Arrays;
 
 /**
  * @author Serhii Mudrachnko
@@ -28,6 +29,18 @@ public class MessageHelper {
         } catch (NumberFormatException e) {
             writeMessage("Invalid input. Try again.");
             return readIntMessage();
+        }
+    }
+
+    public static int[] readIntNumbersMessage() {
+        String input = readStringMessage();
+        try {
+            return Arrays.stream(input.split("[\\s_.,/]\\s?"))
+                    .mapToInt(Integer::parseInt)
+                    .toArray();
+        } catch (NumberFormatException e) {
+            writeMessage("Invalid input. Try again.");
+            return readIntNumbersMessage();
         }
     }
 
