@@ -49,7 +49,7 @@ public class App {
         }
     }
 
-    private void display(List<Employee> employees) {
+    private void display(List<? extends Employee> employees) {
         Arrays.stream(Department.values()).forEach(department ->
                 writeMessage(department.departmentNumber + " - " + department.name()));
 

@@ -1,15 +1,26 @@
 package com.softserve.edu05.practical_tasks.task2.entities;
 
-public interface Employee {
-    int getDepartmentNumber();
+public abstract class Employee {
+    private String name;
+    private double salary;
 
-    String getName();
 
-    void setName(String name);
+    public abstract int getDepartmentNumber();
 
-    double getSalary();
+    public String getName() {
+        return name;
+    }
 
-    void setSalary(double salary);
+    public void setName(String name) {
+        this.name = name;
+    }
 
+    public double getSalary() {
+        return salary;
+    }
+
+    public void setSalary(double salary) {
+        this.salary = salary;
+    }
 
 }
