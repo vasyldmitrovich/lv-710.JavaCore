@@ -1,5 +1,7 @@
 package com.softserve.edu06.Inher;
 
+import java.util.Arrays;
+
 public class AppInheritance {
     public static void main(String[] args) {
 /*
@@ -17,7 +19,6 @@ public class AppInheritance {
 */
 
 
-/*
         A a = new A(14);
         System.out.println("i = " + a.getI());
         B b = new B();
@@ -26,7 +27,11 @@ public class AppInheritance {
         a = b; // Upcasting
         System.out.println("i = " + a.getI());
         System.out.println("j = " + ((B) a).j); // Code Smell; // Downcasting
-*/
+        /*---------------*/
+//        System.out.println("ClassCastException");
+//        b = (B) a;
+//        System.out.println("args = " + b.j); //ClassCastException
+
 
 
 /*
