@@ -7,7 +7,6 @@ import java.util.Objects;
 
 public class FactoryEmployee {
     public static AbstractFactory getFactory(int departmentNumber) throws NonExistingDepartmentException {
-        Objects.checkIndex(departmentNumber, Department.values().length + 1);
         switch (departmentNumber) {
             case 1:
                 return new FactorySeller();
