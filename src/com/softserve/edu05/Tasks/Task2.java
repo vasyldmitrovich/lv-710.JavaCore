@@ -8,10 +8,10 @@ public class Task2 {
         Employee[] arrayEmployee = new Employee[5];
         In myIn = new Input();
         arrayEmployee[0] = new Employee("Bogdan", 3, 150);
-        arrayEmployee[1] = new Employee("Ihor", 2, 100);
-        arrayEmployee[2] = new Employee("Vadim", 1, 100);
-        arrayEmployee[3] = new Employee("Petro", 2, 100);
-        arrayEmployee[4] = new Employee("Ivan", 1, 100);
+        arrayEmployee[1] = new Employee("Ihor", 2, 90);
+        arrayEmployee[2] = new Employee("Vadim", 1, 120);
+        arrayEmployee[3] = new Employee("Petro", 2, 80);
+        arrayEmployee[4] = new Employee("Ivan", 1, 160);
         int department = myIn.readInt("Enter department number(1-3): ");
         System.out.println("Employees from department " + department + " :");
         for (int i = 0; i < 5; i++)
@@ -19,6 +19,7 @@ public class Task2 {
 
         // Arrays.sort(arrayEmployee, Comparator.comparing(Employee::getSalary));
         Employee temp;
+        //if
         for (int i = 0; i < 4; i++) {
             for (int j = i + 1; j < 5; j++) {
                 if (arrayEmployee[i].getSalary() > arrayEmployee[j].getSalary()) {
