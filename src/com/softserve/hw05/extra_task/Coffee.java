@@ -3,10 +3,10 @@ package com.softserve.hw05.extra_task;
 import java.util.HashMap;
 import java.util.Map;
 
-public class Coffee implements DrinkReceipt, DrinkPreparation, Rating{
+public class Coffee implements DrinkReceipt, DrinkPreparation, Rating {
     private String name;
     private int rating;
-    protected Map<String, Integer> ingredients;
+    protected Map<String, Integer> ingredients = new HashMap<>();
 
     public Coffee() {
     }
@@ -16,22 +16,17 @@ public class Coffee implements DrinkReceipt, DrinkPreparation, Rating{
         this.rating = rating;
     }
 
-    public Map<String, Integer> getIngredients() {
-        return ingredients;
-    }
-
     @Override
     public Map<String, Integer> makeDrink() {
-        ingredients = new HashMap<>(){{
-            put("Water", 100);
-            put("Arabica", 20);
-        }};
+        addComponent("Water", 100);
+        addComponent("Arabica", 20);
         return ingredients;
     }
 
     @Override
     public DrinkReceipt addComponent(String componentName, int componentCount) {
-        return null;
+        this.ingredients.put(componentName, componentCount);
+        return this;
     }
 
     @Override

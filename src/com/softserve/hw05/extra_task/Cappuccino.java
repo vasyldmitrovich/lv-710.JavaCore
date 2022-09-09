@@ -12,8 +12,9 @@ public class Cappuccino extends Coffee {
 
     @Override
     public Map<String, Integer> makeDrink() {
-        super.makeDrink();
-        ingredients.put("Milk", 50);
+        addComponent("Water", 100);
+        addComponent("Arabica", 20);
+        addComponent("Milk", 50);
         return ingredients;
     }
 }

@@ -1,6 +1,5 @@
 package com.softserve.hw05.extra_task;
 
-import java.util.HashMap;
 import java.util.Map;
 
 public class Espresso extends Coffee {
@@ -13,10 +12,8 @@ public class Espresso extends Coffee {
 
     @Override
     public Map<String, Integer> makeDrink() {
-        ingredients = new HashMap<>(){{
-            put("Water", 50);
-            put("Arabica", 20);
-        }};
+        addComponent("Water", 50);
+        addComponent("Arabica", 20);
         return ingredients;
     }
 }

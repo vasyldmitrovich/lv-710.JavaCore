@@ -13,7 +13,7 @@ import java.util.List;
  * method makeDrink(). Espresso coffee has 50 g. of Water. Cappuccino coffee has additional of 50 g. of Milk.
  * Create a averageRating() method of the MyUtils class to return a Map with coffee name as key and coffee
  * average rating as value.
- * 
+ *
  * For example, for a given list
  * [Espresso [name=Espresso, rating=8],
  * Cappuccino [name=Cappuccino, rating=10],
@@ -36,5 +36,6 @@ public class App {
 
         System.out.println(MyUtils.averageRating(coffees));
     }
+
 
 }
