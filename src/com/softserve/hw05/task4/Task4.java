@@ -22,6 +22,7 @@ public class Task4 {
             add(new Car(CarType.SPORTS_CAR, 1982, 3700));
         }};
 
+        writeMessage("Enter year in the console:");
         int year = readIntMessage();
         writeMessage("Search results by " + year + " year:");
         cars.stream()
