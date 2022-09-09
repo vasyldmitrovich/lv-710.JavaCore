@@ -1,4 +1,4 @@
-package Lesson3;
+package com.softserve.edu_03.Lesson3;
 
 public class Employee {
 	static double totalSum;
