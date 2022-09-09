@@ -1,7 +1,5 @@
 package com.softserve.edu04.practical_tasks.task1;
 
-import com.softserve.hw01.MessageHelper;
-
 import java.util.Arrays;
 
 import static com.softserve.hw01.MessageHelper.*;
@@ -10,11 +8,11 @@ import static com.softserve.hw01.MessageHelper.*;
  * Enter three numbers. Find out how many of them are odd.
  */
 
-public class App {
-    public static void main(String[] args) {
+public class Task1 {
+    public static void runTask1() {
         findHowManyOdd();
     }
-    
+
     private static void findHowManyOdd() {
         writeMessage("Enter any numbers:");
         String input = readStringMessage();

@@ -9,8 +9,8 @@ import static com.softserve.hw01.MessageHelper.*;
  * Enter the name of the country. Print the name of the continent. (Declare enum with names of continents)
  */
 
-public class App {
-    public static void main(String[] args) {
+public class Task3 {
+    public static void runTask3() {
         writeMessage("Enter the name of the country:");
         String country = readStringMessage();
         getContinentByCountry(country);

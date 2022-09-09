@@ -6,8 +6,8 @@ import static com.softserve.hw01.MessageHelper.*;
 /**
  * Enter the number of the day of the week. Display the name in three languages.
  */
-public class App {
-    public static void main(String[] args) {
+public class Task2 {
+    public static void runTask2() {
         WhatDayOfTheWeek();
     }
 

@@ -14,7 +14,7 @@ import static com.softserve.hw01.MessageHelper.writeMessage;
  * - ordered by the field year.
  */
 public class Task4 {
-    public static void main(String[] args) {
+    public static void runTask4() {
         List<Car> cars = new ArrayList<>() {{
             add(new Car(CarType.TRUCK, 1996, 2000));
             add(new Car(CarType.MINIVAN, 2002, 1800));

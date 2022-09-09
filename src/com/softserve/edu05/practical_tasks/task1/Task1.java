@@ -13,15 +13,14 @@ import static com.softserve.hw01.MessageHelper.writeMessage;
  * - the amount of negative numbers in the array.
  * What values there are more: negative or positive?
  */
-public class App {
-    public static void main(String[] args) {
-        App app = new App();
+public class Task1 {
+    public static void runTask1() {
+        Task1 app = new Task1();
         int[] integers = {1, 5, -3, -4, 9, 7, 0, -2, 4, 2};
 
         app.declarativeExecute(integers);
 
         app.imperativeExecute(integers);
-
     }
 
     private void declarativeExecute(int[] arr) {

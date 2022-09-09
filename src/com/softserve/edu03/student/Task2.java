@@ -1,7 +1,7 @@
 package com.softserve.edu03.student;
 
-public class App {
-    public static void main(String[] args) {
+public class Task2 {
+    public static void runTask2() {
         Student studentBob = new Student("Bob", 2);
         showInfo();
 

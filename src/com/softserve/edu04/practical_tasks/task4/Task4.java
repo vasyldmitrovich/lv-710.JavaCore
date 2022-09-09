@@ -13,8 +13,8 @@ import java.util.stream.Collectors;
  * 3 - Display the name of the items, which has the biggest quantity.
  */
 
-public class App {
-    public static void main(String[] args) {
+public class Task4 {
+    public static void runTask4() {
         // #1
         var products = new ArrayList<Product>() {{
             add(new Product("Boat", 1200.00, 10));

@@ -2,8 +2,8 @@ package com.softserve.edu03.employee;
 
 import java.util.concurrent.ThreadLocalRandom;
 
-public class App {
-    public static void main(String[] args) {
+public class Task1 {
+    public static void runTask1() {
         for (int i = 0; i < 3;) {
             Employee employee = new Employee("employee" + (++i),
                     ThreadLocalRandom.current().nextInt(10_000, 20_000),

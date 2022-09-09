@@ -23,9 +23,8 @@ import java.util.List;
  * you should get
  * {Espresso=9.00, Cappuccino=8.00, Coffee=6.00}
  */
-public class App {
-
-    public static void main(String[] args) {
+public class ExtraTask {
+    public static void runExtraTask() {
         List<Coffee> coffees = new ArrayList<>() {{
             add(new Espresso("Espresso", 8));
             add(new Cappuccino("Cappuccino", 10));
@@ -36,6 +35,5 @@ public class App {
 
         System.out.println(MyUtils.averageRating(coffees));
     }
-
 
 }

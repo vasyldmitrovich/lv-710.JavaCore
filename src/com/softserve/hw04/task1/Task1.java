@@ -16,19 +16,17 @@ import static com.softserve.hw01.MessageHelper.*;
  */
 
 public class Task1 {
-    public static void main(String[] args) {
+    public static void runTask1() {
         Task1 task1 = new Task1();
 
         // #1
         task1.checkFloatsToTheRange(3, 5.0f);
 
         // #2
-//        task1.findMaxIntegerValue(3);
+        task1.findMaxIntegerValue(3);
 
         // #3
-//        task1.identifyHTTPStatus(404);
-
-
+        task1.identifyHTTPStatus(404);
     }
 
     // #1 ---------------------------------------------------------------

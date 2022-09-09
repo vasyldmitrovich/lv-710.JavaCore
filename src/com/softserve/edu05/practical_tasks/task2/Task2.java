@@ -21,9 +21,9 @@ import static com.softserve.hw01.MessageHelper.writeMessage;
  * - arrange workers by the field salary in descending order.
  */
 
-public class App {
-    public static void main(String[] args) {
-        App app = new App();
+public class Task2 {
+    public static void runTask2() {
+        Task2 app = new Task2();
         List<Employee> employees = new ArrayList<>();
         app.fillListEmployees(employees);
         app.display(employees);

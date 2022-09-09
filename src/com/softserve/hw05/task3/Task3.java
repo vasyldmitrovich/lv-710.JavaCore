@@ -10,7 +10,7 @@ import static com.softserve.hw01.MessageHelper.writeMessage;
  * Count the product of all entered even numbers.
  */
 public class Task3 {
-    public static void main(String[] args) {
+    public static void runTask3() {
         writeMessage("Enter 5 integer numbers in one line:");
         int[] input = readIntNumbersMessage();
 

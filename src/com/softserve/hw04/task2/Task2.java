@@ -15,11 +15,7 @@ import static com.softserve.hw01.MessageHelper.writeMessage;
  *  - Display the name and the kind of the oldest dog.
  */
 public class Task2 {
-    public static void main(String[] args) {
-        new Task2().executeTask2();
-    }
-
-    private void executeTask2() {
+    public static void runTask2() {
         var dogs = new ArrayList<Dog>(){{
             add(new Dog("Charlie", Breed.BOXER, 5));
             add(new Dog("Rex", Breed.GERMAN_SHEPHERD, 8));

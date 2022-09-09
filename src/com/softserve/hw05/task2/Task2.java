@@ -11,7 +11,7 @@ import static com.softserve.hw01.MessageHelper.writeMessage;
  * Calculate the sum of first 5 elements if they are positive or product of last 5 element in the other case.
  */
 public class Task2 {
-    public static void main(String[] args) {
+    public static void runTask2() {
         writeMessage("Enter 10 integer numbers in one line:");
         int[] input = readIntNumbersMessage();
 
