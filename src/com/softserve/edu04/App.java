@@ -13,6 +13,7 @@ public class App {
     }
 
     private static void runTask() {
+        //All good, respect
         In myIn = new Input();
         int task = myIn.readInt("What task to start with?(1-4) ");
         boolean andAllAfter = myIn.readBoolean("Do all the following?(true/false) ");
