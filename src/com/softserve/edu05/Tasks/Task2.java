@@ -19,8 +19,16 @@ public class Task2 {
 
         // Arrays.sort(arrayEmployee, Comparator.comparing(Employee::getSalary));
         Employee temp;
-        //if
-        for (int i = 0; i < 4; i++) {
+        for (int i = 1; i < 5; i++) {
+            temp = arrayEmployee[i];
+            int j = i - 1;
+            while (j >= 0 && temp.getSalary() <= arrayEmployee[j].getSalary()) {
+                arrayEmployee[j + 1] = arrayEmployee[j];
+                j = j - 1;
+            }
+            arrayEmployee[j + 1] = temp;
+        }
+/*        for (int i = 0; i < 4; i++) {
             for (int j = i + 1; j < 5; j++) {
                 if (arrayEmployee[i].getSalary() > arrayEmployee[j].getSalary()) {
                     temp = arrayEmployee[i];
@@ -28,7 +36,7 @@ public class Task2 {
                     arrayEmployee[j] = temp;
                 }
             }
-        }
+        }*/
         System.out.println();
         System.out.println("Sorted list of employee :");
         for (Employee emp : arrayEmployee) {
