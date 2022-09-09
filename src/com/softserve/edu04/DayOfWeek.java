@@ -34,6 +34,7 @@ public enum DayOfWeek {
         return ua;
     }
 
+    //TODO move that code to another class, must be in another, not in enum class
     private static DayOfWeek getDayNumber() throws IOException {
         int userInput;
         System.out.print("Enter day number: ");
@@ -60,6 +61,7 @@ public enum DayOfWeek {
         return getDayNumber();
     }
 
+    //TODO move that code to another class, must be in another, not in enum class
     public static void getDayName() throws IOException {
         DayOfWeek a = getDayNumber();
         System.out.println(a.getEn());

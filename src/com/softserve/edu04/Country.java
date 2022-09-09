@@ -225,6 +225,7 @@ public enum Country {
         return continent;
     }
 
+    //TODO move that code to another class, must be in another, not in enum class
     public static void getCountryInfo() throws IOException {
         String countryInput;
         System.out.print("\nEnter counry: ");
