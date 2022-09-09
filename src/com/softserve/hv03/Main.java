@@ -1,11 +1,11 @@
-package hv03;
+package com.softserve.hv03;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.time.YearMonth;
 
-import hv03.Person;
+import com.softserve.hv03.Person;
 
 public class Main  {
 	

@@ -1,4 +1,4 @@
-package hv04;
+package com.softserve.hv04;
 
 import java.util.Scanner;
 
@@ -55,16 +55,26 @@ import java.util.Scanner;
 	    public String toString() {
 	        return getErr();
 	    }
-	        
-	        public String getErr() {
-	            return err;
-	        }
 
-	        public int getNum() {
-	            return num;
-	        }
 
-			
+		public String getErr() {
+			return err;
+		}
+
+		public int getNum() {
+			return num;
+		}
+
+
+
+
+
+
+
+
+
+		//TODO move oll that code to another class, you can move to main method, that should not be here
+
 			 public static void errName() { 
 	  
 				 HTTPError ern = HTTPError.ERROR400;

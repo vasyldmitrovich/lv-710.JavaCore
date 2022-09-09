@@ -1,4 +1,4 @@
-package edu04;
+package com.softserve.hv04;
 
 import java.util.Scanner;
 

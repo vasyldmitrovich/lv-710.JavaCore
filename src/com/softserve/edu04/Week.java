@@ -1,4 +1,4 @@
-package edu04;
+package com.softserve.edu04;
 
 import java.util.Scanner;
 
@@ -41,7 +41,11 @@ public enum Week  {
         }
 		
 		 public static void weekDay() { 
-  
+
+        //TODO Please make refactor code, code must be clear, there should be indents, reformat the code
+
+
+             //TODO move that code to main method, that code should not be here in enum class
 	Week week = Week.MONDAY;
 
 	System.out.print("Number of day (Week) = ");
@@ -61,6 +65,7 @@ public enum Week  {
   }
     System.out.println(week);
 }
+        //TODO Delete that main method
 		 public static void main(String[] args) {
 			 weekDay();	 
 		 }

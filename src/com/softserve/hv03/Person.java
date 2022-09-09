@@ -1,4 +1,4 @@
-package hv03;
+package com.softserve.hv03;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -69,16 +69,12 @@ public class Person {
 	   System.out.println ("firstName of Person= " + firstName + "lastName of Person= " + lastName + "birthYear of Person=" + birthYear);  
    }
    
-   public String changeName (String firstName, String lastName) {
-	   setfirstName(firstName);
+   /*public String changeName (String firstName, String lastName) {
+       setfirstName(firstName);
        return firstName;
        setlastName(lastName);
        return lastName;
-   }
-       	  
-       	
-
-    	   
-       }
+   }*/
+}
     
 

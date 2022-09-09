@@ -1,4 +1,4 @@
-package hv04;
+package com.softserve.hv04;
 
 import java.util.Scanner;
 
@@ -8,6 +8,7 @@ public class intNum {
 		// TODO Auto-generated method stub
 		checNum();
 	}
+	//TODO do not understand what name of method means 'chec'
 		private static void checNum() {
 			 Scanner in= new Scanner (System.in);
 			   

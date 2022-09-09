@@ -1,4 +1,4 @@
-package edu04;
+package com.softserve.edu04;
  
 import java.util.Scanner;
 
@@ -28,6 +28,7 @@ private static void countOdd() {
   System.out.println("There are: "+oddNumbers+" odd numbers");
   
 
+  //TODO write here all Practical tasks
    }
 	
 }

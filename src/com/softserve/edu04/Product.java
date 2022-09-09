@@ -1,4 +1,4 @@
-package edu04;
+package com.softserve.edu04;
 
 public class Product {
 
@@ -36,6 +36,9 @@ public class Product {
 	       this.price = price;
 	   }
 
+
+
+	   //TODO all of this following code move to main method, that code should not be here
 	     public void setQuantity(int quantity) {
 	       this.quantity = quantity;
 	   }
@@ -54,7 +57,7 @@ public class Product {
 	    		mp=products[i];
 	    }
 	    	 }
-	    	 
+	    	 //TODO add space before 'Its' and another string
 	    	 System.out.println("The most expansive product is - " + mp.getName() + "Its quantity=" + mp.getQuantity() );
 	    	
 	     }

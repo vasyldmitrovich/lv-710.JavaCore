@@ -1,4 +1,4 @@
-package edu04;
+package com.softserve.edu04;
 
 import java.util.Scanner;
 
@@ -29,7 +29,12 @@ public enum Сontinent  {
         public String getName() {
             return name;
         }
-        
+
+
+        //TODO make reformat code and move all following code to main method, because that code should not be here
+
+
+    //TODO following code do not work
         public static void country() { 
         	  
         	Сontinent name = Сontinent.ASIA;

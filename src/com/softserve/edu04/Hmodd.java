@@ -1,7 +1,8 @@
-package edu04;
+package com.softserve.edu04;
 
 import java.util.Scanner;
 
+//TODO do not correct name of class, what means 'Hmodd'
 public class Hmodd 	{
 public static void main(String[] args) {
 	countOdd();
