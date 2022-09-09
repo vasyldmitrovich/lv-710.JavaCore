@@ -13,14 +13,13 @@ public class Task2 {
         arrayEmployee[3] = new Employee("Petro", 2, 100);
         arrayEmployee[4] = new Employee("Ivan", 1, 100);
         int department = myIn.readInt("Enter department number(1-3): ");
-        Employee temp;
         System.out.println("Employees from department " + department + " :");
-        // Arrays.sort(arrayEmployee, Comparator.comparing(Employee::getSalary));
-        //System.out.println(arrayEmployee[1].getDepartmentNumber());
-        for (int i = 0; i < 5; i++) {
-            System.out.println(arrayEmployee[1].getDepartmentNumber());
+        for (int i = 0; i < 5; i++)
             if (arrayEmployee[i].getDepartmentNumber() == department) System.out.println(arrayEmployee[i]);
-            if (i == 4) break;
+
+        // Arrays.sort(arrayEmployee, Comparator.comparing(Employee::getSalary));
+        Employee temp;
+        for (int i = 0; i < 4; i++) {
             for (int j = i + 1; j < 5; j++) {
                 if (arrayEmployee[i].getSalary() > arrayEmployee[j].getSalary()) {
                     temp = arrayEmployee[i];
@@ -34,6 +33,5 @@ public class Task2 {
         for (Employee emp : arrayEmployee) {
             System.out.println(emp);
         }
-
     }
 }
