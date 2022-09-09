@@ -34,6 +34,7 @@ public enum DayOfTheWeek {
     }
 
 
+    //TODO move following code  from that class to another, for example in Main class
     public static DayOfTheWeek getByNumber(int dayOfTheWeekNumber) {
         switch (dayOfTheWeekNumber) {
             case 1:
