@@ -6,6 +6,7 @@ public class MainSecondTask {
 
     public static void main(String[] args) {
 
+        //Good
         Dog d = new Dog();
         Dog dog1 = new Dog("Rogger", Breed.LABRADOR_RETRIEVER, 1);
         Dog dog2 = new Dog("Ice", Breed.GERMAN_SHEPHERD, 4);

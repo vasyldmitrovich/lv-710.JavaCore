@@ -6,6 +6,7 @@ public class Main {
 
     public static void main(String[] args) {
 
+        //TODO Do not have Practical tasks 2, 3, 4, tasks
         Calculations calculations = new Calculations();
         Functionality functionality = new Functionality();
 

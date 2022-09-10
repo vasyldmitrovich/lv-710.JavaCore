@@ -15,7 +15,9 @@ public class MainFirstTask {
         //Maximum integer value
         calculations.maxInt(2, 3, 4, 6, 1, 6, 9);
 
+        //TODO Did not write min value
         //HTTP status code
+        //TODO Do not include 401 402 403 status code
         f.readError(HTTP_STATUS_CODE100);
 
     }
