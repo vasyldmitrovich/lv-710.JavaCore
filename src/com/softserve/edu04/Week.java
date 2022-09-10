@@ -14,9 +14,7 @@ public enum Week  {
 	private final String en;
     private final String de;
     private final String sp;
-   
     
-
     private Week(String en, String de, String sp) {
         this.en = en;
         this.de = de;
@@ -40,37 +38,31 @@ public enum Week  {
             return sp;
         }
 		
-		 public static void weekDay() { 
-
-        //TODO Please make refactor code, code must be clear, there should be indents, reformat the code
-
-
-             //TODO move that code to main method, that code should not be here in enum class
-	Week week = Week.MONDAY;
-
-	System.out.print("Number of day (Week) = ");
-    Scanner input = new Scanner(System.in);
-    int numWeek = input.nextInt();
-
-
-    switch (numWeek) {
-    case 1: week = Week.MONDAY; break;
-    case 2: week = Week.TUESDAY; break;
-    case 3: week = Week.WEDNESDAY; break;
-    case 4: week = Week.THURSDAY; break;
-    case 5: week = Week.FRIDAY; break;
-    case 6: week = Week.SATURDAY; break;
-    case 7: week = Week.SUNDAY; break;   
-    default: System.out.println("Incorrect input"); return;
-  }
-    System.out.println(week);
-}
-        //TODO Delete that main method
 		 public static void main(String[] args) {
-			 weekDay();	 
+			 
+				Week week = Week.MONDAY;
+
+				System.out.print("Number of day (Week) = ");
+			    Scanner input = new Scanner(System.in);
+			    int numWeek = input.nextInt();
+
+
+			    switch (numWeek) {
+			    case 1: week = Week.MONDAY; break;
+			    case 2: week = Week.TUESDAY; break;
+			    case 3: week = Week.WEDNESDAY; break;
+			    case 4: week = Week.THURSDAY; break;
+			    case 5: week = Week.FRIDAY; break;
+			    case 6: week = Week.SATURDAY; break;
+			    case 7: week = Week.SUNDAY; break;   
+			    default: System.out.println("Incorrect input"); return;
+			  }
+			    System.out.println(week);
+			}
+			
 		 }
 
 
-}
+
 
 

@@ -38,7 +38,7 @@ public class Product {
 
 
 
-	   //TODO all of this following code move to main method, that code should not be here
+	   
 	     public void setQuantity(int quantity) {
 	       this.quantity = quantity;
 	   }
@@ -57,8 +57,8 @@ public class Product {
 	    		mp=products[i];
 	    }
 	    	 }
-	    	 //TODO add space before 'Its' and another string
-	    	 System.out.println("The most expansive product is - " + mp.getName() + "Its quantity=" + mp.getQuantity() );
+	    
+	    	 System.out.println("The most expansive product is - " + mp.getName() + " Its quantity=" + mp.getQuantity() );
 	    	
 	     }
 	     
@@ -70,12 +70,13 @@ public class Product {
 	    }
 	    	 }
 	    	 
-	    	 System.out.println("The biggest Quantity has - " + mq.getName() + "Its quantity=" + mq.getQuantity() );
+	    	 System.out.println("The biggest Quantity has - " + mq.getName() + " Its quantity=" + mq.getQuantity() );
 	    	
 	     }
 	     
 	     
 	public static void main(String[] args) {
+
 		// TODO Auto-generated method stub
 		maxQuantity();
 		mostExpencive();

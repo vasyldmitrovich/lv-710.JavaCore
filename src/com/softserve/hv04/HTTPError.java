@@ -64,67 +64,53 @@ import java.util.Scanner;
 		public int getNum() {
 			return num;
 		}
-
-
-
-
-
-
-
-
-
-		//TODO move oll that code to another class, you can move to main method, that should not be here
-
-			 public static void errName() { 
-	  
-				 HTTPError ern = HTTPError.ERROR400;
-
-		System.out.print("Number of HTTPError = ");
-	    Scanner input = new Scanner(System.in);
-	    int numErr = input.nextInt();
-
-
-	    switch (numErr) {
-	    case 400: ern = HTTPError.ERROR400; break;
-	    case 401: ern = HTTPError.ERROR401; break;
-	    case 402: ern = HTTPError.ERROR402; break;
-	    case 403: ern = HTTPError.ERROR403; break;
-	    case 404: ern = HTTPError.ERROR404; break;
-	    case 405: ern = HTTPError.ERROR405; break;
-	    case 406: ern = HTTPError.ERROR406; break;
-	    case 407: ern = HTTPError.ERROR407; break;
-	    case 408: ern = HTTPError.ERROR408; break;
-	    case 409: ern = HTTPError.ERROR409; break;
-	    case 410: ern = HTTPError.ERROR410; break;
-	    case 411: ern = HTTPError.ERROR411; break;
-	    case 412: ern = HTTPError.ERROR412; break;
-	    case 413: ern = HTTPError.ERROR413; break;
-	    case 414: ern = HTTPError.ERROR414; break;
-	    case 415: ern = HTTPError.ERROR415; break;
-	    case 416: ern = HTTPError.ERROR416; break;
-	    case 417: ern = HTTPError.ERROR417; break;
-	    case 418: ern = HTTPError.ERROR418; break;
-	    case 419: ern = HTTPError.ERROR419; break;
-	    case 421: ern = HTTPError.ERROR421; break;
-	    case 422: ern = HTTPError.ERROR422; break;
-	    case 423: ern = HTTPError.ERROR423; break;
-	    case 424: ern = HTTPError.ERROR424; break;
-	    case 425: ern = HTTPError.ERROR425; break;
-	    case 426: ern = HTTPError.ERROR426; break;	    
-	    case 428: ern = HTTPError.ERROR428; break;
-	    case 429: ern = HTTPError.ERROR429; break;
-	    case 431: ern = HTTPError.ERROR431; break;
-	    case 449: ern = HTTPError.ERROR449; break;
-	    case 451: ern = HTTPError.ERROR451; break;
-	    case 499: ern = HTTPError.ERROR499; break;
-	    default: System.out.println("Incorrect input"); return;
-	  }
-	    System.out.println(ern);
-			 }
-
+			
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		errName();
+		 HTTPError ern = HTTPError.ERROR400;
+
+			System.out.print("Number of HTTPError = ");
+		    Scanner input = new Scanner(System.in);
+		    int numErr = input.nextInt();
+
+
+		    switch (numErr) {
+		    case 400: ern = HTTPError.ERROR400; break;
+		    case 401: ern = HTTPError.ERROR401; break;
+		    case 402: ern = HTTPError.ERROR402; break;
+		    case 403: ern = HTTPError.ERROR403; break;
+		    case 404: ern = HTTPError.ERROR404; break;
+		    case 405: ern = HTTPError.ERROR405; break;
+		    case 406: ern = HTTPError.ERROR406; break;
+		    case 407: ern = HTTPError.ERROR407; break;
+		    case 408: ern = HTTPError.ERROR408; break;
+		    case 409: ern = HTTPError.ERROR409; break;
+		    case 410: ern = HTTPError.ERROR410; break;
+		    case 411: ern = HTTPError.ERROR411; break;
+		    case 412: ern = HTTPError.ERROR412; break;
+		    case 413: ern = HTTPError.ERROR413; break;
+		    case 414: ern = HTTPError.ERROR414; break;
+		    case 415: ern = HTTPError.ERROR415; break;
+		    case 416: ern = HTTPError.ERROR416; break;
+		    case 417: ern = HTTPError.ERROR417; break;
+		    case 418: ern = HTTPError.ERROR418; break;
+		    case 419: ern = HTTPError.ERROR419; break;
+		    case 421: ern = HTTPError.ERROR421; break;
+		    case 422: ern = HTTPError.ERROR422; break;
+		    case 423: ern = HTTPError.ERROR423; break;
+		    case 424: ern = HTTPError.ERROR424; break;
+		    case 425: ern = HTTPError.ERROR425; break;
+		    case 426: ern = HTTPError.ERROR426; break;	    
+		    case 428: ern = HTTPError.ERROR428; break;
+		    case 429: ern = HTTPError.ERROR429; break;
+		    case 431: ern = HTTPError.ERROR431; break;
+		    case 449: ern = HTTPError.ERROR449; break;
+		    case 451: ern = HTTPError.ERROR451; break;
+		    case 499: ern = HTTPError.ERROR499; break;
+		    default: System.out.println("Incorrect input"); return;
+		  }
+		    System.out.println(ern);
+				 
 	}
 
 }
