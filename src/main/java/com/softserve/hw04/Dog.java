@@ -1,8 +1,7 @@
 package com.softserve.hw04;
 
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Set;
+import java.util.*;
+import java.util.stream.Collectors;
 
 public class Dog {
 
@@ -44,7 +43,7 @@ public class Dog {
             Set<Map.Entry<String, Integer>> entrySet = nameAndCount.entrySet();
             for (Map.Entry<String, Integer> entry : entrySet) {
                 if (entry.getValue() > 1) {
-                    System.out.println("Duplicate element from array : " + entry.getKey());
+                    System.out.println("Duplicated element from the array is: " + entry.getKey());
                 }
         }
     }
@@ -66,5 +65,22 @@ public class Dog {
             nameAndAge.put(dog.getName(), dog.getAge());
         }
         return nameAndAge;
+    }
+
+    public List<String> dogsCollection(String... dogs) {
+        List<String> collection = Arrays.asList(dogs);;
+        return collection;
+    }
+
+    public List<Dog> dogsCollection(Dog... dogs) {
+        List<Dog> collection = Arrays.asList(dogs);;
+        return collection;
+    }
+
+    public <T> Set<T> findDuplicates(List<T> dogsCollection) {
+        Set<T> items = new HashSet<>();
+        return dogsCollection.stream()
+                .filter(n -> !items.add(n))
+                .collect(Collectors.toSet());
     }
 }

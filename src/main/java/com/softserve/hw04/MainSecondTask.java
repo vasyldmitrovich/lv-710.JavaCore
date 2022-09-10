@@ -1,6 +1,6 @@
 package com.softserve.hw04;
 
-import java.util.Map;
+import java.util.*;
 
 public class MainSecondTask {
 
@@ -15,8 +15,19 @@ public class MainSecondTask {
         //Duplicate element from array
         d.getDuplicates(dog1, dog2, dog3, dog4);
 
+        // Duplicates with Streams
+        System.out.println(d.findDuplicates(d.dogsCollection(dog1.getBreed(), dog2.getBreed(), dog3.getBreed(), dog4.getBreed())));
+
         // Oldest dog
         Map<String, Integer> map = d.dogsToMap(dog1, dog2, dog3, dog4);
         d.maxUsingIteration(map);
+        System.out.println();
+
+        // Oldest dog with Streams
+        Dog maxAge = d.dogsCollection(dog1, dog2, dog3, dog4)
+                .stream()
+                .max(Comparator.comparing(Dog::getAge))
+                .orElseThrow(NoSuchElementException::new);
+        System.out.println(maxAge.getName() + " - " + maxAge.getAge());
     }
 }
