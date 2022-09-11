@@ -1,4 +1,4 @@
-package edu05;
+package com.softserve.edu05Logic;
 
 import java.util.Arrays;
 
