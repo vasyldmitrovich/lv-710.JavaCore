@@ -38,7 +38,18 @@ public class TasksRunner {
     public static void task3() {
 
     }
-    public static void task4() {
 
+    public static void task4() {
+        Dog dog1 = new Dog("Toby", Breed.MALTIPOO, 2);
+        Dog dog2 = new Dog("Barsik", Breed.PITBULLTERRIER, 4);
+        Dog dog3 = new Dog("Lord", Breed.LABRADOR, 1);
+
+      Dog[] dogs = new Dog[]{dog1, dog2, dog3};
+
+      boolean result = DogsUtil.hasSameName(dog1, dog2);
+      Dog oldestDog = DogsUtil.findOldestDog(dogs);
+        System.out.println("This dogs %s and %s have same name  ".formatted(dog1, dog2) + result);
+        System.out.println("The oldest dog is " + oldestDog);
     }
+
 }
