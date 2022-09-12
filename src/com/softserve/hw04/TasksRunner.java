@@ -29,6 +29,10 @@ public class TasksRunner {
 
     }
     public static void task2() {
+        Integer[] numbers1 = new Integer[]{67, 9, -6, 44};
+
+        System.out.println(NumbersUtil.findMaxNumber(numbers1));
+        System.out.println(NumbersUtil.findMinNumber(numbers1));
 
     }
     public static void task3() {
