@@ -1,5 +1,9 @@
 package com.softserve.hw04;
 
+import com.softserve.hw04.dog.Breed;
+import com.softserve.hw04.dog.Dog;
+import com.softserve.hw04.dog.DogsUtil;
+
 public class TasksRunner {
 
     public static void main(String[] args) {
@@ -31,11 +35,18 @@ public class TasksRunner {
     public static void task2() {
         Integer[] numbers1 = new Integer[]{67, 9, -6, 44};
 
-        System.out.println(NumbersUtil.findMaxNumber(numbers1));
-        System.out.println(NumbersUtil.findMinNumber(numbers1));
+        System.out.println("Max number is: " + NumbersUtil.findMaxNumber(numbers1));
+        System.out.println("Min number is: " + NumbersUtil.findMinNumber(numbers1));
 
     }
     public static void task3() {
+        int errorNumber1 = 400;
+        int errorNumber2 = 401;
+        int errorNumber3 = 402;
+        String msg = "HTTP error is: %s. Number is %s";
+        System.out.println(msg.formatted(HTTPError.getByNumber(errorNumber1).getName(), errorNumber1));
+        System.out.println(msg.formatted(HTTPError.getByNumber(errorNumber2).getName(), errorNumber2));
+        System.out.println(msg.formatted(HTTPError.getByNumber(errorNumber3).getName(), errorNumber3));
 
     }
 
@@ -49,7 +60,7 @@ public class TasksRunner {
       boolean result = DogsUtil.hasSameName(dog1, dog2);
       Dog oldestDog = DogsUtil.findOldestDog(dogs);
         System.out.println("This dogs %s and %s have same name  ".formatted(dog1, dog2) + result);
-        System.out.println("The oldest dog is " + oldestDog);
+        System.out.println("The oldest com.softserve.hw04.dog is " + oldestDog);
     }
 
 }

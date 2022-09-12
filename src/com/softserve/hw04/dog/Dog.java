@@ -1,4 +1,6 @@
-package com.softserve.hw04;
+package com.softserve.hw04.dog;
+
+import com.softserve.hw04.dog.Breed;
 
 public class Dog {
     private String name;

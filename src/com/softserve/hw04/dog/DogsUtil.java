@@ -1,5 +1,7 @@
-package com.softserve.hw04;
+package com.softserve.hw04.dog;
 
+
+import com.softserve.hw04.dog.Dog;
 
 public class DogsUtil {
     public static boolean hasSameName(Dog dog1, Dog dog2) {
