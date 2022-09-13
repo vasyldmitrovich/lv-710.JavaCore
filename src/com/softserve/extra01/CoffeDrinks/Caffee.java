@@ -1,4 +1,4 @@
-package com.softserve.mar01.CoffeDrinks;
+package com.softserve.extra01.CoffeDrinks;
 
 import java.util.HashMap;
 import java.util.Map;

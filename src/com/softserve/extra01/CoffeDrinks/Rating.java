@@ -1,4 +1,4 @@
-package com.softserve.mar01.CoffeDrinks;
+package com.softserve.extra01.CoffeDrinks;
 
 public interface Rating {
     int getRating();

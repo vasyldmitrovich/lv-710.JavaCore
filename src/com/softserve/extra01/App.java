@@ -1,4 +1,4 @@
-package com.softserve.mar01;
+package com.softserve.extra01;
 /*      Create interface DrinkReceipt with methods String getName()
         and DrinkReceipt addComponent(String componentName, int componentCount).
         Create interface DrinkPreparation with method Map<String, Integer> makeDrink() to return a drink components.
@@ -21,11 +21,11 @@ package com.softserve.mar01;
         {Espresso=9.00, Cappuccino=8.00, Caffee=6.00}
 */
 
-import com.softserve.mar01.CoffeDrinks.Caffee;
+import com.softserve.extra01.CoffeDrinks.Caffee;
 
 import java.util.ArrayList;
 
-import static com.softserve.mar01.CoffeDrinks.MyUtils.*;
+import static com.softserve.extra01.CoffeDrinks.MyUtils.*;
 
 public class App {
     public static void main(String[] args) {
