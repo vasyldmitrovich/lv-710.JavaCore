@@ -14,6 +14,6 @@ public class Espresso extends Coffee {
     public Map<String, Integer> makeDrink() {
         addComponent("Water", 50);
         addComponent("Arabica", 20);
-        return ingredients;
+        return getDrink();
     }
 }

@@ -6,7 +6,7 @@ import java.util.Map;
 public class Coffee implements DrinkReceipt, DrinkPreparation, Rating {
     private String name;
     private int rating;
-    protected Map<String, Integer> ingredients = new HashMap<>();
+    private Map<String, Integer> ingredients = new HashMap<>();
 
     public Coffee() {
     }
@@ -37,5 +37,9 @@ public class Coffee implements DrinkReceipt, DrinkPreparation, Rating {
     @Override
     public int getRating() {
         return rating;
+    }
+
+    protected Map<String, Integer> getDrink() {
+        return this.ingredients;
     }
 }

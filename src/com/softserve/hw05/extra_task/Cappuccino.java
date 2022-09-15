@@ -15,6 +15,6 @@ public class Cappuccino extends Coffee {
         addComponent("Water", 100);
         addComponent("Arabica", 20);
         addComponent("Milk", 50);
-        return ingredients;
+        return getDrink();
     }
 }
