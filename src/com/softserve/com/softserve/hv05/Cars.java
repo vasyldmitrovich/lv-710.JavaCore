@@ -28,7 +28,7 @@ public class Cars {
 	       return engineCapacity;
 	   }
 	   
-	   public void setType(String name) {
+	   public void setType(String type) {
 	       this.type = type;
 	   }
 	   
@@ -39,6 +39,11 @@ public class Cars {
 	     public void setEngineCapacity(double engineCapacity) {
 	       this.engineCapacity = engineCapacity;
 	   }
+	     
+	   @Override
+		    public String toString() {
+		        return this.type + "  Production in " + this.yearOfProduction + " with engine v "  + this.engineCapacity;
+		    }
 	     
 	     
 

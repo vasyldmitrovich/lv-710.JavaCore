@@ -1,6 +1,8 @@
 package com.softserve.hv05;
 
 import java.util.Scanner;
+import java.util.Arrays;
+import java.util.Comparator;
 
 public class Logic {
 	
@@ -10,8 +12,13 @@ public class Logic {
 	static Cars opel = new Cars ("Opel", 2020, 1.2);
 	static Cars cars[] = { acura, audi, bmw, opel };
 	
+	
 	static void displayCars () {
-	Scanner in= new Scanner (System.in);
+	
+		Scanner in=new Scanner(System.in);
+		
+	Arrays.sort(cars, Comparator.comparing(Cars ::getYearOfProduction));
+    System.out.println("Cars ordered by the field year"+'\n'+Arrays.toString(cars));
 	  
 	 System.out.println("Enter year of production: ");
     int yearOfProduction= in.nextInt();
@@ -21,6 +28,7 @@ public class Logic {
   		 if (cars[i].getYearOfProduction() == yearOfProduction){
   			 System.out.println("Trere are " + cars[i].getType() + " Production in " +yearOfProduction + " year " );
            }
+	}
 	}
 /*	int numMonth;
 	
@@ -50,17 +58,8 @@ public class Logic {
 System.out.println(dayInMonth);
 	}
 */	
-/*	public static void innArr () {
-		
-	Scanner sc=new Scanner(System.in);  
+    
 	
-	int[] array = new int[10];  
-	System.out.println("Enter the elements of the array: ");  
-	for(int i=0; i<10; i++)  
-	{  
-	array[i]=sc.nextInt();  
-	}  
-	}
-*/
+
 }
-}
+
