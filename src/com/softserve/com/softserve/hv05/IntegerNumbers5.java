@@ -28,9 +28,15 @@ public class IntegerNumbers5 {
 	}
 	
 	}
+	int positionMin = 0;
+    int positionMinSearch = array[0];
+    
 	
-	
-	
+	for (int i = 0; i < 5 ; i++) {  
+	if (array[i]<positionMinSearch) { positionMinSearch=array[i]; positionMin=i;
+	}
+	}
+	System.out.println ("minimum is = " + positionMinSearch + " in position " +(positionMin+1));
 	
 	}
 }	
