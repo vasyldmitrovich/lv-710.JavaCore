@@ -9,6 +9,14 @@ abstract public class Bird {
     private byte layEggs;
     private boolean couldFly;
 
+    public Bird(String name, boolean haveFlightFeathers, boolean haveKeel, boolean isTooHeavyToFly, byte layEggs) {
+        this.name = name;
+        this.haveFlightFeathers = haveFlightFeathers;
+        this.haveKeel = haveKeel;
+        this.isTooHeavyToFly = isTooHeavyToFly;
+        this.layEggs = layEggs;
+    }
+
     public void setCouldFly() {
         if (haveFlightFeathers & haveKeel & !isTooHeavyToFly){
             couldFly = true;
@@ -48,6 +56,5 @@ abstract public class Bird {
     }
 
     abstract public String fly();
-
 
 }

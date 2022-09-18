@@ -5,8 +5,10 @@ public class Employee {
     private int age;
     private double salary;
 
-    public Employee(){
-
+    public Employee(String name, int age, double salary){
+        this.name = name;
+        this.age = age;
+        this.salary = salary;
     }
 
     public String getName() {
@@ -33,15 +35,8 @@ public class Employee {
         this.salary = salary;
     }
 
-    public Employee(String name, int age, double salary){
-        this.name = name;
-        this.age = age;
-        this.salary = salary;
-    }
-
     public String report(){
-        return String.format("Name : %s, Age %d, Salary: \u20B4 %.2f.", name, age, salary);
+        return String.format("Name: %s, Age %d, Salary: \u20B4 %.2f.", getName(), getAge(), getSalary());
     }
-
 
 }

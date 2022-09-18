@@ -11,7 +11,7 @@ public class Input {
             try { result = Integer.parseInt(input.nextLine());
                 break;
             }catch (NumberFormatException e){
-                System.out.println(errorMessage);
+                System.err.println(errorMessage);
             }
         }
         return result;

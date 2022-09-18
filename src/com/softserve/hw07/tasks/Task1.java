@@ -32,7 +32,7 @@ public class Task1 {
         while (!isSorted){
             isSorted = true;
             for (int i = 1; i < employees.length; i++){
-                if (employees[i].calculatePay() < employees[i - 1].calculatePay()){
+                if (employees[i].calculatePay() > employees[i - 1].calculatePay()){
                 Employee template = employees[i];
                 employees[i] = employees[i - 1];
                 employees[i - 1] = template;

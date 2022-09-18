@@ -4,6 +4,10 @@ import com.softserve.hw06.tasks.classes.firstTaskCalsses.Bird;
 
 public class FlyingBird extends Bird {
 
+    public FlyingBird(String name, boolean haveFlightFeathers, boolean haveKeel, boolean isTooHeavyToFly, byte layEggs) {
+        super(name, haveFlightFeathers, haveKeel, isTooHeavyToFly, layEggs);
+    }
+
     @Override
     public String fly() {
         String result;

@@ -1,6 +1,6 @@
 package com.softserve.hw07.tasks.classes.firstTaskClasses;
 
-public class ContractEmployee extends Employee implements Payment{
+public class ContractEmployee extends Employee{
 
     private String federalTaxIdMember ;
     private double salary;

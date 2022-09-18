@@ -8,8 +8,10 @@ public class Task2 {
 
     public static void runSecondTask() {
 
-        Developer developer = new Developer("Yurii", 26, "Java Developer", 1000.0);
+        Employee cleaner = new Employee("Stepan", 26, 5600);
+        Developer developer = new Developer("Yurii", 26, "Java Developer", 30000.0);
         Output.print(developer.report());
+        Output.print(cleaner.report());
 
     }
 

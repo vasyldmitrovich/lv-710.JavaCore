@@ -21,11 +21,11 @@ public class Task1 {
 
         //Create array Bird and add different birds to it.
 
-        Object[] birds = new Object[] {kiwi, eagle, swallow, penguin, chicken};
+        Bird[] birds = new Bird[] {kiwi, eagle, swallow, penguin, chicken};
 
         //Call fly() method for all of it. Output the information about each type of created bird.
 
-        for (Object template : birds){
+        for (Bird template : birds){
             Output.print(template.toString());
         }
 
