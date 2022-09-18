@@ -1,4 +1,4 @@
-package edu05;
+package com.softserve.edu05;
 
 public class IntegerUtil {
     public static Integer findMaxNumber(Integer[] numbers) {
