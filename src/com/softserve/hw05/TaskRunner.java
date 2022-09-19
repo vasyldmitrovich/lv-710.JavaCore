@@ -6,8 +6,8 @@ import java.io.InputStreamReader;
 
 public class TaskRunner {
     public static void main(String[] args) throws IOException {
-      //  task1();
-       // task2();
+        task1();
+        task2();
         task3();
         task4();
 
