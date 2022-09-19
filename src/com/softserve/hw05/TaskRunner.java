@@ -46,13 +46,16 @@ public class TaskRunner {
 
     }
 
-    public static void task4() {
+    public static void task4() throws IOException {
         Car car1 = new Car("crossover", 2020, 2580);
         Car car2 = new Car("hatchback", 2021, 2010);
         Car car3 = new Car("cabriolet", 2014, 1590);
         Car car4 = new Car("sedan", 2018, 1600);
+        Car[] cars = new Car[] {car1, car2, car3, car4};
         BufferedReader buffReader = new BufferedReader(new InputStreamReader(System.in));
         System.out.println("Please enter number certain model year ");
+        int year = Integer.parseInt(buffReader.readLine());
 
+        System.out.println("car by year is   " + CarUtil.findCarByYear(year, cars));
     }
 }

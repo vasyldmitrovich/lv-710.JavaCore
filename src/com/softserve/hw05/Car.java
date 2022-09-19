@@ -22,4 +22,13 @@ public class Car {
     public double getEngineCapacity() {
         return engineCapacity;
     }
+
+    @Override
+    public String toString() {
+        return "Car{" +
+                "type='" + type + '\'' +
+                ", yearOfProduction=" + yearOfProduction +
+                ", engineCapacity=" + engineCapacity +
+                '}';
+    }
 }
