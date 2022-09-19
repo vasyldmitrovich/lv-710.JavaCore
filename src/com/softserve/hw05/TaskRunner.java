@@ -6,9 +6,10 @@ import java.io.InputStreamReader;
 
 public class TaskRunner {
     public static void main(String[] args) throws IOException {
-        task1();
-        task2();
+      //  task1();
+       // task2();
         task3();
+        task4();
 
     }
 
@@ -29,13 +30,29 @@ public class TaskRunner {
 
     public static void task2() {
         System.out.println("Task 2");
-        int[] integers = new int[]{1,2,-3,10,22,4,7,9,11,33};
+        int[] integers = new int[]{1, 2, -3, 10, 22, 4, 7, 9, 11, 33};
         System.out.println("Sum of integers = " + IntegerUtil.findArraySum(integers));
 
     }
 
 
     public static void task3() {
+        System.out.println("Task 3");
+        int[] integers = new int[]{-6, 32, -43, 105, 272};
+
+        System.out.println("Second positive number is  " + IntegerNumberTask3.findSecondPositiveNumber(integers));
+        System.out.println("Minimal number is   " + IntegerNumberTask3.findMinNumber(integers));
+        System.out.println("sum of numbers =   " + IntegerNumberTask3.sumOfNumbers(integers));
+
+    }
+
+    public static void task4() {
+        Car car1 = new Car("crossover", 2020, 2580);
+        Car car2 = new Car("hatchback", 2021, 2010);
+        Car car3 = new Car("cabriolet", 2014, 1590);
+        Car car4 = new Car("sedan", 2018, 1600);
+        BufferedReader buffReader = new BufferedReader(new InputStreamReader(System.in));
+        System.out.println("Please enter number certain model year ");
 
     }
 }
