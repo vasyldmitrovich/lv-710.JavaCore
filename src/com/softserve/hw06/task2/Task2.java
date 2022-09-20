@@ -12,5 +12,10 @@ package com.softserve.hw06.task2;
  * class and print in the console information about them using report() method.
  */
 public class Task2 {
-
+    public void run() {
+        Employee developer = new Developer("Taras", "Average Java developer", 32, 5000);
+        Employee employee = new Employee("Taras", 32, 5000);
+        System.out.println(developer.report());
+        System.out.println(employee.report());
+    }
 }
