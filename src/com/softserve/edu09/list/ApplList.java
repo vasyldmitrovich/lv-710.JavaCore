@@ -76,7 +76,8 @@ public class ApplList {
 */
 
 
-        // Iterator
+        //Iterator
+/*
 
 		List<String> list = new ArrayList<>();
 		list.add("First element");
@@ -84,8 +85,8 @@ public class ApplList {
 		list.add(0, "One more first element");
 		list.add("Second element");
 //		//
-//		String element2 = list.get(1);
-//		System.out.println("element2 = " + element2);
+		String element2 = list.get(2);
+		System.out.println("element2 = " + element2);
 		//
 		// Print Elements
 //		System.out.println("elements: " + list);
@@ -98,15 +99,16 @@ public class ApplList {
 //			System.out.println("current = " + current);
 //		}
 		//
-		Iterator<String> iterator = list.iterator(); // get iterator
-		while (iterator.hasNext()) {
-			String current = iterator.next();
-			System.out.println("current: " + current);
-		}
+//		Iterator<String> iterator = list.iterator(); // get iterator
+//		while (iterator.hasNext()) {
+//			String current = iterator.next();
+//			System.out.println("current: " + current);
+//		}
+*/
 
+/*
 
-
-		/*-
+		//Do not delete all 'Second element'
 		List<String> list = new ArrayList<>();
 		list.add("First element");
 		list.add("Second element");
@@ -117,22 +119,25 @@ public class ApplList {
 		System.out.println("elements: " + list);
 		//
 		//int n = list.size();
-		for (int i = 0; i < list.size(); i++) {
-		//for (int i = 0; i < n; i++) {
-            System.out.println("Current Element = " + list.get(i));
-            if (list.get(i).contains("Second")) {
-                list.remove(i);
-            }
-        }
-		//
-//        for (String current : list) {
-//            System.out.println(current);
-//            if (current.contains("Second")) {
-//                list.remove(current);
+//		for (int i = 0; i < list.size(); i++) {
+//		//for (int i = 0; i < n; i++) {
+//            System.out.println("Current Element = " + list.get(i));
+//            if (list.get(i).contains("Second")) {
+//                list.remove(i);
 //            }
 //        }
-        */
-		 /*-
+		//
+        for (String current : list) {
+            System.out.println(current);
+            if (current.contains("Second")) {
+                list.remove(current);
+            }
+        }
+*/
+
+		//How can realise delete all 'Second element'
+/*
+
 		List<String> list = new ArrayList<>();
 		list.add("First element");
 		list.add("Second element");
@@ -156,22 +161,20 @@ public class ApplList {
 //				list.remove(i);
 //			}
 //		} while(isFound);
+
 		//
-		//
-		Iterator<String> iterator = list.iterator();
-		while(iterator.hasNext()) {
-		    String current = iterator.next();
-		    System.out.println("element = " + current);
-		    if (current.contains("Second")) {
-		        iterator.remove();
-		    }
-		}
-		 */
-		 /*-
-		System.out.println("\nFinal List:");
-		for (String current : list) {
-		    System.out.println(current);
-		}
-		 */
+//		Iterator<String> iterator = list.iterator();
+//		while(iterator.hasNext()) {
+//		    String current = iterator.next();
+//		    System.out.println("element = " + current);
+//		    if (current.contains("Second")) {
+//		        iterator.remove();
+//		    }
+//		}
+
+		System.out.println("\nFinal List: " + list);
+*/
+
+
     }
 }

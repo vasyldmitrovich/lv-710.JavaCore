@@ -49,8 +49,8 @@ public class Employee implements Comparable<Employee> {
 		this.name = name;
 	}
 
-	@Override
-	public int hashCode() {
+	//@Override
+	public int hashCode11() {
 		System.out.println("\thashCode() running");
 		final int prime = 31;
 		int result = 1;
@@ -59,8 +59,8 @@ public class Employee implements Comparable<Employee> {
 		return result;
 	}
 
-	@Override
-	public boolean equals(Object obj) {
+	//@Override
+	public boolean equals1(Object obj) {
 		System.out.println("\t\tequals() running");
 		if (this == obj) {
 			return true;

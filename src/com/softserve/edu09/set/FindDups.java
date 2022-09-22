@@ -4,19 +4,26 @@ import java.util.*;
 
 public class FindDups {
 	public static void main(String[] args) {
-		/*-
+
+		//Use arguments
+/*
+
 		Set<String> s = new HashSet<>();
-		// List<String> s = new LinkedList<>();
+		//List<String> s = new LinkedList<>();
 		for (int i = 0; i < args.length; i++) {
 		    if (!s.add(args[i])) {
 		        System.out.println("Duplicate detected: " + args[i]);
 		    }
 		}
 		System.out.println("Elements: " + s);
-		*/
-		/*-
-		//Set<Employee> s = new HashSet<>();
-		Set<Employee> s = new TreeSet<>(new Employee.ByNameAndId());
+*/
+
+
+		//Without equals() hashCode() compareTo(), and with
+/*
+
+		Set<Employee> s = new HashSet<>();
+		//Set<Employee> s = new TreeSet<>(new Employee.ByNameAndId());
 		//Set<Employee> s = new TreeSet<>();
 		boolean b;
 		b = s.add(new Employee(123, "Ivan"));
@@ -36,15 +43,19 @@ public class FindDups {
 //			System.out.println("employee: " + current
 //					+ "  hashCode(): " + current.hashCode());
 //		}
-		//Employee e = new Employee(123, "Ivan");
-		//e.equals(e);
+		Employee e = new Employee(123, "Ivan");
+		e.equals(e);
 		//
 //		for (Employee current : s) {
 //			System.out.println("employee: " + current // current.toString()
 //					+ "  hashCode(): " + (current != null ? current.hashCode(): null));
 //		}
-		*/
-		/*-
+*/
+
+
+		//
+/*
+
 		//Set<String> s = new HashSet<>();
 		//Set<String> s = new TreeSet<>();
 		List<String> s = new LinkedList<>();
@@ -55,8 +66,12 @@ public class FindDups {
 		Collections.sort(s);
 		//s.sort((a,b)->a.compareTo(b));
 		System.out.println("Sorted Elements: " + s);
-		*/
-		// /*-
+*/
+
+
+		//
+
+		 /*
 		List<Employee> s = new LinkedList<>();
 		s.add(new Employee(123, "Ivan"));
 		s.add(new Employee(121, "Petro"));
@@ -66,7 +81,7 @@ public class FindDups {
 		//Collections.sort(s, new Employee.ByNameAndId());
 		//s.sort(new Employee.ByNameAndId());
 		System.out.println("Sorted Elements: " + s);
-		// */
+		 */
 		//Set<String> s2 = new HashSet<>();
 	}
 }

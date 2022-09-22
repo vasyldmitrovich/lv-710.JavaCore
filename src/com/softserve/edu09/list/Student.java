@@ -2,7 +2,7 @@ package com.softserve.edu09.list;
 
 import java.util.Comparator;
 
-public class Student { //implements Comparable<Student> {
+public class Student implements Comparable<Student> {
 	
 	public static class ByDestName implements Comparator<Student> {
 		@Override
@@ -59,8 +59,8 @@ public class Student { //implements Comparable<Student> {
 				+ " ]";
 	}
 
-	//@Override
-	public int compareTo1(Student student) { // Default Sort
+	@Override
+	public int compareTo(Student student) { // Default Sort
 		return name.compareTo(student.getName());
 		// return -age + student.getAge();
 		// return age - student.getAge();
