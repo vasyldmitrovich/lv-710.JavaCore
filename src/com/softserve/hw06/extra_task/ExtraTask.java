@@ -1,8 +1,5 @@
 package com.softserve.hw06.extra_task;
 
-import org.w3c.dom.ls.LSOutput;
-
-import javax.crypto.spec.PSource;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -25,7 +22,7 @@ import java.util.List;
  */
 public class ExtraTask {
     public void run() {
-        List<Person> persons = new ArrayList<Person>() {{
+        List<Person> persons = new ArrayList<>() {{
             add(new Person("Ivan"));
             add(new Student("Petro", "University", 3));
             add(new Worker("Andriy", "Developer", 12));

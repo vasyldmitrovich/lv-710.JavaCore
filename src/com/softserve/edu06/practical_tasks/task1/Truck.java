@@ -1,4 +1,4 @@
-package com.softserve.edu06.practical_tasks.Task1;
+package com.softserve.edu06.practical_tasks.task1;
 
 public class Truck extends Car {
 

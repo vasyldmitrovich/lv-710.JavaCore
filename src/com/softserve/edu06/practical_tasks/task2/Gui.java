@@ -1,4 +1,4 @@
-package com.softserve.edu06.practical_tasks.Task2;
+package com.softserve.edu06.practical_tasks.task2;
 
 import javax.swing.*;
 import java.awt.*;
