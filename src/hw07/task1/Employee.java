@@ -1,4 +1,4 @@
-package task1;
+package hw07.task1;
 
 import java.math.BigDecimal;
 
