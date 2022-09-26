@@ -1,7 +1,5 @@
 package com.softserve.edu08.practical_tasks.task2;
 
-import java.io.BufferedReader;
-
 public class Task2 {
     public void run() {
         System.out.println("create shapes: ");
