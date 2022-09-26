@@ -1,8 +1,12 @@
 package task1;
 
+import task2.Developer;
+import task2.Employee;
+
 public class TaskRunner {
     public static void main(String[] args) {
         task1();
+        task2();
     }
 
     public static void task1() {
@@ -18,6 +22,11 @@ public class TaskRunner {
             birds[i].fly();
 
         }
+
+    }
+    public static void task2() {
+        Employee developer = new Developer("java developer", "Oleh", 30, 250000);
+        System.out.println(developer.report());
 
     }
 }
