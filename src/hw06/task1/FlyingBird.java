@@ -1,4 +1,6 @@
-package task1;
+package hw06.task1;
+
+import hw06.task1.Bird;
 
 public class FlyingBird extends Bird {
 

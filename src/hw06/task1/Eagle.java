@@ -1,6 +1,6 @@
-package task1;
+package hw06.task1;
 
-public class Eagle extends FlyingBird{
+public class Eagle extends FlyingBird {
 
     public Eagle(String feathers) {
         super(feathers);

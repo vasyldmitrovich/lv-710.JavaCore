@@ -1,4 +1,4 @@
-package task1;
+package hw06.task1;
 
 public abstract class Bird {
     protected String feathers;

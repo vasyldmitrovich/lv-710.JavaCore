@@ -1,6 +1,6 @@
-package task1;
+package hw06.task1;
 
-public class Chicken extends NonFlyingBird{
+public class Chicken extends NonFlyingBird {
 
     public Chicken(String feathers) {
         super(feathers);

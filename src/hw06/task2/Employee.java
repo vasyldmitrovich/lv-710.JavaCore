@@ -1,4 +1,4 @@
-package task2;
+package hw06.task2;
 
 public class Employee {
     protected String name;

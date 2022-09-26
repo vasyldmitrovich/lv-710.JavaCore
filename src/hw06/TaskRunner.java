@@ -1,7 +1,8 @@
-package task1;
+package hw06;
 
-import task2.Developer;
-import task2.Employee;
+import hw06.task1.*;
+import hw06.task2.Developer;
+import hw06.task2.Employee;
 
 public class TaskRunner {
     public static void main(String[] args) {

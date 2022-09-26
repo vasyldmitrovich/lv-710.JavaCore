@@ -1,6 +1,8 @@
-package task1;
+package hw06.task1;
 
-public class NonFlyingBird extends Bird{
+import hw06.task1.Bird;
+
+public class NonFlyingBird extends Bird {
 
     public NonFlyingBird(String feathers) {
         super(feathers, true);
