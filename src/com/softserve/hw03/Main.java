@@ -1,6 +1,4 @@
-package hw03;
-
-import hw03.Person;
+package com.softserve.hw03;
 
 public class Main {
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package hw03;
+package com.softserve.hw03;
 
 import java.util.Scanner;
 
@@ -72,7 +72,7 @@ public class Person {
         count++;
         return "Name: " + firstName + " " + lastName + " \n" + "Age: " + age ;
     }
-    
+    //TODO All is good, but i recomend use not 'fn' use 'firstname'   and  'lastname'
     public void changeName(String fn, String ln){
         setFirstName(fn);
         setLastName(ln);
