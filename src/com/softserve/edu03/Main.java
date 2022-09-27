@@ -24,7 +24,6 @@ public class Main {public static void main(String[] args) {
     e1.changeRate(200);
     System.out.println("\nTotal Compensation: " + Employee.totalSum);
 
-    //TODO All did perfect, e1.toString() - toString do not need write because java use that method by default
 }
 
 }
