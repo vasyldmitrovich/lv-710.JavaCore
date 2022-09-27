@@ -6,22 +6,11 @@ import java.time.temporal.ChronoField;
 import java.util.Scanner;
   
 public class DaysInMounth {
-    public static void main(String[] args)
-    {
-        // Create a month instance
+	
+    public static void daysInMounth()    {
+        
     	Month month = Month.JANUARY;
-    	/*Month month = Month.FEBRUARY;
-    	Month month = Month.MARCH;    	
-    	Month month = Month.APRIL;
-    	Month month = Month.MAY;
-    	Month month = Month.JUNE;
-    	Month month = Month.JULY;
-    	Month month = Month.AUGUST;
-    	Month month = Month.SEPTEMBER;
-    	Month month = Month.OCTOBER;
-    	Month month = Month.NOVEMBER;
-    	Month month = Month.DECEMBER;
-    	*/
+    	
 
 		System.out.print("Please wright Number of Month  ");
 	    Scanner input = new Scanner(System.in);
