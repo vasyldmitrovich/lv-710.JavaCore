@@ -8,8 +8,9 @@ public abstract class Person {
         return fullName;
     }
 
-    public void setFullName(FullName fullName) {
-        this.fullName = fullName;
+    public Person(String firstName, String lastName, int age) {
+        this.fullName = new FullName(firstName, lastName);
+        this.age = age;
     }
 
     public int getAge() {
@@ -20,13 +21,40 @@ public abstract class Person {
         this.age = age;
     }
 
-    public Person(FullName fullName, int age) {
-        this.fullName = fullName;
-        this.age = age;
-    }
+
     public String info() {
         return String.format("First name: %s, Last name: %s, Age: %d",
                 fullName.getFirstName(), fullName.getLastName(), age);
     }
     public abstract String activity();
+
+
+    public static class FullName {
+        private String firstName;
+        private String lastName;
+
+        public FullName() {
+        }
+
+        public FullName(String firstName, String lastName) {
+            this.firstName = firstName;
+            this.lastName = lastName;
+        }
+
+        public String getFirstName() {
+            return firstName;
+        }
+
+        public void setFirstName(String firstName) {
+            this.firstName = firstName;
+        }
+
+        public String getLastName() {
+            return lastName;
+        }
+
+        public void setLastName(String lastName) {
+            this.lastName = lastName;
+        }
+    }
 }

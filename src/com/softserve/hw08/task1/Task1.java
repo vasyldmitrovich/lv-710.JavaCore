@@ -24,8 +24,8 @@ import java.util.List;
 public class Task1 {
     public void run() {
         var students = new ArrayList<Student>(){{
-            add(new Student(new FullName("Harry", "Blunder"), 22, 5));
-            add(new Student(new FullName("Tony", "Godfrey"), 20, 3));
+            add(new Student("Harry", "Blunder", 22, 5));
+            add(new Student("Tony", "Godfrey", 20, 3));
         }};
 
         students.forEach(student -> {
