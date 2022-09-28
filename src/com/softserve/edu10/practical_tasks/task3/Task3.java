@@ -1,4 +1,4 @@
-package com.softserve.edu09.practical_tasks.task3;
+package com.softserve.edu10.practical_tasks.task3;
 
 import static com.softserve.hw01.MessageHelper.readStringMessage;
 import static com.softserve.hw01.MessageHelper.writeMessage;

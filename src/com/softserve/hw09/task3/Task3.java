@@ -1,24 +1,34 @@
 package com.softserve.hw09.task3;
 
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
-
-import static com.softserve.hw01.MessageHelper.readStringMessage;
-import static com.softserve.hw01.MessageHelper.writeMessage;
+import java.util.Collections;
 
 /**
- * Implement a pattern for US currency: the first symbol "$", then any number of digits, dot and
- * two digits after the dot. Enter the text from the console that contains several occurrences
- * of US currency. Display all occurrences on the screen.
+ * Write class Student that provides information about the name of the student and his course. Class Student should
+ * consist of
+ * <p>a) properties for access to these fields
+ * <p>b) constructor with parameters
+ * <p>c) method printStudents (List students, Integer course), which receives a list of students and the course number
+ * and prints to the console the names of the students from the list, which are taught in this course (use an iterator)
+ * <p>d) methods to compare students by name and by course
+ * <p>e) In the main() method:
+ * <p> - declare List students and add to the list five different students
+ * <p> - display the list of students ordered by name
+ * <p> - display the list of students ordered by course.
  */
 public class Task3 {
     public void run() {
-        writeMessage("Enter the text from the console that contains several occurrences of US currency.");
-        Pattern pattern = Pattern.compile("[$]\\d+?\\.\\d{2}\\b");
-        String input = readStringMessage();
-        Matcher matcher = pattern.matcher(input);
-        while (matcher.find()) {
-            writeMessage(input.substring(matcher.start(), matcher.end()));
-        }
+        Student student1 = new Student("Alla", 3);
+        Student student2 = new Student("Ira", 2);
+        Student student3 = new Student("Igor", 3);
+        Student student4 = new Student("Serhii", 2);
+        Student student5 = new Student("Roman", 1);
+
+        Collections.sort(Student.getStudents());
+        System.out.println(Student.getStudents());
+
+        Student.getStudents().sort(Student.compareByCourse());
+        System.out.println(Student.getStudents());
+
+
     }
 }

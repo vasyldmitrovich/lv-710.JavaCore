@@ -1,53 +1,51 @@
 package com.softserve.hw09.task1;
 
-import java.util.Arrays;
-import java.util.Comparator;
-
-import static com.softserve.hw01.MessageHelper.readStringMessage;
-import static com.softserve.hw01.MessageHelper.writeMessage;
+import java.util.Collection;
+import java.util.HashSet;
+import java.util.Set;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 /**
- * Enter in console sentence of five words.
- * - display the longest word in the sentence
- * - determine the number of its letters
- * - bring the second word in reverse order
+ * Write parameterized methods union(Set set1, Set set2) and intersect(Set set1, Set set2), realizing
+ * the operations of union and intersection of two sets. Test the operation of these techniques on
+ * two pre-filled sets.
  */
 public class Task1 {
     public void run() {
-        writeMessage("Enter in console sentence of five words.");
-        String sentence = readStringMessage();
+        Set<Integer> set1 = new HashSet<>() {{
+            add(1);
+            add(2);
+            add(3);
+            add(4);
+            add(5);
+            add(6);
+            add(7);
+        }};
+        Set<Integer> set2 = new HashSet<>() {{
+            add(1);
+            add(2);
+            add(30);
+            add(40);
+            add(50);
+            add(60);
+            add(70);
+        }};
 
-        Task1 task = new Task1();
+        System.out.println("union" + union(set1, set2));
+        System.out.println("intersect" + intersect(set1, set2));
 
-        task.showLongestWord(sentence);
-        task.showAmountLetters(sentence);
-        task.showReverseSecondWord(sentence);
     }
 
-    private void showLongestWord(String sentence) {
-        writeMessage("The longest word is - " + Arrays.stream(sentence.split("\\b\\s+?\\b"))
-                .map(word -> word
-                        .trim()
-                        .replaceAll("(\\w+)(\\W*?$)", "$1"))
-                .max(Comparator.comparing(String::length))
-                .get());
+    private <T> Set<T> union(Set<T> set1, Set<T> set2) {
+        return Stream.of(set1, set2)
+                .flatMap(Collection::stream)
+                .collect(Collectors.toSet());
     }
 
-    private void showAmountLetters(String sentence) {
-        writeMessage("Amount letters - " + sentence
-                .replaceAll("[^a-zA-Z]", "")
-                .length());
-    }
-
-    private void showReverseSecondWord(String sentence) {
-        try {
-            String[] words = sentence.split("\\b\\s+?\\b");
-            StringBuilder secondWord = new StringBuilder(words[1]
-                    .trim()
-                    .replaceAll("(\\w+)(\\W*?$)", "$1"));
-            writeMessage("Inverted second word - " + secondWord.reverse());
-        } catch (IndexOutOfBoundsException e) {
-            writeMessage("The sentence does not contain a second word.");
-        }
+    private <T> Set<T> intersect(Set<T> set1, Set<T> set2) {
+        return set1.stream()
+                .filter(value -> !set2.add(value))
+                .collect(Collectors.toSet());
     }
 }
