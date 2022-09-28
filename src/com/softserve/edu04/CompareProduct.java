@@ -3,6 +3,7 @@ package com.softserve.edu04;
 import java.util.ArrayList;
 
 public class CompareProduct {
+
     private static ArrayList<Product> products = new ArrayList<>();
     public static void createProducts() {
         products.add(0, new Product("table", 50, 11));

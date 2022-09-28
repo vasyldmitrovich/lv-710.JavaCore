@@ -1,6 +1,7 @@
 package com.softserve.edu04;
 
 public class Product {
+
     private String name;
     private int price;
     private int quantity;
@@ -49,4 +50,5 @@ public class Product {
                 ", quantity=" + quantity +
                 '}';
     }
+
 }

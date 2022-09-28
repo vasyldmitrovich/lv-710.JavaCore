@@ -1,9 +1,7 @@
 package com.softserve.edu04;
 
-import java.io.IOException;
-import com.softserve.hw03.InputReader;
-
 public enum DayOfWeek {
+
     MONDAY("monday", "montag", "понеділок"),
     TUESDAY("tuesday", "dienstag", "вівторок"),
     WEDNESDAY("wednesday", "mittwoch", "середа"),
@@ -34,38 +32,4 @@ public enum DayOfWeek {
         return ua;
     }
 
-    //TODO move that code to another class, must be in another, not in enum class
-    private static DayOfWeek getDayNumber() throws IOException {
-        int userInput;
-        System.out.print("Enter day number: ");
-        userInput = InputReader.getInputInt();
-
-        switch (userInput) {
-            case 1:
-                return MONDAY;
-            case 2:
-                return TUESDAY;
-            case 3:
-                return WEDNESDAY;
-            case 4:
-                return THURSDAY;
-            case 5:
-                return FRIDAY;
-            case 6:
-                return SATURDAY;
-            case 7:
-                return SUNDAY;
-            default:
-                System.out.println("wrong data");
-        }
-        return getDayNumber();
-    }
-
-    //TODO move that code to another class, must be in another, not in enum class
-    public static void getDayName() throws IOException {
-        DayOfWeek a = getDayNumber();
-        System.out.println(a.getEn());
-        System.out.println(a.getDe());
-        System.out.println(a.getUa());
-    }
 }

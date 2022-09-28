@@ -1,10 +1,7 @@
 package com.softserve.hw04;
 
-import com.softserve.hw03.InputReader;
-
-import java.io.IOException;
-
 public enum HTTPError {
+
     _400(400, "Bad Request"),
     _401(401, "Unauthorized"),
     _402(402, "Payment Required"),
@@ -54,15 +51,4 @@ public enum HTTPError {
         return value;
     }
 
-    public static void getVal() throws IOException {
-        int codeInput;
-        System.out.print("Enter error code: ");
-        codeInput = InputReader.getInputInt();
-
-        for (HTTPError deskript : values()) {
-            if (deskript.value == codeInput)
-                System.out.println(deskript.getValue()
-                        + " " + deskript.getDescription());
-        }
-    }
 }

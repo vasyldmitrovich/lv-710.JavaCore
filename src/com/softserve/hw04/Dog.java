@@ -1,6 +1,7 @@
 package com.softserve.hw04;
 
 public class Dog {
+
     private String name;
     private int age;
     private Breed breed;
@@ -48,4 +49,5 @@ public class Dog {
                 ", breed=" + breed +
                 '}';
     }
+
 }

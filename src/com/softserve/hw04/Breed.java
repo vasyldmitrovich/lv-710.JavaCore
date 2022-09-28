@@ -1,6 +1,7 @@
 package com.softserve.hw04;
 
 public enum Breed {
+
     SHEPHERD("German Shepherd"),
     BERNARD("Saint Bernard"),
     DALMATAIN("Dalmatian");

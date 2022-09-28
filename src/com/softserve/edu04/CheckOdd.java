@@ -4,6 +4,7 @@ import com.softserve.hw03.InputReader;
 import java.io.IOException;
 
 public class CheckOdd {
+
     private int[] odd = new int[3];
     private int counter = 0;
 
@@ -36,5 +37,6 @@ public class CheckOdd {
         }
 
         System.out.println(counter + " of 3 numbers is are odd.");
+
     }
 }

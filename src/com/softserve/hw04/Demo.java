@@ -33,9 +33,9 @@ public class Demo {
         numbs[2] = InputReader.getInputInt();
 
         min = max = numbs[0];
-        for (int i = 0; i < numbs.length; i++) {
-            if (numbs[i] < min) min = numbs[i];
-            if (numbs[i] > max) max = numbs[i];
+        for (int numb : numbs) {
+            if (numb < min) min = numb;
+            if (numb > max) max = numb;
         }
         System.out.println("Min: " + min + ", max: " + max + ";");
     }
@@ -73,6 +73,18 @@ public class Demo {
                 "his is " + dogBreed + ".");
     }
 
+    public static void handleHTTPError() throws IOException {
+        int codeInput;
+        System.out.print("Enter error code: ");
+        codeInput = InputReader.getInputInt();
+
+        for (HTTPError deskript : HTTPError.values()) {
+            if (deskript.getValue() == codeInput)
+                System.out.println(deskript.getValue()
+                        + " " + deskript.getDescription());
+        }
+    }
+
     public static void demonstration() throws IOException {
         System.out.println("\nEnter three float numbers and check: are they" +
                 " all belong to the range [-5,5].");
@@ -82,7 +94,7 @@ public class Demo {
         showMinMax();
         System.out.println("\nEnter number of HTTP Error (400, 401, ...)" +
                 "and get declaration of this error.");
-        HTTPError.getVal();
+        handleHTTPError();
         System.out.println("\nCreate three instances of class Dog, " +
                 "check the oldest dog, check if there is no two dogs with" +
                 "the same name.");

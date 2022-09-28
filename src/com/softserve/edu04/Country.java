@@ -1,9 +1,7 @@
 package com.softserve.edu04;
 
-import com.softserve.hw03.InputReader;
-import java.io.IOException;
-
 public enum Country {
+
     _001("Algeria", "Africa"),
     _002("Angola", "Africa"),
     _003("Benin", "Africa"),
@@ -225,16 +223,4 @@ public enum Country {
         return continent;
     }
 
-    //TODO move that code to another class, must be in another, not in enum class
-    public static void getCountryInfo() throws IOException {
-        String countryInput;
-        System.out.print("\nEnter counry: ");
-        countryInput = InputReader.getInputString();
-
-        for (Country i : values()) {
-            if (i.country.equals(countryInput))
-                System.out.println("Country " + i.country
-                        + " placed on " + i.continent + " continent.");
-        }
-    }
 }
