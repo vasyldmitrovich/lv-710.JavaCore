@@ -20,9 +20,16 @@ public class MainFirstTask {
         //TODO Do not include 401 402 403 status code
         f.readError(HTTP_STATUS_CODE100);
 
-        int[] values = {23, 12, 13, 17, 12, 23, 19, 11};
+//        int[] values = {23, 12, 13, 17, 12, 23, 19, 11};
+//
+//        Sorting sort = new Sorting();
+//        sort.sorting(values);
 
-        Sorting sort = new Sorting();
-        sort.sorting(values);
+
+        System.out.println(methodName(4,3));
+    }
+
+    public static Integer methodName(Integer x, Integer y) {
+        return y != 0 ? x + methodName(x, y - 1) : 0;
     }
 }
