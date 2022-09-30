@@ -10,7 +10,7 @@ public class MainFirstTask {
         HTTPFunctionality f = new HTTPFunctionality();
 
         // Float value belongs to the range [-5;5]
-        calculations.range(6.2f, 3.3f, - 6.2f);
+        calculations.range(6.2f, 3.3f, -6.2f);
 
         //Maximum integer value
         calculations.maxInt(2, 3, 4, 6, 1, 6, 9);
@@ -20,5 +20,9 @@ public class MainFirstTask {
         //TODO Do not include 401 402 403 status code
         f.readError(HTTP_STATUS_CODE100);
 
+        int[] values = {23, 12, 13, 17, 12, 23, 19, 11};
+
+        Sorting sort = new Sorting();
+        sort.sorting(values);
     }
 }
