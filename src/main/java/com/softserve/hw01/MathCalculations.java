@@ -6,11 +6,13 @@ public class MathCalculations {
         System.out.println("Hello");
     }
 
-    public double circlePerimeter(double radius) {
-        return 2 * Math.PI * radius;
+    public void circlePerimeter(double radius) {
+        double perimeter = 2 * Math.PI * radius;
+        System.out.println("Perimeter = " + perimeter);
     }
 
-    public double circleArea(double radius) {
-        return Math.PI * radius * radius;
+    public void circleArea(double radius) {
+        double area = Math.PI * radius * radius;
+        System.out.println("Circle area = " + area);
     }
 }
