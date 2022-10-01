@@ -43,7 +43,7 @@ public class Dog {
             Set<Map.Entry<String, Integer>> entrySet = nameAndCount.entrySet();
             for (Map.Entry<String, Integer> entry : entrySet) {
                 if (entry.getValue() > 1) {
-                    System.out.println("Duplicated element from the array is: " + entry.getKey());
+                    System.out.println("Duplicated element in the array is: " + entry.getKey());
                 }
         }
     }
