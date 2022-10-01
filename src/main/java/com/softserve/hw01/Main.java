@@ -1,5 +1,7 @@
 package com.softserve.hw01;
 
+import com.softserve.io.Input;
+
 import java.util.List;
 
 public class Main {
@@ -23,9 +25,11 @@ public class Main {
 
     public static void task3() {
         MathCalculations calc = new MathCalculations();
+        User u = new User();
         List<User> users = List.of(new User[]{
-                new User("Lora", 2, 1),
-                new User("John", 3, 2)
+                new User(u.inputName(), u.inputCoastPerMin(), u.inputMinAmount()),
+                new User(u.inputName(), u.inputCoastPerMin(), u.inputMinAmount()),
+                new User(u.inputName(), u.inputCoastPerMin(), u.inputMinAmount())
         });
         calc.phoneCallCoast(users);
     }
