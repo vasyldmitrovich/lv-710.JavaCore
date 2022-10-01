@@ -1,6 +1,6 @@
 package com.softserve.hw05;
 
-import java.util.Arrays;
+import java.util.*;
 
 public class Main {
 
@@ -12,6 +12,9 @@ public class Main {
         task1();
         task2();
         task3();
+        task4();
+
+
     }
 
     public static void task1() {
@@ -31,6 +34,13 @@ public class Main {
     }
 
     public static void task4() {
+        Car car = new Car();
+
+        ArrayList<Car> cars = new ArrayList<>();
+        cars.add(new Car("Audi", car.setYearOfProduction(), 3.0));
+        cars.add(new Car("BMW", car.setYearOfProduction(), 2.5));
+
+        car.sortByYear(cars);
     }
 
     public static void task5() {
