@@ -2,25 +2,21 @@ package com.softserve.hw07;
 
 public class ContractEmployee extends Employee implements Payment {
 
-    private final int quantityOfJobs;
-    private final int payPerJob;
+    private final int fixedMonthlyPayment;
+    private final int federalTaxIdNumber;
 
-    public ContractEmployee(String employeeId, int quantityOfJobs, int payPerJob) {
+    public ContractEmployee(String employeeId, int fixedMonthlyPayment, int federalTaxIdNumber) {
         super(employeeId);
-        this.quantityOfJobs = quantityOfJobs;
-        this.payPerJob = payPerJob;
+        this.fixedMonthlyPayment = fixedMonthlyPayment;
+        this.federalTaxIdNumber = federalTaxIdNumber;
     }
 
-    public int getPayPerJob() {
-        return payPerJob;
-    }
-
-    public int getQuantityOfJobs() {
-        return quantityOfJobs;
+    public int getFixedMonthlyPayment() {
+        return fixedMonthlyPayment;
     }
 
     @Override
     public int calculatePay() {
-        return getPayPerJob() * getQuantityOfJobs();
+        return getFixedMonthlyPayment();
     }
 }

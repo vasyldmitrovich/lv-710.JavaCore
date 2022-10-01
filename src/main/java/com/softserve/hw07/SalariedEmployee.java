@@ -5,11 +5,13 @@ public class SalariedEmployee extends Employee implements Payment {
     private final int payPerHour;
     private String employeeId;
     private final int amountHours;
+    private final String socialSecurityNumber;
 
-    public SalariedEmployee(String employeeId, int payPerHour, int amountHours) {
+    public SalariedEmployee(String employeeId, int payPerHour, int amountHours, String socialSecurityNumber) {
         super(employeeId);
         this.payPerHour = payPerHour;
         this.amountHours = amountHours;
+        this.socialSecurityNumber = socialSecurityNumber;
     }
 
     public int getAmountHours() {
@@ -18,6 +20,10 @@ public class SalariedEmployee extends Employee implements Payment {
 
     public int getPayPerHour() {
         return payPerHour;
+    }
+
+    public String getSocialSecurityNumber() {
+        return socialSecurityNumber;
     }
 
     @Override
