@@ -4,7 +4,7 @@ public class Employee {
 
     private String employeeId;
 
-    public Employee(String employeeId){
+    public Employee(String employeeId) {
         this.employeeId = employeeId;
     }
 }
