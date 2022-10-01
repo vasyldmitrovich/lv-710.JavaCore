@@ -1,7 +1,5 @@
 package com.softserve.hw01;
 
-import com.softserve.io.Input;
-
 import java.util.Scanner;
 
 public class User {

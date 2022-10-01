@@ -7,14 +7,11 @@ public class Main {
     static Input input = new Input();
 
     public static void main(String[] args) {
-        Person personOne = new Person(input.inputFirstName(), input.inputLastName(), input.inputBirthDate());
-        System.out.println(personOne.ageCalculation(personOne.getBirthDate()));
 
-        System.out.println(personOne.output());
-
-        personOne.changeName("Jo", "Jo");
-        System.out.println(personOne.getFirstName() + " " + personOne.getLastName());
-
-
+        Person person1 = new Person(input.inputFirstName(), input.inputLastName(), input.inputBirthDate());
+        System.out.println(person1.ageCalculation(person1.getBirthDate()));
+        System.out.println(person1.output());
+        person1.changeName("Jo", "Jo");
+        System.out.println(person1.getFirstName() + " " + person1.getLastName() + " " + person1.getBirthDate());
     }
 }
