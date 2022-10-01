@@ -1,9 +1,16 @@
 package com.softserve.hw05;
 
 import javax.swing.*;
+import java.time.YearMonth;
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
+import java.util.Scanner;
+import java.util.stream.Collectors;
 
 public class Calculations {
+
+    private Scanner in = new Scanner(System.in);
 
     public void isPositiveOrNegativeInt(int[] value) {
         for (int i = 0; i < value.length; i++) {
@@ -108,5 +115,47 @@ public class Calculations {
         }
         System.out.println("Sum of all even numbers is equal: " + sum);
         return sum;
+    }
+
+    public int numberDaysMonth() {
+        System.out.println("Please input the year...");
+        int year = in.nextInt();
+        System.out.println("Please input month...");
+        int month = in.nextInt();
+        YearMonth yearMonthObject = YearMonth.of(year, month);
+        int daysInMonth = yearMonthObject.lengthOfMonth();
+        System.out.println("This month have " + daysInMonth + " days.");
+        return daysInMonth;
+    }
+
+    public int numberDaysInYear() {
+        int yearDaysSum = 0;
+        int daysInMonth = 0;
+        System.out.println("Please input the year...");
+        int year = in.nextInt();
+        for (int i = 1; i <= 12; i++) {
+            YearMonth yearMonthObject = YearMonth.of(year, i);
+            daysInMonth = yearMonthObject.lengthOfMonth();
+            yearDaysSum = yearDaysSum + daysInMonth;
+        }
+        System.out.println("This year have " + yearDaysSum + " days.");
+        return daysInMonth;
+    }
+
+    public List<Integer> numberDaysInYearArr() {
+        int daysInMonth;
+        System.out.println("Please input the year...");
+        int year = in.nextInt();
+        List<Integer> month = new ArrayList<>();
+        Integer sum = null;
+        for (int i = 1; i <= 12; i++) {
+            YearMonth yearMonthObject = YearMonth.of(year, i);
+            daysInMonth = yearMonthObject.lengthOfMonth();
+            month.add(daysInMonth);
+            sum = month.stream()
+                    .reduce(0, Integer::sum);
+        }
+        System.out.println("This year have " + sum + " days.");
+        return month;
     }
 }
