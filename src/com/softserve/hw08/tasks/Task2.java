@@ -7,13 +7,13 @@ public class Task2 {
 
     public static void runSecondTask(){
 
-        Wrapper[] wrappers = new Wrapper[] {
+        Wrapper<Object>[] wrappers = new Wrapper[] {
                 new Wrapper<String>("Hello World"),
                 new Wrapper<Integer>(101),
                 new Wrapper<Boolean>(true)
         };
 
-        for (Wrapper template : wrappers){
+        for (Wrapper<Object> template : wrappers){
             System.out.println(template.getValue());
         }
     }
