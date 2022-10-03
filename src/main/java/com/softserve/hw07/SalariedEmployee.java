@@ -58,6 +58,7 @@ public class SalariedEmployee extends Employee implements Payment {
         return averagePay;
     }
 
+    // should be changed
 //    @Override
 //    public ArrayList<SalariedEmployee> sortBySalary(ArrayList<SalariedEmployee> employees){
 //        Collections.sort(employees, new Comparator<SalariedEmployee>() {
