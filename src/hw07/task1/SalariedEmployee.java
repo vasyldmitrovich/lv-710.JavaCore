@@ -13,6 +13,15 @@ public class SalariedEmployee extends Employee {
     }
 
     @Override
+    public String toString() {
+        return "SalariedEmployee{" +
+                "hourlySalary=" + hourlySalary +
+                ", socialSecurityNumber='" + socialSecurityNumber + '\'' +
+                "average monthly wage  " + calculatePay() +
+                '}';
+    }
+
+    @Override
     public BigDecimal calculatePay() {
         return BigDecimal.valueOf(hourlySalary)
                 .multiply(BigDecimal.valueOf(8));

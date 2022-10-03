@@ -10,6 +10,7 @@ package hw08;
         public static void task1() {
 
 
+
         }
 
         public static void task2() {

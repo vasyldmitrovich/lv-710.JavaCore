@@ -13,6 +13,15 @@ public class ContractEmployee  extends Employee {
     }
 
     @Override
+    public String toString() {
+        return "ContractEmployee{" +
+                "fixedSalary=" + fixedSalary +
+                ", federalTaxIdMember='" + federalTaxIdMember + '\'' +
+                "average monthly wage  " + calculatePay() +
+                '}';
+    }
+
+    @Override
     public BigDecimal calculatePay() {
         return BigDecimal.valueOf(fixedSalary);
     }
