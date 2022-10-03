@@ -4,8 +4,8 @@ public abstract class Person {
     private final static String INFO_MESSAGE = 
             "First name: %s, Last name: %s, Age: %d";
 
-    private FullName fullName;
-    private int age;
+    protected FullName fullName;
+    protected int age;
 
     public Person(FullName fullName, int age) {
         this.fullName = fullName;
