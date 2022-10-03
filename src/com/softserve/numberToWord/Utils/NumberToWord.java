@@ -1,20 +1,19 @@
-package com.softserve.edu15.Tasks;
+package com.softserve.numberToWord.Utils;
 
 import java.util.Random;
 
-public class Task8 {
+public class NumberToWord {
     static String[] One = {"", "One", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine", "Ten",
             "Eleven", "Twelve", "Thirteen", "Fourteen", "Fifteen", "Sixteen", "Seventeen", "Eighteen", "Nineteen"};
     static String[] Ten = {"", "", "Twenty", "Thirty", "Forty", "Fifty", "Sixty",
             "Seventy", "Eighty", "Ninety"};
 
-    static String[] Od = {"", "один", "два", "три", "чотири", "пять", "шість", "сім", "вісім", "девять", "десять",
-            "одинадцять", "дванадцять", "тринадцять", "чотирнадцять", "пятнадцять", "шістнадцять", "сімнадцять", "вісімнадцять", "девятнадцять"};
-    static String[] OdF = {"", "одна", "дві", "три", "чотири", "пять", "шість", "сім", "вісім", "девять", "десять",
-            "одинадцять", "дванадцять", "тринадцять", "чотирнадцять", "пятнадцять", "шістнадцять", "сімнадцять", "вісімнадцять", "девятнадцять"};
-    static String[] Des = {"", "", "двадцять", "тридцять", "сорок", "пятдесят", "шістдесят",
+    static String[] OneUkr = {"", "один", "два", "три", "чотири", "пять", "шість", "сім", "вісім", "девять", "десять",
+            "одинадцять", "дванадцять", "тринадцять", "чотирнадцять", "пятнадцять", "шістнадцять", "сімнадцять",
+            "вісімнадцять", "девятнадцять", "","одна","дві"};
+     static String[] TenUkr = {"", "", "двадцять", "тридцять", "сорок", "пятдесят", "шістдесят",
             "сімдесят", "вісімдесят", "девяносто"};
-    static String[] Sto = {"", "сто", "двісті", "триста", "чотириста", "пятсот", "шістсот",
+    static String[] HundredUkr = {"", "сто", "двісті", "триста", "чотириста", "пятсот", "шістсот",
             "сімсот", "вісімсот", "девятсот"};
     private static boolean female = false;
 
@@ -24,6 +23,12 @@ public class Task8 {
             female = false;
             num = (new Random()).ints(0, 999999999).findFirst().getAsInt();
             System.out.println(num + " = " + numberToWordsUkr(num));
+            double grn = num/100;
+            double kop = (num%100)*100;
+            System.out.println(grn+" "+kop);
+
+            System.out.println(grn + " = " + numberToWordsUkr((int)grn) + " грн. "+
+                                            numberToWordsUkr((int)kop) + " коп. ");
 
         }
         System.out.println();
@@ -36,7 +41,7 @@ public class Task8 {
         return helper(num);
     }
 
-    private static String numberToWordsUkr(int num) {
+    public static String numberToWordsUkr(int num) {
         if (num == 0) {
             return "нуль";
         }
@@ -93,14 +98,10 @@ public class Task8 {
 
     private static String helperUkr(int num, boolean f) {
         female = f;
-        if (f) {
-            if (num <= 2) return OdF[num];
-        }
         return helperUkr(num);
     }
 
     private static String helperUkr(int num) {
-
         if (num >= 1000000) {
             return (helperUkr(num / 1000000) + " мільйон" + milPref(
                     ((num / 1000000) % 100 < 10 || (num / 1000000) % 100 > 20) ? (num / 1000000) % 10 : 0
@@ -114,15 +115,15 @@ public class Task8 {
                     + helperUkr(num % 1000)).trim();
         }
         if (num >= 100) {
-
-            return (Sto[num / 100] + " " + helperUkr(num % 100)).trim();
+            return (HundredUkr[num / 100] + " " + helperUkr(num % 100)).trim();
         }
         if (num >= 20) {
-            return (Des[num / 10] + " " + helperUkr(num % 10)).trim();
+            return (TenUkr[num / 10] + " " + helperUkr(num % 10)).trim();
         } else {
             if (female) {
-                return OdF[num];
-            } else return Od[num];
+                return (num<3)?OneUkr[num+20]:OneUkr[num];
+            } else return OneUkr[num];
         }
     }
 }
+
