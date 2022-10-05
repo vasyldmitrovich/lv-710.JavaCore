@@ -1,10 +1,6 @@
-package com.softserve.hw07;
-
-import com.softserve.hw05.Car;
+package com.softserve.hw07.task1;
 
 import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Comparator;
 
 public class SalariedEmployee extends Employee implements Payment {
 
