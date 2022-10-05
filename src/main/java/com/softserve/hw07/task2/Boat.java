@@ -1,6 +1,6 @@
 package com.softserve.hw07.task2;
 
-public class Boat extends  WatterVehicle{
+public class Boat extends WaterVehicle {
 
     private int volume;
 

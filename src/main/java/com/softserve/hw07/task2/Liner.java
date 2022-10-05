@@ -1,6 +1,6 @@
 package com.softserve.hw07.task2;
 
-public class Liner extends WatterVehicle{
+public class Liner extends WaterVehicle {
 
     private int floors;
 
