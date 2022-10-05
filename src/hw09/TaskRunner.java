@@ -1,9 +1,6 @@
 package hw09;
 
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.Map;
-import java.util.Set;
+import java.util.*;
 
 public class TaskRunner {
     public static void main(String[] args) {
@@ -51,6 +48,17 @@ public class TaskRunner {
     }
 
     public static void task3() {
+        List<Student> students = new ArrayList<>();
+        students.add(new Student("Oleh", 3));
+        students.add(new Student("Ira", 4));
+        students.add(new Student("Roman", 5));
+        students.add(new Student("Veronika", 2));
+        StudentsUtil.printStudents(students,5);
+        students.sort(new Student.StudentNameComparator());
+        System.out.println(students);
+        students.sort(new Student.StudentCourseComparator());
+        System.out.println(students);
+
 
     }
 }
