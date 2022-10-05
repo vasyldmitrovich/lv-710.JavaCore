@@ -4,7 +4,7 @@ public class Passengers {
 
     private int passengers;
 
-    public Passengers(int passengers){
+    public Passengers(int passengers) {
         this.passengers = passengers;
     }
 
