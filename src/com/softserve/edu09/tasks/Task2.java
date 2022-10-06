@@ -24,7 +24,7 @@ public class Task2 {
         employeeMap.put(10006, "George");
         employeeMap.put(10007, "Maria");
 
-        Output.print(employeeMap);
+        Output.printMap1(employeeMap);
 
         //Ask user to enter ID, then find and write corresponding name from your map.
         // If you can't find this ID - say about it to user (use function containsKey()).

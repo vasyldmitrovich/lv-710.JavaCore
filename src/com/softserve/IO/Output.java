@@ -2,6 +2,7 @@ package com.softserve.IO;
 
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 
 public class Output {
 
@@ -13,12 +14,19 @@ public class Output {
         System.out.println(outputMessage);
     }
 
-    public static void print(List<Integer> list){
+    public static <T> void print(List<T> list){
         System.out.println(list);
     }
 
-    public static void print(Map<Integer, String> map){
+    public static <T> void printMap(Map<T, T> map){
         System.out.println(map);
     }
 
+    public static <T> void print(Set<T> set){
+        System.out.println(set);
+    }
+
+    public static void printMap1(Map<Integer, String> map) {
+        System.out.println(map);
+    }
 }
