@@ -3,14 +3,9 @@ package com.softserve.hw08.task1;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Main {
+public class Task1 {
 
-    public static void main(String[] args) {
-
-        task1();
-    }
-
-    public static void task1() {
+    public void runApp() {
         List<Student> students = new ArrayList<Student>() {{
             add(new Student("John", "Kross", 31, 121));
             add(new Student("Max", "Lewis", 28, 120));

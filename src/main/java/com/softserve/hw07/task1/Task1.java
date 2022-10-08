@@ -3,14 +3,9 @@ package com.softserve.hw07.task1;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Main {
+public class Task1 {
 
-    public static void main(String[] args) {
-
-        tak1();
-    }
-
-    public static void tak1() {
+    public void runApp() {
         List<Employee> employees = new ArrayList<>() {{
             add(new SalariedEmployee("SELL_DEPP-1234221", "Jordan", 50, 10, "2341"));
             add(new SalariedEmployee("SELL_DEPP-2324244", "Mick", 30, 10, "1245"));

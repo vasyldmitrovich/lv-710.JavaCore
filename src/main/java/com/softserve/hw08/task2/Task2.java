@@ -3,13 +3,9 @@ package com.softserve.hw08.task2;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Main {
+public class Task2 {
 
-    public static void main(String[] args) {
-        task2();
-    }
-
-    public static void task2(){
+    public void runApp(){
         List<Wrapper<?>> wrappers = new ArrayList<>() {{
 
             add(new Wrapper<>("S"));
