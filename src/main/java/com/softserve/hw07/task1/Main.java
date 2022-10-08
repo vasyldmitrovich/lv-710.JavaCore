@@ -1,21 +1,24 @@
 package com.softserve.hw07.task1;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class Main {
 
     public static void main(String[] args) {
 
-        Employee s = new Employee();
-        ArrayList<Employee> employees = new ArrayList<>();
+        tak1();
+    }
 
-        employees.add(new SalariedEmployee("SELL_DEPP-1234221", "Jordan", 25, 175, "2341"));
-        employees.add(new SalariedEmployee("SELL_DEPP-2324244", "Mick", 25, 175, "1245"));
-        employees.add(new ContractEmployee("QA_DEPP", 15000, 43523));
-        employees.add(new ContractEmployee("DEV_DEPP", 15000, 23145));
+    public static void tak1() {
+        List<Employee> employees = new ArrayList<>() {{
+            add(new SalariedEmployee("SELL_DEPP-1234221", "Jordan", 50, 10, "2341"));
+            add(new SalariedEmployee("SELL_DEPP-2324244", "Mick", 30, 10, "1245"));
+            add(new ContractEmployee("QA_DEPP", "Marry", 15000, 43523));
+            add(new ContractEmployee("DEV_DEPP", "Liza", 12000, 23145));
+        }};
 
-//            s.sortBySalary(employees);
-
-
+        employees.stream().sorted((e1, e2) -> ((Integer) e1.getSalary()).compareTo(e2.getSalary()))
+                .forEach(person -> System.out.println(person.getEmployeeId() + "Salary: " + person.getSalary()));
     }
 }

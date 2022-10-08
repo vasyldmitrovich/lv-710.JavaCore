@@ -1,6 +1,6 @@
 package com.softserve.hw07.task2;
 
-public class Car extends GroundVehicle{
+public class Car extends GroundVehicle {
 
     private String model;
 
@@ -19,6 +19,5 @@ public class Car extends GroundVehicle{
 
     @Override
     public void drive() {
-
     }
 }

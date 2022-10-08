@@ -1,10 +1,8 @@
 package com.softserve.hw07.task1;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Comparator;
+import static java.lang.Long.compare;
 
-public class Employee {
+public class Employee implements Payment, Comparable<Employee>{
 
     private String employeeId;
 
@@ -14,16 +12,21 @@ public class Employee {
         this.employeeId = employeeId;
     }
 
-//    public ArrayList<> sortBySalary(ArrayList<SalariedEmployee> employees){
-//        Collections.sort(employees, new Comparator<SalariedEmployee>() {
-//            @Override
-//            public int compare(SalariedEmployee o1, SalariedEmployee o2) {
-//                return o1.calculatePay() - o2.calculatePay();
-//            }
-//        });
-//        for (SalariedEmployee employee: employees){
-//            System.out.println(employee);
-//        }
-//        return employees;
-//    }
+    public String getEmployeeId() {
+        return employeeId;
+    }
+
+    public int getSalary(){
+        return 0;
+    }
+
+    @Override
+    public int compareTo(Employee o) {
+        return compare(this.calculatePay(), o.calculatePay());
+    }
+
+    @Override
+    public int calculatePay() {
+        return 0;
+    }
 }

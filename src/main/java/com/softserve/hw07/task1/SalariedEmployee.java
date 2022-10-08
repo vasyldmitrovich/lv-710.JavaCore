@@ -5,11 +5,12 @@ import java.util.ArrayList;
 public class SalariedEmployee extends Employee implements Payment {
 
     private final int payPerHour;
-    private String employeeId;
     private final int amountHours;
     private final String socialSecurityNumber;
     private String name;
     private int averagePay;
+    private String employeeId;
+
 
     public SalariedEmployee(String employeeId, String name, int payPerHour, int amountHours, String socialSecurityNumber) {
         super(employeeId);
@@ -23,7 +24,7 @@ public class SalariedEmployee extends Employee implements Payment {
         return amountHours;
     }
 
-    public int getPayPerHour() {
+    public int getRatePerHour() {
         return payPerHour;
     }
 
@@ -33,7 +34,12 @@ public class SalariedEmployee extends Employee implements Payment {
 
     @Override
     public int calculatePay() {
-        return getAmountHours() * getPayPerHour();
+        return getAmountHours() * getRatePerHour();
+    }
+
+    @Override
+    public int getSalary(){
+        return calculatePay();
     }
 
     @Override
@@ -53,19 +59,4 @@ public class SalariedEmployee extends Employee implements Payment {
     public int getAveragePay() {
         return averagePay;
     }
-
-    // should be changed
-//    @Override
-//    public ArrayList<SalariedEmployee> sortBySalary(ArrayList<SalariedEmployee> employees){
-//        Collections.sort(employees, new Comparator<SalariedEmployee>() {
-//            @Override
-//            public int compare(SalariedEmployee o1, SalariedEmployee o2) {
-//                return o1.calculatePay() - o2.calculatePay();
-//            }
-//        });
-//        for (SalariedEmployee employee: employees){
-//            System.out.println(employee);
-//        }
-//        return employees;
-//    }
 }
