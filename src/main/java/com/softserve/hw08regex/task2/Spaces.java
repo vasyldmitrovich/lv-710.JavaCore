@@ -4,11 +4,7 @@ import java.util.Scanner;
 
 public class Spaces {
 
-    public static void main(String[] args) {
-        coverSpaces();
-    }
-
-    public static void coverSpaces(){
+    public void coverSpaces(){
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter Sentence");
         String s = sc.nextLine();

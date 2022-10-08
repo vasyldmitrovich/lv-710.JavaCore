@@ -6,11 +6,7 @@ import java.util.Scanner;
 
 public class DisplayLongestWordLength {
 
-    public static void main(String[] args) {
-        longestWordLength();
-    }
-
-    public static void longestWordLength() {
+    public void longestWordLength() {
         String s;
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter Sentence");
