@@ -38,5 +38,18 @@ public class Input {
         return result;
     }
 
+    public static String inputString(String message, String errorMessage, int biggerThen, int smallerThen){
+        System.out.println(message);
+        Scanner input = new Scanner(System.in);
+        String result = input.nextLine();
+        while (!(result.length() >= biggerThen) || !(result.length() <= smallerThen)){
+            System.err.println(errorMessage);
+            result = input.nextLine();
+        }
+        return result;
+    }
+
+
+
 
 }
