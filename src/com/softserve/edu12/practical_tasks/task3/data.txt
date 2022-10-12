@@ -1,0 +1,7 @@
+Reading from external devices – almost always necessary
+for buffer to be used.
+FileReader and FileWriter classes inherited from
+InputStreamReader and OutputStreamWriter.
+The InputStreamReader class is intended to wrap an InputStream,
+thereby turning the byte based input stream into a character var
+based Reader.               var
