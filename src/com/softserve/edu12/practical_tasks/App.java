@@ -6,7 +6,7 @@ import com.softserve.edu12.practical_tasks.task3.Task3;
 
 public class App {
     public static void main(String[] args) {
-//        Task1.run();
+//        new Task1().run();
 //        new Task2().run();
         new Task3().run();
     }

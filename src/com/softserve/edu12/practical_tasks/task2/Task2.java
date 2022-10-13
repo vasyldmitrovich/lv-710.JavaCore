@@ -1,6 +1,7 @@
 package com.softserve.edu12.practical_tasks.task2;
 
 import com.softserve.edu12.practical_tasks.task1.Task1;
+import com.softserve.edu12.practical_tasks.task1.TaskCreator;
 
 /**
  * Output two messages «Hello, world» and «Peace in the peace» 5 times each with
@@ -12,10 +13,10 @@ public class Task2 {
 
     public void run() {
         Thread threadPrintingHello = new Thread(() ->
-                new Task1("Hello, world", 5, 2000L).printTextWithIntervals());
+                new TaskCreator("Hello, world", 5, 2000L).printTextWithIntervals());
 
         Thread threadPrintingPeace = new Thread(() ->
-                new Task1("Peace in the peace", 5, 3000L).printTextWithIntervals());
+                new TaskCreator("Peace in the peace", 5, 3000L).printTextWithIntervals());
 
         threadPrintingHello.start();
         threadPrintingPeace.start();
