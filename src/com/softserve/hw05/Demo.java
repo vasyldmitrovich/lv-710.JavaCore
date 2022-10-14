@@ -131,8 +131,11 @@ public class Demo {
 
     public static void demonstration() throws IOException {
         getMonthDays();
+        System.out.println();
         get10Numbers();
+        System.out.println();
         get5numbers();
+        System.out.println();
         carCompare();
     }
 
