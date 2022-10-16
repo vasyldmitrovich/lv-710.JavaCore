@@ -49,7 +49,31 @@ public class Input {
         return result;
     }
 
+    public static double inputDouble(String errorMessage){
+        double result;
+        Scanner input = new Scanner(System.in);
+        while (true){
+            try { result = Double.parseDouble(input.nextLine().replaceAll(",", "."));
+                break;
+            }catch (NumberFormatException e){
+                System.err.println(errorMessage);
+            }
+        }
+        return result;
+    }
 
-
+    public static double inputDouble(String message, String errorMessage){
+        System.out.println(message);
+        double result;
+        Scanner input = new Scanner(System.in);
+        while (true){
+            try { result = Double.parseDouble(input.nextLine().replaceAll(",", "."));
+                break;
+            }catch (NumberFormatException e){
+                System.err.println(errorMessage);
+            }
+        }
+        return result;
+    }
 
 }

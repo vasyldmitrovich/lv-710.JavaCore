@@ -14,6 +14,10 @@ public class Output {
         System.out.println(outputMessage);
     }
 
+    public static void print(double outputMessage){
+        System.out.println(outputMessage);
+    }
+
     public static <T> void print(List<T> list){
         System.out.println(list);
     }
