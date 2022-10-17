@@ -1,4 +1,4 @@
-package main.java.com.softserve.edu05.apptest;
+package com.softserve.edu05.apptest;
 
 import com.softserve.edu05.apptest.Calc;
 import org.junit.*;
