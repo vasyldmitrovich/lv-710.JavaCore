@@ -6,7 +6,7 @@ import java.io.InputStreamReader;
 import java.util.Arrays;
 
 /**
- * @author Serhii Mudrachnko
+ * @author Serhii Mudrachenko
  */
 public class MessageHelper {
     private static final BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));

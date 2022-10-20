@@ -1,7 +1,7 @@
 package com.softserve.hw01;
 
 /**
- * @author Serhii Mudrachnko
+ * @author Serhii Mudrachenko
  */
 public class Main {
 
