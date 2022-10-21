@@ -16,8 +16,7 @@ public class Task3 {
             System.out.println();
 
             System.out.println("Longest line: ");
-            lines.sort(Comparator.comparing(String::length));
-            System.out.println(lines.get(lines.size() - 1));
+            System.out.println(lines.stream().max(Comparator.comparing(String::length)).orElse(null));
             System.out.println();
 
             System.out.println("Lines, which contain of word «var»: ");
