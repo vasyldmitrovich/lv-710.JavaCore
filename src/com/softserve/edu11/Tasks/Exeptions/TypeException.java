@@ -12,9 +12,6 @@ public class TypeException extends Exception{
         possibleTypes.add(Type.FLOWER);
     }
 
-    public TypeException() {
-    }
-
     public TypeException(String message) {
         super(message);
     }
