@@ -1,0 +1,57 @@
+package com.softserve.edu11.Tasks.Entity;
+
+import com.softserve.edu11.Tasks.Exeptions.ColorException;
+import com.softserve.edu11.Tasks.Exeptions.TypeException;
+
+public class Plant {
+    private int size;
+    private Color color;
+    private Type type;
+
+    public Plant(int size, Color color, Type type) {
+        try {
+            TypeException.isPossible(type);
+            ColorException.isPossible(color);
+            this.size = size;
+            this.color = color;
+            this.type = type;
+
+        } catch (TypeException | ColorException e) {
+            e.printStackTrace();
+        }
+
+    }
+
+    public int getSize() {
+        return size;
+    }
+
+    public void setSize(int size) {
+        this.size = size;
+    }
+
+    public Color getColor() {
+        return color;
+    }
+
+    public void setColor(Color color) {
+        this.color = color;
+    }
+
+    public Type getType() {
+        return type;
+    }
+
+    public void setType(Type type) {
+        this.type = type;
+    }
+
+    @Override
+    public String toString() {
+        return "Plant{" +
+                "size=" + size +
+                ", color=" + color +
+                ", type=" + type +
+                '}';
+    }
+}
