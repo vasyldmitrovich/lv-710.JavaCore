@@ -1,0 +1,3 @@
+Hello, my name is Bohdan.
+I study on courses, study Java.
+I like this language.
