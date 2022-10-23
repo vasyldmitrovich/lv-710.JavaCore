@@ -2,11 +2,9 @@ package com.softserve.hw09collections;
 
 import com.softserve.hw09collections.task1.CollectionOperations;
 import com.softserve.hw09collections.task2.FirstLastName;
+import com.softserve.hw09collections.task3.Student;
 
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.Map;
-import java.util.Set;
+import java.util.*;
 
 public class Main {
 
@@ -14,6 +12,7 @@ public class Main {
 
         task1();
         task2();
+        task3();
     }
 
     public static void task1() {
@@ -52,5 +51,24 @@ public class Main {
         }};
 
         new FirstLastName().deleteSpecificPerson(personMap, "Clark");
+    }
+
+    public static void task3() {
+        List<Student> studentList = new ArrayList<>() {{
+            add(new Student("Mark Zuckerberg", 121));
+            add(new Student("Steve Jobs", 131));
+            add(new Student("Davy Johns", 141));
+            add(new Student("Bill Gates", 121));
+            add(new Student("Marco Polo", 131));
+
+        }};
+
+        new Student().printStudents(studentList, 121);
+        System.out.println(" ");
+
+        studentList.stream().sorted().forEach(System.out::println);
+        System.out.println(" ");
+
+        studentList.stream().sorted(Student.compareByCourse()).forEach(System.out::println);
     }
 }
