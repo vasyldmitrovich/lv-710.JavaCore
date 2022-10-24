@@ -1,4 +1,4 @@
-package com.softserve.edu06.employees;
+package com.softserve.edu0607.employees;
 
 public enum Hours {
     HOURS_100(100),

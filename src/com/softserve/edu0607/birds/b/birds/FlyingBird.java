@@ -1,4 +1,4 @@
-package com.softserve.edu06.birds.b.birds;
+package com.softserve.edu0607.birds.b.birds;
 
 class FlyingBird extends Bird {
     public FlyingBird(){};

@@ -1,4 +1,4 @@
-package com.softserve.edu06.employees;
+package com.softserve.edu0607.employees;
 
 /**
  * Create an interface to the method calculatePay(), the base class Employee with a string variable employeeId.
