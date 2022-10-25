@@ -10,7 +10,7 @@ public class Task3 {
         new Task3().parseStringToDate();
     }
 
-    protected LocalDate parseStringToDate() {
+    private LocalDate parseStringToDate() {
         System.out.println("Enter the start date: YYYY-MM-DD.");
         LocalDate localDate;
         try {
