@@ -1,8 +1,8 @@
-package com.softserve.hv12classes;
+package hv12classes;
 
 public class Threads extends Thread {
 
-    private String message;
+    private String message ;
     private String message2;
 
     public String getMessage() {
@@ -26,15 +26,13 @@ public class Threads extends Thread {
 
     }
     public Threads(String message, String message2) {
-    	 this.message = message;
-    	 this.message2 = message2;
-
+        this.message = message;
+        this.message2 = message2;
 
     }
 
     public Threads( String message) {
-    	this.message = message;
-
+        this.message = message;
     }
 
     @Override
@@ -53,6 +51,3 @@ public class Threads extends Thread {
 
     }
 }
-
-
-
