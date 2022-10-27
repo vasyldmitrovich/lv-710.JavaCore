@@ -1,4 +1,4 @@
-package com.softserve.hw10.task1;
+package com.softserve.hw10;
 
 public class TaskManager {
 

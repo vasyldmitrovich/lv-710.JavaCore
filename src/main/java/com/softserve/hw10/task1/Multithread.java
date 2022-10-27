@@ -1,5 +1,7 @@
 package com.softserve.hw10.task1;
 
+import com.softserve.hw10.TaskManager;
+
 public class Multithread extends Thread implements Runnable{
 
     @Override
@@ -20,8 +22,6 @@ public class Multithread extends Thread implements Runnable{
             new TaskManager("process-3", 5, 3000L).printProcessStackTrace();
         });
 
-        task1.start();
-        task2.start();
         task3.start();
     }
 }
