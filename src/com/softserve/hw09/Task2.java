@@ -29,10 +29,13 @@ public class Task2 {
         }
         //System.out.println(name);
 
+        Map<String, Integer> personMap1 = new HashMap<>();
         for (String o : name){
-            System.out.println(o);
-            System.out.println(getCountTheSameFirstName(personMap, o));
+           
+           personMap1.put(o, getCountTheSameFirstName(personMap, o));
+           
         }
+        System.out.println(personMap1);
 
     }
     public static int getCountTheSameFirstName(Map<String, String> map, String firstName){
