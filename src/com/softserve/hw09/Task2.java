@@ -22,6 +22,36 @@ public class Task2 {
         personMap.entrySet().removeIf(entry -> entry.getValue().equals("John"));
         System.out.println("\n" + personMap);
         
+        Iterator<Map.Entry<String, String>> iterator = personMap.entrySet().iterator();
+        ArrayList<String> name = new ArrayList<String>();
+        while(iterator.hasNext()){
+            name.add(iterator.next().getValue());
+        }
+        //System.out.println(name);
+
+        for (String o : name){
+            System.out.println(o);
+            System.out.println(getCountTheSameFirstName(personMap, o));
+        }
+
+    }
+    public static int getCountTheSameFirstName(Map<String, String> map, String firstName){
+
+        int count = 0;
+        Iterator<Map.Entry<String, String>> iterator = map.entrySet().iterator();
+
+        while (iterator.hasNext())
+        {
+            Map.Entry<String, String> pair1 = iterator.next();
+            String value = pair1.getValue();
+            if (value.equals(firstName))
+            {
+                count++;
+            }
+        }
+
+        return count;
+        
     }
 
 
