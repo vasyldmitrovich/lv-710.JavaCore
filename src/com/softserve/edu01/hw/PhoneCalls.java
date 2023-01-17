@@ -21,5 +21,8 @@ public class PhoneCalls {
         System.out.println("Cost of the thred call " + t3 * c3);
         System.out.println("Cost of all calls " + (t1 * c1 + t2 * c2 + t3 * c3));
 
+        scanner.close();
+        scanner1.close();
+
     }
 }

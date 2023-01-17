@@ -6,25 +6,35 @@ import java.io.InputStreamReader;
 import java.util.Scanner;
 
 public class Greeting {
+
     public Greeting() throws IOException {
     }
 
     public static void main(String[] args) throws IOException {
         System.out.println("What is your name?");
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-//        String[] name = new String[]{br.readLine()};
-//        for (String world:
-//             name) {
-//            System.out.println("Where are do you live, " + world + " ?");
-        String a = br.readLine();
-        String b = br.readLine();
-        System.out.println("Where are do you live, " + a + b + " ?");
+        String[] name = new String[]{br.readLine()};
+        for (String partOfName :
+                name) {
+            System.out.println("Where are do you live, " + partOfName + " ?");
+//            String a = br.readLine();
+//        String b = br.readLine();
+//            System.out.println("Where are do you live, " + a + " ?");
 
-        BufferedReader br1 = new BufferedReader(new InputStreamReader(System.in));
-        String address = br1.readLine();
-//        for (String world1:
-//                name) {
-            System.out.println("Your name is " + a + b + "\nYour address is " + address);
+
+            BufferedReader br1 = new BufferedReader(new InputStreamReader(System.in));
+//            String[] address = new String[]{br1.readLine()};
+//            for (String world1 :
+//                    address)
+            String street = br1.readLine();
+            String numberOfBuild = br1.readLine();
+
+            System.out.print("Your name is " + partOfName + "\nYour address is " + street + numberOfBuild );
+
+            br.close();
+            br1.close();
         }
-
+    }
 }
+
+
