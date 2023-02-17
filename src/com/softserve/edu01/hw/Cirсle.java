@@ -11,8 +11,7 @@ public class Cirсle {
 
         scanner.close();
 
-        System.out.println("Perimeter of the circle: " + (int)(2*Math.PI*r));
-        System.out.println("Area of the circle: " + (int)(Math.PI*r*r));
-
+        System.out.println("Perimeter of the circle: " + (int) (2 * Math.PI * r));
+        System.out.println("Area of the circle: " + (int) (Math.PI * r * r));
     }
 }

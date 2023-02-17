@@ -1,13 +1,11 @@
-package com.softserve.edu02.practik;
+package com.softserve.edu03.practik;
 
 public class Employee {
+    static double totalSum;
     private String name;
     private int rate;
     private double hours;
-    static double totalSum;
-
-    public Employee() {
-    }
+    private double salary;
 
     public Employee(String name, int rate) {
         this.name = name;
@@ -19,6 +17,9 @@ public class Employee {
         this.rate = rate;
         this.hours = hours;
         totalSum = totalSum + rate * hours;
+    }
+
+    public Employee(Object ...readLine) {
     }
 
     public String getName() {
@@ -38,7 +39,9 @@ public class Employee {
     }
 
     public double getSalary() {
-        return rate * hours;
+        salary = rate * hours;
+
+        return salary;
     }
 
     public String toString() {
@@ -49,23 +52,25 @@ public class Employee {
                 + "}";
     }
 
-    public double chageRate(int rate) {
-        return rate * hours;
+    public void changeRate(int rate) {   // УВАГА!! що скажешь про цю частину коду?
+        if (rate >= 0) {
+            totalSum = totalSum - (this.rate - rate) * hours;   // віднімаємо різницю між вартістю години роботи
+        }
+        if (rate < 0) {
+            System.out.println("Error");
+        }
+        this.rate = rate;   // тільки зараз перезаписуємо нову вартість роботи в обʼєкт
     }
 
     public double getBonuses() {
         return 0.1 * getSalary();
     }
-
-    public static void main(String[] args) {
-        Employee em1 = new Employee("Kollin", 35, 14);
-        Employee em2 = new Employee("Boby", 30, 15);
-        Employee em3 = new Employee("Nick", 40, 12);
-
-        System.out.println(em1.toString());
-        System.out.println(em2.toString());
-        System.out.println(em3.toString());
-        System.out.println("Total salary of all employees: " + (em1.getSalary() + em2.getSalary() + em3.getSalary()));
-        System.out.println(totalSum);
-    }
 }
+
+
+
+
+
+
+
+

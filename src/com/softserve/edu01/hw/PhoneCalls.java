@@ -23,6 +23,5 @@ public class PhoneCalls {
 
         scanner.close();
         scanner1.close();
-
     }
 }
