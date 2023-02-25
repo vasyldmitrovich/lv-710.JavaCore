@@ -5,12 +5,14 @@ public class Car {
     private int yearOfProduction;
     private double engineCapacity;
 
+    public Car() {
+    }
+
     public Car(String type, int yearOfProduction, double engineCapacity) {
         this.type = type;
         this.yearOfProduction = yearOfProduction;
         this.engineCapacity = engineCapacity;
     }
-
 
     public String getType() {
         return type;
