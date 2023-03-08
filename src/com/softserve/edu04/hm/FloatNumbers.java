@@ -3,29 +3,35 @@ package com.softserve.edu04.hm;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.util.Arrays;
 
 // READY !!
 public class FloatNumbers {
+    public static void runMyApp() throws IOException {
+        checkFloatNumbers(inputNumbers());
+    }
 
-public  static void checkFloatNumbers() throws IOException {
-    BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-    float f1 = Float.parseFloat(br.readLine());
-    float f2 = Float.parseFloat(br.readLine());
-    float f3 = Float.parseFloat(br.readLine());
+    public static void checkFloatNumbers(float[] numbers) {
+        {
+            for (Float number :
+                    numbers) {
+                String s = number >= -5 && number <= 5 ? " number satisfies the condition" : " number does not satisfy the condition";
 
-    Float[] numbers = new Float[]{f1, f2, f3};
-    {
-        for (Float number :
-                numbers) {
-            String s = number >= -5 && number <= 5 ? " number satisfies the condition" : " number does not satisfy the condition";
-
-            System.out.println(number + s);
+                System.out.println(number + s);
+            }
         }
     }
-}
-    public static void main(String[] args) throws IOException {
-        checkFloatNumbers();
+
+    public static float[] inputNumbers() throws IOException {
+        System.out.println("Print three float numbers");
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        float[] numbers = new float[]{
+                Float.parseFloat(br.readLine()), Float.parseFloat(br.readLine()), Float.parseFloat(br.readLine())};
+        System.out.println("numbers = " + Arrays.toString(numbers));
+        return numbers;
     }
 
-
+    public static void main(String[] args) throws IOException {
+        runMyApp();
+    }
 }

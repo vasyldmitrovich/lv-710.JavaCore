@@ -6,6 +6,9 @@ public class Employee {
     private String name;
     private int departmentNumber, salary;
 
+    public Employee() {
+    }
+
     public Employee(String name, int departmentNumber, int salary) {
         this.name = name;
         this.departmentNumber = departmentNumber;
@@ -58,7 +61,7 @@ public class Employee {
 
     @Override
     public String toString() {
-        return "{" + name  +
+        return "{" + name +
                 ", " + departmentNumber +
                 ", " + salary + "}";
     }

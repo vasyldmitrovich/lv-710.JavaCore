@@ -1,5 +1,5 @@
 package com.softserve.edu05.hw.Cars;
 
-public interface MyInterface {
+public interface interfaceRunMethod {
     void runMyApp(String s);
 }

@@ -1,24 +1,15 @@
 package com.softserve.edu04.hm.Dog;
-
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-
 import static com.softserve.edu04.hm.Dog.Breed.*;
 
 // READY !!
-public class DogDemo {
-
-    public static void createDogs() throws IOException {
-
-        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        Dog dog = new Dog(br.readLine(), DOBERMAN, Integer.parseInt(br.readLine()));
-        Dog dog2 = new Dog(br.readLine(), DACHSHUND, Integer.parseInt(br.readLine()));
-        Dog dog3 = new Dog(br.readLine(), BULLDOG, Integer.parseInt(br.readLine()));
-//        Dog dog4 = new Dog(br.readLine(), BULLDOG, Integer.parseInt(br.readLine()));
-//        Dog dog5 = new Dog(br.readLine(), BULLDOG, Integer.parseInt(br.readLine()));
-
-        Dog dogs[] = new Dog[]{dog, dog2, dog3};
+public class DogDemo implements interfaceRunMyApp{
+    public void runMyApp() throws IOException {
+        сheckMatchesNames(new Dog[]{createDog(), createDog(), createDog()});
+    };
+    public void сheckMatchesNames(Dog[] dogs) {
         int maxAge = dogs[0].getAge();
         int iMaxAge = 0;
         boolean b = false;
@@ -35,13 +26,34 @@ public class DogDemo {
                 }
             }
         }
-            if (b = true) {
-                System.out.println("We found a match for the names");
-            }
+        if (b == true) {
+            System.out.println("We found a match for the names");
+        }
         System.out.println("The oldest dog's name is " + dogs[iMaxAge].getName() + " and it breed is " + dogs[iMaxAge].getBreed());
     }
+        public static String returnInputData (String s) throws IOException{
+            System.out.println(s);
+            BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+            String result = "";
+            try {
+                result = br.readLine();
+            } catch (IOException e) {
+                e.printStackTrace();
+                System.out.println("You input wrong data");
+            }
+            return result;
+        }
+
+        public static Dog createDog () throws IOException {
+            String name = returnInputData("Input name of dog");
+            Breed breed = Breed.valueOf(returnInputData("Input breed of dog"));
+            int age = Integer.parseInt(returnInputData("Input age of dog"));
+            Dog dog = new Dog(name, breed, age);
+            return dog;
+        }
     public static void main(String[] args) throws IOException {
-        createDogs();
+        interfaceRunMyApp dog = new DogDemo();
+        dog.runMyApp();
     }
 }
 

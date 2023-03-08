@@ -13,6 +13,9 @@ public class Dog {
         this.age = age;
     }
 
+    public Dog() {
+    }
+
     public String getName() {
         return name;
     }

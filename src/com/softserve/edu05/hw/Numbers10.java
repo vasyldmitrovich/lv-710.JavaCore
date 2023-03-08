@@ -3,47 +3,53 @@ package com.softserve.edu05.hw;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.util.Arrays;
+
 // READY!!
 public class Numbers10 {
-    public static void checkNumbers() throws IOException {
-        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        int n1 = Integer.parseInt(br.readLine());
-        int n2 = Integer.parseInt(br.readLine());
-        int n3 = Integer.parseInt(br.readLine());
-        int n4 = Integer.parseInt(br.readLine());
-        int n5 = Integer.parseInt(br.readLine());
-        int n6 = Integer.parseInt(br.readLine());
-        int n7 = Integer.parseInt(br.readLine());
-        int n8 = Integer.parseInt(br.readLine());
-        int n9 = Integer.parseInt(br.readLine());
-        int n10 = Integer.parseInt(br.readLine());
+    public static void inputAndCheckNumbers() throws IOException {
+        checkNumbers(inputNumbers());
+    }
 
-        int[] numbers = new int[]{n1, n2, n3, n4, n5, n6, n7, n8, n9, n10};
+    public static void checkNumbers(int[] array) {
         int sum = 0;
         int prod = 1;
         boolean b = true;
         int i;
 
-        for (i = 0; i < numbers.length / 2; i++) {
-            if (numbers[i] < 0) {
+        for (i = 0; i < array.length / 2; i++) {
+            if (array[i] < 0) {
                 b = false;
             }
         }
         if (b == true) {
-            for (i = 0; i < numbers.length / 2; i++) {
-                sum = sum + numbers[i];
+            for (i = 0; i < array.length / 2; i++) {
+                sum = sum + array[i];
             }
             System.out.println("The sum of the first five numbers: " + sum);
         }
         if (b == false) {
-            for (i = numbers.length / 2 - 1; i < numbers.length; i++) {
-                prod = prod * numbers[i];
+            for (i = array.length / 2 - 1; i < array.length; i++) {
+                prod = prod * array[i];
             }
             System.out.println("The product of the last five numbers: " + prod);
         }
     }
 
+    public static int[] inputNumbers() throws IOException {
+        System.out.println("Print ten numbers");
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        int[] numbers = new int[]{
+                Integer.parseInt(br.readLine()), Integer.parseInt(br.readLine()),
+                Integer.parseInt(br.readLine()), Integer.parseInt(br.readLine()),
+                Integer.parseInt(br.readLine()), Integer.parseInt(br.readLine()),
+                Integer.parseInt(br.readLine()), Integer.parseInt(br.readLine()),
+                Integer.parseInt(br.readLine()), Integer.parseInt(br.readLine())};
+        System.out.println("numbers = " + Arrays.toString(numbers));
+        return numbers;
+    }
+
     public static void main(String[] args) throws IOException {
-        checkNumbers();
+        inputAndCheckNumbers();
     }
 }

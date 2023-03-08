@@ -45,11 +45,10 @@ public class Employee {
     }
 
     public String toString() {
-        return "Employee {"
-                + "name: " + name
+        return "name: " + name
                 + ", rate: " + rate
                 + ", hours: " + hours
-                + "}";
+                ;
     }
 
     public void changeRate(int rate) {   // УВАГА!! що скажешь про цю частину коду?

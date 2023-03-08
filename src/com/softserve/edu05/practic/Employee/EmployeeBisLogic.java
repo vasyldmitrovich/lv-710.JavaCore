@@ -1,65 +1,72 @@
 package com.softserve.edu05.practic.Employee;
-
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
-import java.util.Arrays;
+
 // READY!!
-public class EmployeeBisLogic {
-
-    public static void checkEmployee() {
+public class EmployeeBisLogic implements interfaceSortEmployee, interfaceCheckEmployee, interfaceRunMethod{
+    public void runMethod(String s) {
+        System.out.println(s);
+        Employee[] empl = {createEmployee(), createEmployee(), createEmployee(), createEmployee(), createEmployee()};
+        checkEmployee(empl, Integer.parseInt(showMessageAndReturnInputData
+                ("Input department number of employee for sorting")));
+        sortEmployee(empl);
+    }
+    public String showMessageAndReturnInputData(String s) {
+        System.out.println(s);
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        int t;
+        String result = "";
         try {
-            t = Integer.parseInt(br.readLine());
+            result = br.readLine();
         } catch (IOException e) {
-            throw new RuntimeException(e);
+            e.printStackTrace();
+            System.out.println("You input wrong data");
         }
-        Employee employee1 = new Employee("Bob", 12, 12000);
-        Employee employee2 = new Employee("Jack", 11, 12500);
-        Employee employee3 = new Employee("Stevie", 12, 11800);
-        Employee employee4 = new Employee("Angela", 10, 12400);
-        Employee employee5 = new Employee("Karol", 12, 12800);
-
-        Employee[] empl = {
-                employee1,
-                employee2,
-                employee3,
-                employee4,
-                employee5
-        };
-        ArrayList<Employee> empl1 = new ArrayList<>();
-        for (int i = 0; i < empl.length; i++) {
-
-            if (empl[i].getDepartmentNumber() == t) {
-                empl1.add(empl[i]);
+        return result;
+    }
+    public Employee createEmployee() {
+        Employee employee = new Employee(showMessageAndReturnInputData("Input name of employee"),
+                Integer.parseInt(showMessageAndReturnInputData("Input department number of employee")),
+                Integer.parseInt(showMessageAndReturnInputData("Input engine salary of employee")));
+        System.out.println(employee);
+        return employee;
+    }
+    public void checkEmployee(Employee[] e, int depNumber) {
+        ArrayList<Employee> employeeArrayList = new ArrayList<>();
+        for (int i = 0; i < e.length; i++) {
+            if (e[i].getDepartmentNumber() == depNumber) {
+                employeeArrayList.add(e[i]);
             }
         }
-        System.out.println(empl1);
-
-        for (int i = 0; i < empl.length; i++) {
-            int pos = i;
-            int max = empl[i].getSalary();
-            Employee obMax = empl[i];
-            for (int j = i + 1; j < empl.length; j++) {
-                if (empl[j].getSalary() > max) {
-                    max = empl[j].getSalary();
-                    pos = j;
-                    obMax = empl[j];
-                }
-            }
-            empl[pos] = empl[i];
-            empl[i] = obMax;
+        if (employeeArrayList.size() == 0) {
+            System.out.println("Employees of this department are not found");
         }
-        for (Employee em :
-                empl) {
-            System.out.println(em);
-
+        if (employeeArrayList.size() != 0) {
+            System.out.println("Employees with the department number you are looking for:");
+            System.out.println(employeeArrayList);
         }
     }
 
-    public static void main(String[] args) {
-        checkEmployee();
+    public void sortEmployee(Employee[] e) {
+        System.out.println("Sorting employees by salary decrease: ");
+        for (int i = 0; i < e.length; i++) {
+            int pos = i;
+            int max = e[i].getSalary();
+            Employee obMax = e[i];
+            for (int j = i + 1; j < e.length; j++) {
+                if (e[j].getSalary() > max) {
+                    max = e[j].getSalary();
+                    pos = j;
+                    obMax = e[j];
+                }
+            }
+            e[pos] = e[i];
+            e[i] = obMax;
+        }
+        for (Employee em :
+                e) {
+            System.out.println(em);
+        }
     }
 }

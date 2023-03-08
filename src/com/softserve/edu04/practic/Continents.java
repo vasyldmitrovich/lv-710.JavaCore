@@ -13,7 +13,7 @@ public enum Continents {
             "British Indian Ocean Territory", "Brunei", "Cambodia", "China", "Georgia", "Hong Kong", "India",
             "Indonesia", "Iran", "Iraq", "Israel", "Japan", "Jordan", "Kazakhstan", "Kuwait", "Kyrgyzstan", "Laos",
             "Lebanon", "Macau", "Malaysia", "Maldives", "Mongolia", "Myanmar", "Nepal", "North Korea", "Oman",
-            "Pakistan", "Palestine", "Philippines", "Qatar", "Russia", "Saudi Arabia", "Singapore", "South Korea",
+            "Pakistan", "Palestine", "Philippines", "Qatar", "russia", "Saudi Arabia", "Singapore", "South Korea",
             "Sri Lanka", "Syria", "Taiwan", "Tajikistan", "Thailand", "East Timor", "Turkey", "Turkmenistan",
             "United Arab Emirates", "Uzbekistan", "Vietnam", "Yemen", "Egypt"),
     NORTHAMERICA("Antigua and Barbuda", "Bahamas", "Barbados", "Belize", "Canada",
