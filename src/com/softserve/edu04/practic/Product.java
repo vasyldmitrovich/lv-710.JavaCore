@@ -1,6 +1,7 @@
 package com.softserve.edu04.practic;
 
 public class Product {
+    /*If this code in next fourth lines do not needed, del unneeded lines*/
 //    BREAD("baguette", 25666.5, 11),
 //    PHONE("samsung", 5000, 3),
 //    JEANS("levi's", 2000,5),

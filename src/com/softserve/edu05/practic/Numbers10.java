@@ -35,6 +35,7 @@ public class Numbers10 {
         return null;
     }
 
+    /*If you do not return nothing then make return type void. Make this rules for all method*/
     public static Object foundAmountNegNumbers(int[] n) {
         int sumNeg = 0;
         for (int i = 0; i < n.length; i++) {
