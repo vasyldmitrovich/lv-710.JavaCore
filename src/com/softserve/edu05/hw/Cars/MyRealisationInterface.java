@@ -28,7 +28,7 @@ public class MyRealisationInterface implements interfaceRunMethod, interfaceSort
     }
 
     @Override
-    public void sortOfYear(Car[] car) {
+    public Car[] sortOfYear(Car[] car) {
         int i;
         boolean b = false;
         Car tmp;
@@ -45,6 +45,7 @@ public class MyRealisationInterface implements interfaceRunMethod, interfaceSort
                 }
             }
         }
+        return car;
     }
 
     @Override
