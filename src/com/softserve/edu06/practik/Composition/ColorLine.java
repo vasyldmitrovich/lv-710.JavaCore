@@ -3,11 +3,12 @@ package com.softserve.edu06.practik.Composition;
 public class ColorLine extends Line{
     private String Color;
 
+    public ColorLine() {
+    }
+
     public ColorLine(Point point1, Point point2, String color) {
         super(point1, point2);
         Color = color;
-    }
-    public ColorLine() {
     }
 
     public String getColor() {

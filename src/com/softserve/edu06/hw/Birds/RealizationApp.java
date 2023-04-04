@@ -35,6 +35,7 @@ public class RealizationApp {
         return result;
     }
 
+    /*All is good*/
     public static void main(String[] args) {
         createBirds();
     }

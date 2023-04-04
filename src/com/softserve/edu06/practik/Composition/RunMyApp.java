@@ -33,7 +33,7 @@ public class RunMyApp {
         for (Line line :
                 lines) {
             line.print();
-            System.out.println(line.toString());
+            System.out.println(line.toString());//Good, but toString() not needed
         }
     }
 }
