@@ -1,8 +1,10 @@
 package com.softserve.edu05.practic.Employee;
 
+import com.softserve.edu06.hw.Developer.InterfaceReport;
+
 import java.util.Objects;
 
-public class Employee {
+public class Employee implements InterfaceReport {
     private String name;
     private int departmentNumber, salary;
 
@@ -64,5 +66,10 @@ public class Employee {
         return "{" + name +
                 ", " + departmentNumber +
                 ", " + salary + "}";
+    }
+
+    public void report() {
+        System.out.println("Name: " + this.getName() + ", Number of department: " + this.departmentNumber +
+                ", Salary: " + this.getSalary());
     }
 }
