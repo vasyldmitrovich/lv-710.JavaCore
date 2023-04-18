@@ -2,7 +2,7 @@ package com.softserve.edu07.hw.Emploees;
 
 import java.util.Objects;
 
-public class Employee {
+public class Employee implements Payment, Comparable{
     private String employeeld;
     private int salary;
 
@@ -49,5 +49,15 @@ public class Employee {
         return "Employee{" +
                 "employeeld='" + employeeld + '\'' +
                 '}';
+    }
+
+    @Override
+    public int calculatePay() {
+        return 0;
+    }
+
+    @Override
+    public int compareTo(Object o) {
+        return 0;
     }
 }

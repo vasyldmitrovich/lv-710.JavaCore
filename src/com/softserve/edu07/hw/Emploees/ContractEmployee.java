@@ -16,7 +16,6 @@ public class ContractEmployee extends Employee implements Payment {
     @Override
     public int calculatePay() {
         int salary = 0;
-        System.out.print("Salary = ");
         return salary = getFixedMonthlySalary();
     }
 
@@ -58,8 +57,7 @@ public class ContractEmployee extends Employee implements Payment {
 
     @Override
     public String toString() {
-        return "ContractEmployee {" + "Employeeld = " + getEmployeeld() +
-                ", Federal TaxId Member = " + getFederalTaxIdMember() + '\'' +
-                "}";
+        return "\nContractEmployee: " + "Name = " + getEmployeeld() +
+                ", Federal TaxId Member = " + getFederalTaxIdMember() + ", Salary = " + calculatePay();
     }
 }

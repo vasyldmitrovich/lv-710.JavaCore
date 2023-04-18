@@ -18,7 +18,6 @@ public class SalariedEmployee extends Employee implements Payment {
     @Override
     public int calculatePay() {
         int salary;
-        System.out.print("Salary = ");
         return salary = getHourlyRate() * getNumberOfHours();
     }
 
@@ -70,8 +69,7 @@ public class SalariedEmployee extends Employee implements Payment {
 
     @Override
     public String toString() {
-        return "SalariedEmployee {" + "Employeeld = " + getEmployeeld() +
-                ", Social Security Number = " + getSocialSecurityNumber() +  + '\'' +
-                "}";
+        return "\nSalariedEmployee: " + "Name = " + getEmployeeld() +
+                ", Social Security Number = " + getSocialSecurityNumber() + ", Salary = " + calculatePay();
     }
 }
