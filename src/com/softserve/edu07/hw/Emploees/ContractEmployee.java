@@ -1,6 +1,6 @@
 package com.softserve.edu07.hw.Emploees;
 
-public class ContractEmployee extends Employee implements Payment {
+public class ContractEmployee extends Employee implements Payment {//, Comparator<Employee> {
     private String federalTaxIdMember;
     private int fixedMonthlySalary;
 
@@ -33,6 +33,13 @@ public class ContractEmployee extends Employee implements Payment {
     public void setFixedMonthlySalary(int fixedMonthlySalary) {
         this.fixedMonthlySalary = fixedMonthlySalary;
     }
+
+
+
+//    @Override
+//    public int compare(Employee o1, Employee o2) {
+//        return o1.getSalary() + o2.getSalary();
+//    }
 
     @Override
     public boolean equals(Object o) {

@@ -1,8 +1,8 @@
 package com.softserve.edu07.hw.Emploees;
 
-import java.util.Objects;
+import java.util.Comparator;
 
-public abstract class Employee implements Payment{
+public abstract class Employee implements Payment, Comparator<Employee>, Comparable<Employee> {
     private String employeeld;
     private int salary;
 
@@ -30,17 +30,12 @@ public abstract class Employee implements Payment{
     }
 
     @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-
-        Employee employee = (Employee) o;
-
-        return Objects.equals(employeeld, employee.employeeld);
+    public int compare(Employee o1, Employee o2) {
+        return o1.getSalary() + o2.getSalary();
     }
 
     @Override
-    public int hashCode() {
-        return employeeld != null ? employeeld.hashCode() : 0;
+    public int compareTo(Employee o) {
+        return this.getSalary() + o.getSalary();
     }
 }
