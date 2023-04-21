@@ -15,8 +15,7 @@ public class ContractEmployee extends Employee implements Payment {
 
     @Override
     public int calculatePay() {
-        int salary = 0;
-        return salary = getFixedMonthlySalary();
+        return getFixedMonthlySalary();
     }
 
     public String getFederalTaxIdMember() {

@@ -1,6 +1,6 @@
 package com.softserve.edu07.hw.SchemaOfClasses;
 
-public class WaterVehicle extends Passengers implements Vehicle {
+public abstract class WaterVehicle extends Passengers implements Vehicle {
     public WaterVehicle() {
     }
 

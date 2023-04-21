@@ -7,7 +7,7 @@ import java.util.Arrays;
 
 import static java.util.Arrays.sort;
 
-public class RealizationMyApp {
+public class RealizationMyAppArrays {
     public static void createEmploees() {
         Employee[] employees = new Employee[4];
         employees[0] = new SalariedEmployee(InputData("Write name"), InputData("Write Social Security Number"),
@@ -20,14 +20,12 @@ public class RealizationMyApp {
                 Integer.parseInt(InputData("Write Fixed Monthly Salary")));
 
         System.out.println(Arrays.toString(employees) + "\n");
-//        for (Payment employee :
-//                employees) {
-//            System.out.println(employee.calculatePay());
-//        }
-        sort(employees);
-        System.out.println(Arrays.toString(employees) + "\n");
         sort(employees, new SortBySalary());
-        System.out.println(Arrays.toString(employees) + "\n");
+        for (Payment employee :
+                employees) {
+            System.out.println();
+            System.out.println(employee);
+        }
     }
 
     public static String InputData(String s) {

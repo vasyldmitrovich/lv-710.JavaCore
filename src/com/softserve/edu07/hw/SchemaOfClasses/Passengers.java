@@ -1,6 +1,6 @@
 package com.softserve.edu07.hw.SchemaOfClasses;
 
-public class Passengers {
+public abstract class Passengers {
     public int passengers;
 
     public Passengers() {

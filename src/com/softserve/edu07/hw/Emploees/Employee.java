@@ -2,7 +2,7 @@ package com.softserve.edu07.hw.Emploees;
 
 import java.util.Objects;
 
-public class Employee implements Payment, Comparable{
+public abstract class Employee implements Payment{
     private String employeeld;
     private int salary;
 
@@ -42,22 +42,5 @@ public class Employee implements Payment, Comparable{
     @Override
     public int hashCode() {
         return employeeld != null ? employeeld.hashCode() : 0;
-    }
-
-    @Override
-    public String toString() {
-        return "Employee{" +
-                "employeeld='" + employeeld + '\'' +
-                '}';
-    }
-
-    @Override
-    public int calculatePay() {
-        return 0;
-    }
-
-    @Override
-    public int compareTo(Object o) {
-        return 0;
     }
 }

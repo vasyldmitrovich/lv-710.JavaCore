@@ -1,6 +1,6 @@
 package com.softserve.edu07.hw.SchemaOfClasses;
 
-public class GroundVehicle extends Passengers implements Vehicle {
+public abstract class GroundVehicle extends Passengers implements Vehicle {
     public GroundVehicle() {
     }
 

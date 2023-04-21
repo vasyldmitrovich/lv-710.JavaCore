@@ -1,6 +1,6 @@
 package com.softserve.edu07.hw.Emploees;
 
-public class SalariedEmployee extends Employee implements Payment {
+public class SalariedEmployee extends Employee {
     private String socialSecurityNumber;
     private int hourlyRate;
     private int numberOfHours;
