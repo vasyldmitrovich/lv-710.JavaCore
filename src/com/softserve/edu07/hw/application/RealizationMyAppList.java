@@ -1,14 +1,8 @@
-package com.softserve.edu07.hw.Emploees;
-
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.util.ArrayList;
-import java.util.List;
+package com.softserve.edu07.hw.application;
 
 public class RealizationMyAppList {
-    public static void createEmploees() {
-        List<Employee> employees = new ArrayList<>();
+    /*public static void createEmploees() {
+        *//*List<Employee> employees = new ArrayList<>();
         employees.add(new ContractEmployee(InputData("Write name"), InputData("Write Federal TaxId Member"),
                 Integer.parseInt(InputData("Write Fixed Monthly Salary"))));
         employees.add(new ContractEmployee(InputData("Write name"), InputData("Write Federal TaxId Member"),
@@ -29,7 +23,7 @@ public class RealizationMyAppList {
                 employees) {
             System.out.println();
             System.out.println(employee);
-        }
+        }*//*
     }
 
     public static String InputData(String s) {
@@ -47,5 +41,5 @@ public class RealizationMyAppList {
 
     public static void main(String[] args) {
         createEmploees();
-    }
+    }*/
 }
