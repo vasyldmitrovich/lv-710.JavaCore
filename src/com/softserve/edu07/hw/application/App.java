@@ -80,7 +80,7 @@ public class App {
     }
 
     public static List<Employee> getListEmp() {
-        List<Employee> employees = new ArrayList<Employee>();
+        List<Employee> employees = new ArrayList<>();
         employees.add(new ContractEmp(1,1000,"Bla", 3000));
         employees.add(new ContractEmp(2,1500,"Bla2", 1700));
         employees.add(new ContractEmp(3,1100,"Bla2", 1700));
